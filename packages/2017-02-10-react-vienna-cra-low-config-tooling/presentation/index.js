@@ -5,10 +5,13 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
+  Image,
   ListItem,
   List,
+  // MarkdownSlides,
   Quote,
   Slide,
   Text
@@ -26,10 +29,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png")
 };
 
 preloader(images);
@@ -49,13 +49,18 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+          <Text textSize={50} lineHeight={1.4} textColor="secondary">
+            How <Code textSize={55}>create-react-app</Code> inspired low-configuration tooling at kununu
+          </Text>
+          <Text margin="10px 0 0" textColor="tertiary" size={1}>
+            by @karlhorky
           </Text>
         </Slide>
+
+        <Slide>
+          <Image src={images.danTweetTragedyOfTheCommons} />
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
           <Heading size={1} textColor="secondary">Heading 1</Heading>
@@ -65,6 +70,7 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">Heading 5</Heading>
           <Text size={6} textColor="secondary">Standard text</Text>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
           <List>
@@ -74,12 +80,21 @@ export default class Presentation extends React.Component {
             <ListItem>Item 4</ListItem>
           </List>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
           </BlockQuote>
         </Slide>
+
+        {null /* MarkdownSlides`
+          ## Slide One Title
+          Slide Content
+          ---
+          ## Slide Two Title
+          Slide Content
+        `*/}
       </Deck>
     );
   }
