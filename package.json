@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "build": "for dir in packages/*/ ; do (echo \"[$dir]($dir)  \" > index.md && cd \"$dir\" && yarn run build); done"
+    "build": "for dir in packages/*/ ; do (if ! grep -q $dir index.md; then echo \"* [$dir]($dir)  \" >> index.md; fi && cd \"$dir\" && yarn run build); done"
   }
 }
