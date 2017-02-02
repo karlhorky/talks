@@ -41,14 +41,14 @@ const theme = createTheme({
   quartenary: "#CECECE"
 }, {
   primary: "Montserrat",
-  secondary: "Helvetica"
+  secondary: "Montserrat"
 });
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["slide"]} bgColor="primary">
+      <Deck transition={["fade"]} transitionDuration={500} theme={theme} progress="none">
+        <Slide bgColor="primary">
           <Text textSize={50} lineHeight={1.4} textColor="secondary">
             How <Code textSize={55}>create-react-app</Code> inspired low-configuration tooling at kununu
           </Text>
@@ -58,10 +58,59 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Image src={images.danTweetTragedyOfTheCommons} />
+          <Heading size={2} textColor="secondary">
+            What is configuration?
+          </Heading>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="tertiary">
+        <Slide>
+          <Heading size={3} textColor="secondary">
+            Settings to apply something generic to multiple use cases
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={3} textColor="secondary">
+            Example:<br />
+            Applying a code bundler to multiple use cases.
+          </Heading>
+        </Slide>
+
+        <Slide notes="Sounds great, right?">
+          <Heading size={3} textColor="secondary">
+            Everyone gets what they want and everyone is happy... right?
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={2} textColor="secondary">
+            JavaScript Fatigue
+          </Heading>
+        </Slide>
+
+        <Slide notes="Decisions being part of JavaScript Fatigue">
+          <Heading size={2} textColor="secondary">
+            Configuration represents decisions
+          </Heading>
+        </Slide>
+
+        <Slide notes="<ul><li>Triaging, answering and investigating issues about configuration</li><li>Writing and maintaining tests for every possible configuration</li></ul>">
+          <Heading size={2} textColor="secondary">
+            Configuration represents maintainer effort
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Image width="80%" src={images.danTweetTragedyOfTheCommons} />
+        </Slide>
+
+        <Slide notes="Every team member who works with the tool needs to understand it and its configuration options.">
+          <Heading size={2} textColor="secondary">
+            Configuration represents team responsibility
+          </Heading>
+        </Slide>
+
+        <Slide bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
           <Heading size={1} textColor="secondary">Heading 1</Heading>
           <Heading size={2} textColor="secondary">Heading 2</Heading>
@@ -71,7 +120,7 @@ export default class Presentation extends React.Component {
           <Text size={6} textColor="secondary">Standard text</Text>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary" textColor="tertiary">
+        <Slide bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Standard List</Heading>
           <List>
             <ListItem>Item 1</ListItem>
@@ -81,7 +130,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="secondary" textColor="primary">
+        <Slide bgColor="secondary" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>
             <Cite>Author</Cite>
