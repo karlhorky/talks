@@ -34,7 +34,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png"),
-  tired: require("../assets/tired.jpg"),
+  jerryExhausted: require("../assets/jerry-exhausted.gif"),
   georgeUnderDesk: require("../assets/george-under-desk.gif"),
   webpackIssues: require("../assets/webpack-issues.png"),
   kramerHead: require("../assets/kramer-head.gif"),
@@ -108,7 +108,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide bgImage={images.tired} bgDarken={0.4} align="center top">
+        <Slide bgImage={images.jerryExhausted} bgDarken={0.4} align="center top">
           <br />
           <Text textSize={50} textColor="primary">
             Industry phenomenon #1
