@@ -15,7 +15,6 @@ import {
   // Layout,
   ListItem,
   List,
-  // MarkdownSlides,
   Quote,
   Slide,
   Text
@@ -34,10 +33,13 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png"),
-  jerryExhausted: require("../assets/jerry-exhausted.gif"),
   georgeUnderDesk: require("../assets/george-under-desk.gif"),
-  webpackIssues: require("../assets/webpack-issues.png"),
+  jerryExhausted: require("../assets/jerry-exhausted.gif"),
   kramerHead: require("../assets/kramer-head.gif"),
+  thinking: require("../assets/thinking.png"),
+  thinkingCat: require("../assets/thinking-cat.jpg"),
+  tired: require("../assets/tired.jpg"),
+  webpackIssues: require("../assets/webpack-issues.png"),
   webpackConfigSearch: require("../assets/webpack-config-search.png")
 };
 
@@ -66,11 +68,12 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
 
-
         <Slide>
           <Heading size={2} textColor="secondary">
             What is configuration?
           </Heading>
+          <br />
+          <Image width="34%" src={images.thinkingCat} />
         </Slide>
 
         <Slide align="center top">
@@ -92,6 +95,8 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">
             Example:<br />
             Adapting a code bundler to multiple use cases.
+            <br />
+            <Image height="1.5em" src={images.thinking} />
           </Heading>
         </Slide>
 
