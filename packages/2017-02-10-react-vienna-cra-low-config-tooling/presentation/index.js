@@ -195,45 +195,82 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
+
+        {null /*
+
+          Start of unfinished stuff
+
+        */}
+
         <Slide>
-          So what's the answer?  **OR** The zero-config movement
+          <Heading size={2} textColor="secondary">
+            So what's the answer?
+            <br />
+          </Heading>
+          <Appear>
+            <Heading size={4} textColor="secondary">
+              How do we reduce the problems with modern build tools?
+            </Heading>
+          </Appear>
         </Slide>
 
         <Slide>
-          Zero=config movement: Dan joining facebook to work on a secret project which turned out to be create-react-app
+          Zero configuration tooling
+            > Luckily some very smart people have been working on this
         </Slide>
 
         <Slide>
-          Zero=config movement: prettier
+          jlong: prettier
         </Slide>
 
         <Slide>
-          Zero=config movement: u
+          Image of lack of config options
         </Slide>
 
         <Slide>
-          What's the answer? I'll answer that with a story...
-        </Slide>
-
-
-        <Slide>
-          When I first tried out create-react-app
-        </Slide>
-
-{null /*
-        <Slide>
-          At kununu we weren't even trying to solve this problem at first.<br />
-          We just wanted to experiment with Dan's new `create-react-app` tool to see if it would help us.
+          Dan joining facebook to work on a secret project which turned out to be create-react-app
         </Slide>
 
         <Slide>
-          This happened at the same time as we were coming up with the concept for a new modular, scalable architecture.
+          Quick overview of core ideas of CRA / react-scripts
         </Slide>
 
         <Slide>
-
+          Becoming popular in some teams
+            > buzzfeed image
         </Slide>
-*/}
+
+        <Slide>
+          Also kununu.
+            > took the paradigm for create-universal-react-app
+            > screenshot
+
+          How did we get here?
+        </Slide>
+
+        <Slide>
+          When I first tried out create-react-app, first instinct was to eject
+            > wanted full control
+        </Slide>
+
+        <Slide>
+          I read more about the principles of create-react-app, found the issue with forking
+            > image of https://github.com/facebookincubator/create-react-app/issues/682
+        </Slide>
+
+        <Slide>
+          Tried it out
+            > found that it would work quite well for our new independent architecture and team structures
+        </Slide>
+
+        <Slide>
+          Why "low-configuration"?
+        </Slide>
+
+        <Slide>
+          We found that certain projects needed one or two specific configuration tweaks deviating from our global config
+        </Slide>
+
 
         <Slide>
           <Heading size={3} textColor="secondary">
