@@ -268,7 +268,12 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          We found that certain projects needed one or two specific configuration tweaks deviating from our global config
+          We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config
+        </Slide>
+
+
+        <Slide>
+          Recommendation: Resist adding configuration as much as possible in your own tools!
         </Slide>
 
 
@@ -297,12 +302,13 @@ export default class Presentation extends React.Component {
 
         <Slide align="center top">
           <Heading size={3} textColor="secondary">
-            Recap:
+            Takeaways:
           </Heading>
           <List>
             <Appear><ListItem>Config is ...</ListItem></Appear>
-            <Appear><ListItem>Resist configuration ...</ListItem></Appear>
-            <Appear><ListItem>create-react-app paradigm can help</ListItem></Appear>
+            <Appear><ListItem>New zero-configuration tooling can help</ListItem></Appear>
+            <Appear><ListItem>You may need an escape hatch</ListItem></Appear>
+            <Appear><ListItem>Resist configuration in your own tools</ListItem></Appear>
           </List>
         </Slide>
       </Deck>
