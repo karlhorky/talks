@@ -3,12 +3,16 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Cite,
   Code,
   Deck,
+  // Fill,
+  // Fit,
   Heading,
   Image,
+  // Layout,
   ListItem,
   List,
   // MarkdownSlides,
@@ -29,16 +33,18 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png")
+  danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png"),
+  tired: require("../assets/tired.jpg"),
+  webpackIssues: require("../assets/webpack-issues.png")
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  primary: "#fff8eb",
+  secondary: "#482e2e",
+  tertiary: "#ae4737",
+  quartenary: "#ffdb99"
 }, {
   primary: "Montserrat",
   secondary: "Montserrat"
@@ -48,56 +54,88 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["fade"]} transitionDuration={500} theme={theme} progress="none">
-        <Slide bgColor="primary">
-          <Text textSize={50} lineHeight={1.4} textColor="secondary">
-            How <Code textSize={55}>create-react-app</Code> inspired low-configuration tooling at kununu
+        <Slide>
+          <Text textSize={50} lineHeight={1.4}>
+            How <Code textSize={55} bgColor="#fff3c7" textColor="secondary">create-react-app</Code> inspired low-configuration tooling at kununu
           </Text>
-          <Text margin="10px 0 0" textColor="tertiary" size={1}>
+          <Text margin="10px 0 0" textColor="tertiary" textSize={40}>
             by @karlhorky
           </Text>
         </Slide>
 
         <Slide>
-          <Heading size={2} textColor="secondary">
+          <Heading size={2} color="secondary">
             What is configuration?
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide align="center top">
+          <br />
+          <Text textSize={50}>
+            What is configuration?
+          </Text>
+          <br />
           <Heading size={3} textColor="secondary">
-            Settings to apply something generic to multiple use cases
+            Settings to adapt something generic to multiple use cases
           </Heading>
         </Slide>
 
-        <Slide>
+        <Slide align="center top">
+          <br />
+          <Text textSize={50}>
+            What is configuration?
+          </Text>
           <Heading size={3} textColor="secondary">
             Example:<br />
-            Applying a code bundler to multiple use cases.
+            Adapting a code bundler to multiple use cases.
           </Heading>
         </Slide>
 
-        <Slide notes="Sounds great, right?">
+        <Slide notes="<ul><li>Sounds great, right?</li><li>'right': To try to answer this question, let's examine a phenomenon in our industry...</li></ul>">
           <Heading size={3} textColor="secondary">
-            Everyone gets what they want and everyone is happy... right?
+            Everyone gets what they want and everyone is happy! 🎉
           </Heading>
+          <br />
+          <Appear>
+            <Heading size={3} textColor="secondary">
+              ... right? 🤔
+            </Heading>
+          </Appear>
         </Slide>
 
-        <Slide>
-          <Heading size={2} textColor="secondary">
+        <Slide bgImage={images.tired} bgDarken={0.4}>
+          <Heading size={2} textColor="primary">
             JavaScript Fatigue
           </Heading>
         </Slide>
 
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>...every project required decisions to be made...</Quote>
+            <Appear>
+              <Cite textColor="quartenary">Eric Clemmons, "JavaScript Fatigue"</Cite>
+            </Appear>
+          </BlockQuote>
+        </Slide>
+
         <Slide notes="Decisions being part of JavaScript Fatigue">
           <Heading size={2} textColor="secondary">
-            Configuration represents decisions
+            Configuration represents author decisions
           </Heading>
         </Slide>
 
-        <Slide notes="<ul><li>Triaging, answering and investigating issues about configuration</li><li>Writing and maintaining tests for every possible configuration</li></ul>">
+        <Slide>
+          <Image width="100%" src={images.webpackIssues} />
+        </Slide>
+
+        <Slide notes="<ul><li>Triaging, answering and investigating issues with configuration</li><li>Writing and maintaining tests for every possible configuration</li></ul>">
           <Heading size={2} textColor="secondary">
             Configuration represents maintainer effort
           </Heading>
+          <List>
+            <Appear><ListItem>Issues with configuration</ListItem></Appear>
+            <Appear><ListItem>Maintaining tests for every configuration</ListItem></Appear>
+          </List>
         </Slide>
 
         <Slide>
