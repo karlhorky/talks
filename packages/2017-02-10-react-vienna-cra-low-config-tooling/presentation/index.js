@@ -77,7 +77,47 @@ export default class Presentation extends React.Component {
           <Image width="34%" src={images.thinkingCat} />
         </Slide>
 
-        <Slide align="center top">
+        <Slide notes="To try to answer this, let's start with an example" align="center top">
+          <br />
+          <Text textSize={50}>
+            What is configuration?
+          </Text>
+          <Heading size={3} textColor="secondary">
+            Example:<br />
+            webpack Configuration
+          </Heading>
+        </Slide>
+
+        <Slide notes="<ul><li>how can we describe this?</li><li>what is webpack? a code bundler</li><li>why is it being configured? to adapt to a specific application</li></ul>" align="center top">
+          <Layout>
+            <div style={{ width: "60%", marginLeft: "-10%", marginRight: "2%" }}>
+              <CodePane
+                lang="js"
+                source={require("raw-loader!../assets/webpack-config-1.example")}
+              />
+            </div>
+            <div style={{ width: "60%", marginRight: "-10%" }}>
+              <CodePane
+                lang="js"
+                source={require("raw-loader!../assets/webpack-config-2.example")}
+              />
+            </div>
+          </Layout>
+        </Slide>
+
+        <Slide notes="<ul><li>We're getting started on a definition.</li><li>But can we make it more generic?</li></ul>" align="center top">
+          <br />
+          <Text textSize={50}>
+            What is configuration?
+          </Text>
+          <Heading size={3} textColor="secondary">
+            Adapting a code bundler to a specific application.
+            <br />
+            <Image height="1.5em" src={images.thinking} />
+          </Heading>
+        </Slide>
+
+        <Slide notes="<ul><li>thought about this for a while and came up with this</li><li>something generic like a module bundler</li></ul>" align="center top">
           <br />
           <Text textSize={50}>
             What is configuration?
@@ -86,36 +126,6 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">
             Settings to adapt something generic to multiple use cases
           </Heading>
-        </Slide>
-
-        <Slide align="center top">
-          <br />
-          <Text textSize={50}>
-            What is configuration?
-          </Text>
-          <Heading size={3} textColor="secondary">
-            Example:<br />
-            Adapting a code bundler to multiple use cases.
-            <br />
-            <Image height="1.5em" src={images.thinking} />
-          </Heading>
-        </Slide>
-
-        <Slide align="center top">
-          <Layout>
-            <div style={{ width: "550px", marginLeft: "-100px", marginRight: "20px" }}>
-              <CodePane
-                lang="js"
-                source={require("raw-loader!../assets/webpack-config-1.example")}
-              />
-            </div>
-            <div style={{ width: "550px", marginRight: "-100px" }}>
-              <CodePane
-                lang="js"
-                source={require("raw-loader!../assets/webpack-config-2.example")}
-              />
-            </div>
-          </Layout>
         </Slide>
 
         <Slide notes="<ul><li>Sounds great, right?</li><li>'...right?': To try to answer this question, let's examine 3 phenomena in our industry...</li></ul>">
@@ -230,6 +240,20 @@ export default class Presentation extends React.Component {
               How do we reduce the problems with modern build tools?
             </Heading>
           </Appear>
+        </Slide>
+
+        <Slide>
+          Let's go back to our definition of configuration:
+            > Settings to adapt something generic to multiple use cases
+        </Slide>
+
+        <Slide>
+          Can we avoid having multiple use cases?
+            > probably not - we still want to be able to make new projects...
+        </Slide>
+
+        <Slide>
+          But - can we avoid changing the settings of our tools?
         </Slide>
 
         <Slide>
