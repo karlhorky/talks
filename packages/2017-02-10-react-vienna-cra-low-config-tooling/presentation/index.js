@@ -7,12 +7,13 @@ import {
   BlockQuote,
   Cite,
   Code,
+  CodePane,
   Deck,
   // Fill,
   // Fit,
   Heading,
   Image,
-  // Layout,
+  Layout,
   ListItem,
   List,
   Quote,
@@ -98,6 +99,23 @@ export default class Presentation extends React.Component {
             <br />
             <Image height="1.5em" src={images.thinking} />
           </Heading>
+        </Slide>
+
+        <Slide align="center top">
+          <Layout>
+            <div style={{ width: "550px", marginLeft: "-100px", marginRight: "20px" }}>
+              <CodePane
+                lang="js"
+                source={require("raw-loader!../assets/webpack-config-1.example")}
+              />
+            </div>
+            <div style={{ width: "550px", marginRight: "-100px" }}>
+              <CodePane
+                lang="js"
+                source={require("raw-loader!../assets/webpack-config-2.example")}
+              />
+            </div>
+          </Layout>
         </Slide>
 
         <Slide notes="<ul><li>Sounds great, right?</li><li>'...right?': To try to answer this question, let's examine 3 phenomena in our industry...</li></ul>">
