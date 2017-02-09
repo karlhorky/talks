@@ -338,27 +338,50 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide>
-          Becoming popular in some teams
-            > buzzfeed image
+        <Slide note="Not having to bikeshed or yak-shave configuration is becoming popular in some teams" align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          ** buzzfeed tweet screenshot
         </Slide>
 
-        <Slide>
-          Also kununu.
-            > took the paradigm for create-universal-react-app
-            > screenshot
-
-          How did we get here?
+        <Slide note="Also at kununu! We've built on create-react-app to add universal rendering. How did we get here?" align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          ** create-universal-react-app screenshot
         </Slide>
 
-        <Slide>
-          When I first tried out create-react-app, first instinct was to eject
-            > wanted full control
+        <Slide note="When I first tried out create-react-app, first instinct was to eject. I was a power user! And I wanted full control! This was my developer instinct to want to configure." align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          ** eject create-react-app screenshot
         </Slide>
 
-        <Slide>
-          I read more about the principles of create-react-app, found the issue with forking
-            > image of https://github.com/facebookincubator/create-react-app/issues/682
+        <Slide note="Unfortunately, there are some significant downsides of ejecting" align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          <Heading size={2} textColor="secondary">
+            Downsides of Ejecting
+          </Heading>
+          <List>
+            <Appear><ListItem>Configuration your responsibility again</ListItem></Appear>
+            <Appear><ListItem>Configuration your responsibility again</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide note="But we wanted to add universal rendering. How could we have our cake and eat it too? Reading more about the principles of create-react-app (zero-configuration, updatability) led me to find the option to fork." align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          ** screenshot of forking: https://github.com/facebookincubator/create-react-app/issues/682
         </Slide>
 
         <Slide>
@@ -366,21 +389,19 @@ export default class Presentation extends React.Component {
             > found that it would work quite well for our new independent architecture and team structures
         </Slide>
 
-        <Slide>
-          More kununu info
+
+        <Slide notes="Why is this talk about 'low-configuration' instead of 'zero configuration'?">
+          <Heading size={3} textColor="secondary">
+            Low-configuration
+          </Heading>
         </Slide>
 
-        <Slide>
-          Why "low-configuration"?
-        </Slide>
-
-        <Slide>
-          We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config
-        </Slide>
-
-
-        <Slide>
-          Recommendation: Resist adding configuration as much as possible in your own tools!
+        <Slide note="We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config" align="center top">
+          <br />
+          <Text textSize={50}>
+            Low-configuration
+          </Text>
+          ** screenshot of module-specific config
         </Slide>
 
 
@@ -405,6 +426,11 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">
             Otherwise, try it out and decide for yourself! 🖖
           </Heading>
+        </Slide>
+
+
+        <Slide notes="When building tooling, resist your developer instinct to configure and add configuration. Taking a more opinionated stance with sensible default behavior will both reduce your effort (so that you as a maintainer don't burn out) and the effort of others in your team or the community (if you're writing open source tooling).">
+          Recommendation: Resist adding configuration as much as possible in your own tools!
         </Slide>
 
         <Slide align="center top">
