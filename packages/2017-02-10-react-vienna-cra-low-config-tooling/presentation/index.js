@@ -33,10 +33,13 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  danCRA: require("../assets/dan-cra.png"),
   danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png"),
   georgeUnderDesk: require("../assets/george-under-desk.gif"),
   jerryExhausted: require("../assets/jerry-exhausted.gif"),
   kramerHead: require("../assets/kramer-head.gif"),
+  newmanDrinking: require("../assets/newman-drinking.gif"),
+  prettier: require("../assets/prettier.png"),
   thinking: require("../assets/thinking.png"),
   thinkingCat: require("../assets/thinking-cat.jpg"),
   tired: require("../assets/tired.jpg"),
@@ -117,7 +120,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide notes="<ul><li>thought about this for a while and came up with this</li><li>something generic like a module bundler</li></ul>" align="center top">
+        <Slide notes="<ul><li>code bundler => something generic</li><li>your specific application => many use cases</li></ul>" align="center top">
           <br />
           <Text textSize={50}>
             What is configuration?
@@ -224,12 +227,6 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        {null /*
-
-          Start of unfinished stuff
-
-        */}
-
         <Slide>
           <Heading size={2} textColor="secondary">
             So what's the answer?
@@ -237,40 +234,69 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <Heading size={4} textColor="secondary">
-              How do we reduce the problems with modern build tools?
+              How can we reduce problems caused by modern build configuration?
             </Heading>
           </Appear>
         </Slide>
 
-        <Slide>
-          Let's go back to our definition of configuration:
-            > Settings to adapt something generic to multiple use cases
+        <Slide notes="Let's go back to our definition of configuration" align="center top">
+          <br />
+          <Text textSize={50}>
+            What is configuration?
+          </Text>
+          <br />
+          <Heading size={3} textColor="secondary">
+            Settings to adapt something generic to multiple use cases
+          </Heading>
         </Slide>
 
-        <Slide>
-          Can we avoid having multiple use cases?
-            > probably not - we still want to be able to make new projects...
+        <Slide notes="probably not - we still have new requirements for new projects...">
+          <Heading size={2} textColor="secondary">
+            Can we avoid multiple use cases?
+          </Heading>
         </Slide>
 
-        <Slide>
-          But - can we avoid changing the settings of our tools?
+        <Slide notes="...but, can we standardize the settings in our tools? hm...">
+          <Heading size={2} textColor="secondary">
+            Can we standardize the settings in our tools?
+          </Heading>
         </Slide>
 
-        <Slide>
-          Zero configuration tooling
-            > Luckily some very smart people have been working on this
+
+        <Slide bgImage={images.newmanDrinking} bgDarken={0.6} align="center top">
+          <br />
+          <Text textSize={50} textColor="primary">
+            Industry phenomenon #4
+          </Text>
+          <br />
+          <Heading size={2} textColor="primary">
+            The rise of zero configuration tooling
+          </Heading>
         </Slide>
 
-        <Slide>
-          jlong: prettier
+        <Slide align="center top">
+          <Text textSize={50}>
+            jlongster/prettier
+            <br />
+          </Text>
+          <Image width="100%" src={images.prettier} />
         </Slide>
 
-        <Slide>
-          Image of lack of config options
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>Unlike eslint, there aren't a million configuration options and rules.</Quote>
+            <Appear>
+              <Cite textColor="quartenary">James Long, "A Prettier JavaScript Formatter"</Cite>
+            </Appear>
+          </BlockQuote>
         </Slide>
 
-        <Slide>
-          Dan joining facebook to work on a secret project which turned out to be create-react-app
+        <Slide notes="One of Dan Abramov's first projects after joining Facebook was a scaffolder for React apps to take away much of this configuration" align="center top">
+          <Text textSize={50}>
+            facebookincubator/create-react-app
+            <br />
+          </Text>
+          <Image width="80%" src={images.danCRA} />
         </Slide>
 
         <Slide>
@@ -303,6 +329,10 @@ export default class Presentation extends React.Component {
         <Slide>
           Tried it out
             > found that it would work quite well for our new independent architecture and team structures
+        </Slide>
+
+        <Slide>
+          More kununu info
         </Slide>
 
         <Slide>
