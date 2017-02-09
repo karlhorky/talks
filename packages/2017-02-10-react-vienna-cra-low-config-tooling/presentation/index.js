@@ -291,7 +291,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
 
-        <Slide notes="One of Dan Abramov's first projects after joining Facebook was a scaffolder for React apps to take away much of this configuration" align="center top">
+        <Slide notes="One of Dan Abramov's first projects after joining Facebook: a scaffolder for React apps to:<ul><li>abstract away configuration and dependencies</li><li>...in order to make it easier to get started with React</li></ul>" align="center top">
           <Text textSize={50}>
             facebookincubator/create-react-app
             <br />
@@ -299,8 +299,43 @@ export default class Presentation extends React.Component {
           <Image width="80%" src={images.danCRA} />
         </Slide>
 
-        <Slide>
-          Quick overview of core ideas of CRA / react-scripts
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>Create React apps with no build configuration.</Quote>
+            <Cite textColor="quartenary">create-react-app</Cite>
+          </BlockQuote>
+        </Slide>
+
+        <Slide notes="So what's in the box?<ul><li>packages</li><li>react-scripts</li></ul>" align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          ** Image of packages...
+          ** Image of react-scripts package.json...
+          ** Image of config...
+        </Slide>
+
+        <Slide align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          <List>
+            <Appear><ListItem>Babel configuration</ListItem></Appear>
+            <Appear><ListItem>ESLint configuration</ListItem></Appear>
+            <Appear><ListItem>webpack configuration</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide note="so what's clear here is that the build tools still need to be configured, but that is just being abstracted away from the author by the react-scripts dependency" align="center top">
+          <br />
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          <Heading size={2} textColor="secondary">
+            Making tools zero-config since 2016.
+          </Heading>
         </Slide>
 
         <Slide>
