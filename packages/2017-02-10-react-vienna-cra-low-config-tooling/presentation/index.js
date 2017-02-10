@@ -140,7 +140,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide notes="<ul><li>Sounds great, right?</li><li>'...right?': To try to answer this question, let's examine 3 phenomena in our industry...</li></ul>">
+        <Slide notes="<ul><li>Sounds great, right?</li><li>'...right?': To try to answer this question, let's examine a few industry phenomena</li></ul>">
           <Heading size={3} textColor="secondary">
             Everyone gets what they want and everyone is happy! 🎉
           </Heading>
@@ -323,7 +323,7 @@ export default class Presentation extends React.Component {
           <Image style={{ width: "50%", marginLeft: "4%" }} src={images.reactScriptsPackages} />
         </Slide>
 
-        <Slide notes="webpack config" align="center top">
+        <Slide notes="webpack config<ul><li>they sort out the difficult things for you</li><li>babel issue 7539 example</li></ul>" align="center top">
           <Text textSize={50}>
             create-react-app
           </Text>
