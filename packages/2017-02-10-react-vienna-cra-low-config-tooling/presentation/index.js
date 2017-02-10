@@ -33,13 +33,23 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  buzzfeedCra: require("../assets/buzzfeed-cra.png"),
+  craForking: require("../assets/cra-forking.png"),
+  craEjecting: require("../assets/cra-ejecting.png"),
+  craPackages: require("../assets/cra-packages.png"),
+  craWebpackConfig: require("../assets/cra-webpack-config.png"),
+  createUniversalReactApp: require("../assets/create-universal-react-app.png"),
   danCRA: require("../assets/dan-cra.png"),
   danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png"),
   georgeUnderDesk: require("../assets/george-under-desk.gif"),
   jerryExhausted: require("../assets/jerry-exhausted.gif"),
   kramerHead: require("../assets/kramer-head.gif"),
+  moduleSpecificWebpackConfig: require("../assets/module-specific-webpack-config.png"),
   newmanDrinking: require("../assets/newman-drinking.gif"),
   prettier: require("../assets/prettier.png"),
+  reactScriptsPackages: require("../assets/react-scripts-packages.png"),
+  reactServerIntegration: require("../assets/react-server-integration.png"),
+  reactServerRc: require("../assets/reactserverrc.png"),
   thinking: require("../assets/thinking.png"),
   thinkingCat: require("../assets/thinking-cat.jpg"),
   tired: require("../assets/tired.jpg"),
@@ -307,101 +317,116 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide notes="So what's in the box?<ul><li>packages</li><li>react-scripts</li></ul>" align="center top">
-          <br />
           <Text textSize={50}>
             create-react-app
           </Text>
-          ** Image of packages...
-          ** Image of react-scripts package.json...
-          ** Image of config...
+          <Image style={{ width: "30%", verticalAlign: "top" }} src={images.craPackages} />
+          <Image style={{ width: "50%", marginLeft: "4%" }} src={images.reactScriptsPackages} />
+        </Slide>
+
+        <Slide notes="webpack config" align="center top">
+          <Text textSize={50}>
+            create-react-app
+          </Text>
+          <Image width="80%" src={images.craWebpackConfig} />
         </Slide>
 
         <Slide align="center top">
-          <br />
           <Text textSize={50}>
             create-react-app
           </Text>
           <List>
-            <Appear><ListItem>Babel configuration</ListItem></Appear>
+            <ListItem>Babel configuration</ListItem>
             <Appear><ListItem>ESLint configuration</ListItem></Appear>
             <Appear><ListItem>webpack configuration</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide note="so what's clear here is that the build tools still need to be configured, but that is just being abstracted away from the author by the react-scripts dependency" align="center top">
-          <br />
           <Text textSize={50}>
             create-react-app
           </Text>
           <Heading size={2} textColor="secondary">
-            Making tools zero-config since 2016.
+            Making tools<br />zero-config since 2016.
           </Heading>
         </Slide>
 
         <Slide note="Not having to bikeshed or yak-shave configuration is becoming popular in some teams" align="center top">
-          <br />
           <Text textSize={50}>
             create-react-app
           </Text>
-          ** buzzfeed tweet screenshot
+          <Image src={images.buzzfeedCra} width="60%" />
         </Slide>
 
         <Slide note="Also at kununu! We've built on create-react-app to add universal rendering. How did we get here?" align="center top">
-          <br />
           <Text textSize={50}>
-            create-react-app
+            kununu/create-universal-react-app
           </Text>
-          ** create-universal-react-app screenshot
+          <Image src={images.createUniversalReactApp} width="120%" style={{ marginLeft: "-10%", marginRight: "-10%" }} />
         </Slide>
 
-        <Slide note="When I first tried out create-react-app, first instinct was to eject. I was a power user! And I wanted full control! This was my developer instinct to want to configure." align="center top">
-          <br />
+        <Slide note="I first tried out create-react-app for a side project. When I first tried out create-react-app, first instinct was to eject. I was a power user! And I wanted full control! This was my developer instinct to want to configure." align="center top">
           <Text textSize={50}>
             create-react-app
           </Text>
-          ** eject create-react-app screenshot
+          <Image src={images.craEjecting} width="120%" style={{ marginLeft: "-10%", marginRight: "-10%" }} />
         </Slide>
 
-        <Slide note="Unfortunately, there are some significant downsides of ejecting" align="center top">
-          <br />
-          <Text textSize={50}>
+        <Slide note="Unfortunately, there are some significant downsides of ejecting." align="center top">
+          <Text textSize={50} style={{ marginLeft: "-8%", marginRight: "-8%" }}>
             create-react-app
           </Text>
-          <Heading size={2} textColor="secondary">
+          <Heading size={3} textColor="secondary">
             Downsides of Ejecting
           </Heading>
-          <List>
-            <Appear><ListItem>Configuration your responsibility again</ListItem></Appear>
-            <Appear><ListItem>Configuration your responsibility again</ListItem></Appear>
+          <br />
+          <List style={{ margin: "0 -4%" }}>
+            <Appear><ListItem>All configuration is scoped to the project</ListItem></Appear>
+            <Appear><ListItem>All configuration is your responsibility again</ListItem></Appear>
+            <Appear><ListItem>Applying updates is a manual task</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide note="But we wanted to add universal rendering. How could we have our cake and eat it too? Reading more about the principles of create-react-app (zero-configuration, updatability) led me to find the option to fork." align="center top">
-          <br />
           <Text textSize={50}>
-            create-react-app
+            create-react-app - forking
           </Text>
-          ** screenshot of forking: https://github.com/facebookincubator/create-react-app/issues/682
+          <Image src={images.craForking} width="100%" />
         </Slide>
 
-        <Slide>
-          Tried it out
-            > found that it would work quite well for our new independent architecture and team structures
+        <Slide note="So we forked create-react-app and modified react-scripts to add Redfin's awesome react-server for universal rendering" align="center top">
+          <Text textSize={50}>
+            kununu/create-universal-react-app
+          </Text>
+          <Image src={images.reactServerIntegration} width="100%" />
         </Slide>
 
 
         <Slide notes="Why is this talk about 'low-configuration' instead of 'zero configuration'?">
           <Heading size={3} textColor="secondary">
-            Low-configuration
+            Where does<br />"low-configuration" come in?
           </Heading>
         </Slide>
 
-        <Slide note="We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config" align="center top">
-          <br />
+        <Slide note="We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config. - reactserverrc" align="center top">
           <Text textSize={50}>
             Low-configuration
           </Text>
-          ** screenshot of module-specific config
+          <Image src={images.reactServerRc} width="80%" />
+        </Slide>
+
+        <Slide note="The reactserverrc solution not the best - evaluating other options such as webpack-merge-config" align="center top">
+          <Text textSize={50}>
+            Low-configuration
+          </Text>
+          <Image src={images.moduleSpecificWebpackConfig} width="120%" style={{ margin: "0 -10%" }} />
+        </Slide>
+
+
+        <Slide notes="When building tooling, resist your developer instinct to configure and add configuration. Taking a more opinionated stance with sensible default behavior will both reduce your effort (so that you as a maintainer don't burn out) and the effort of others in your team or the community (if you're writing open source tooling).">
+          <Heading size={2} textColor="secondary">
+            Resist adding configuration as much as possible in your own tools!
+          </Heading>
         </Slide>
 
 
@@ -413,7 +438,7 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <Heading size={3} textColor="secondary">
-            Can be, if:
+            It can be, if:
           </Heading>
           <List>
             <Appear><ListItem>You have a small team</ListItem></Appear>
@@ -429,20 +454,24 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide notes="When building tooling, resist your developer instinct to configure and add configuration. Taking a more opinionated stance with sensible default behavior will both reduce your effort (so that you as a maintainer don't burn out) and the effort of others in your team or the community (if you're writing open source tooling).">
-          Recommendation: Resist adding configuration as much as possible in your own tools!
-        </Slide>
-
-        <Slide align="center top">
+        <Slide notes="<ul><li>JS fatigue - among other things</li></ul>" align="center top">
+          <br />
           <Heading size={3} textColor="secondary">
             Takeaways:
           </Heading>
-          <List>
-            <Appear><ListItem>Config is ...</ListItem></Appear>
+          <List style={{ marginLeft: "-8%", marginRight: "-8%" }}>
+            <Appear><ListItem>Config contributes to JavaScript fatigue</ListItem></Appear>
+            <Appear><ListItem>Config contributes to maintainer burnout</ListItem></Appear>
+            <Appear><ListItem>Config contributes to high team mental load</ListItem></Appear>
             <Appear><ListItem>New zero-configuration tooling can help</ListItem></Appear>
             <Appear><ListItem>You may need an escape hatch</ListItem></Appear>
             <Appear><ListItem>Resist configuration in your own tools</ListItem></Appear>
           </List>
+          <Appear>
+            <Heading size={3} textColor="secondary">
+              Thanks!
+            </Heading>
+          </Appear>
         </Slide>
       </Deck>
     );
