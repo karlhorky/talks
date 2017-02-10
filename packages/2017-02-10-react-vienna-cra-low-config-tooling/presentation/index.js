@@ -341,7 +341,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide note="so what's clear here is that the build tools still need to be configured, but that is just being abstracted away from the author by the react-scripts dependency" align="center top">
+        <Slide notes="so what's clear here is that the build tools still need to be configured, but that is just being abstracted away from the author by the react-scripts dependency" align="center top">
           <Text textSize={50}>
             create-react-app
           </Text>
@@ -350,28 +350,28 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide note="Not having to bikeshed or yak-shave configuration is becoming popular in some teams" align="center top">
+        <Slide notes="Not having to bikeshed or yak-shave configuration is becoming popular in some teams" align="center top">
           <Text textSize={50}>
             create-react-app
           </Text>
           <Image src={images.buzzfeedCra} width="60%" />
         </Slide>
 
-        <Slide note="Also at kununu! We've built on create-react-app to add universal rendering. How did we get here?" align="center top">
+        <Slide notes="Also at kununu! We've built on create-react-app to add universal rendering. How did we get here?" align="center top">
           <Text textSize={50}>
             kununu/create-universal-react-app
           </Text>
           <Image src={images.createUniversalReactApp} width="120%" style={{ marginLeft: "-10%", marginRight: "-10%" }} />
         </Slide>
 
-        <Slide note="I first tried out create-react-app for a side project. When I first tried out create-react-app, first instinct was to eject. I was a power user! And I wanted full control! This was my developer instinct to want to configure." align="center top">
+        <Slide notes="I first tried out create-react-app for a side project. When I first tried out create-react-app, first instinct was to eject. I was a power user! And I wanted full control! This was my developer instinct to want to configure." align="center top">
           <Text textSize={50}>
             create-react-app
           </Text>
           <Image src={images.craEjecting} width="120%" style={{ marginLeft: "-10%", marginRight: "-10%" }} />
         </Slide>
 
-        <Slide note="Unfortunately, there are some significant downsides of ejecting." align="center top">
+        <Slide notes="Unfortunately, there are some significant downsides of ejecting." align="center top">
           <Text textSize={50} style={{ marginLeft: "-8%", marginRight: "-8%" }}>
             create-react-app
           </Text>
@@ -386,14 +386,14 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide note="But we wanted to add universal rendering. How could we have our cake and eat it too? Reading more about the principles of create-react-app (zero-configuration, updatability) led me to find the option to fork." align="center top">
+        <Slide notes="But we wanted to add universal rendering. How could we have our cake and eat it too? Reading more about the principles of create-react-app (zero-configuration, updatability) led me to find the option to fork." align="center top">
           <Text textSize={50}>
             create-react-app - forking
           </Text>
           <Image src={images.craForking} width="100%" />
         </Slide>
 
-        <Slide note="So we forked create-react-app and modified react-scripts to add Redfin's awesome react-server for universal rendering" align="center top">
+        <Slide notes="So we forked create-react-app and modified react-scripts to add Redfin's awesome react-server for universal rendering" align="center top">
           <Text textSize={50}>
             kununu/create-universal-react-app
           </Text>
@@ -407,14 +407,14 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide note="We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config. - reactserverrc" align="center top">
+        <Slide notes="We found that certain projects needed an escape hatch: one or two specific configuration tweaks deviating from our global config. - reactserverrc" align="center top">
           <Text textSize={50}>
             Low-configuration
           </Text>
           <Image src={images.reactServerRc} width="80%" />
         </Slide>
 
-        <Slide note="The reactserverrc solution not the best - evaluating other options such as webpack-merge-config" align="center top">
+        <Slide notes="The reactserverrc solution not the best - evaluating other options such as webpack-merge-config" align="center top">
           <Text textSize={50}>
             Low-configuration
           </Text>
@@ -422,7 +422,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
 
-        <Slide notes="When building tooling, resist your developer instinct to configure and add configuration. Taking a more opinionated stance with sensible default behavior will both reduce your effort (so that you as a maintainer don't burn out) and the effort of others in your team or the community (if you're writing open source tooling).">
+        <Slide notes="When building tooling:<ul><li>taking a more opinionated stance with sensible default behavior</li><li>resist your developer instinct to configure and add configuration</li></ul>To<ul><li>reduce your effort (so that you as a maintainer don't burn out)</li><li>the effort of others in your team or the community (if you're writing open source tooling)</li></ul>">
           <Heading size={2} textColor="secondary">
             Resist adding configuration as much as possible in your own tools!
           </Heading>
