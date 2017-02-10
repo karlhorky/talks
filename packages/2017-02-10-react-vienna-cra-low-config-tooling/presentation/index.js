@@ -135,7 +135,6 @@ export default class Presentation extends React.Component {
           <Text textSize={50}>
             What is configuration?
           </Text>
-          <br />
           <Heading size={3} textColor="secondary">
             Settings to adapt something generic to multiple use cases
           </Heading>
