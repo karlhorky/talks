@@ -1,0 +1,29 @@
+import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+export default {
+  entry: './js/app.js',
+  output: {
+    path: path.resolve('build'),
+    filename: 'static/js/[name].[chunkhash:8].js',
+  },
+  module: {
+    preLoaders: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'eslint',
+      }
+    ],
+    loaders: [
+      {
+        test: /\.(js|jsx)$/,
+        include: path.resolve('src'),
+        loader: 'babel',
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract([
+          'style',
+          'css?modules&-autoprefixer&importLoaders=1',
+          'postcss',
