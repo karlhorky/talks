@@ -141,8 +141,9 @@ export default class Presentation extends React.Component {
         <Slide>
           Take a more opinionated stance and resist adding configuration to your tooling
         </Slide>
-        <Slide />
-        Takeaways
+        <Slide>
+          Takeaways
+        </Slide>
         <Slide>
           <Text textSize={50} lineHeight={1.4}>
             How
