@@ -80,86 +80,20 @@ export default class Presentation extends React.Component {
         theme={theme}
         progress="none"
       >
-        <Slide>
-          The rise of low-configuration tooling
-        </Slide>
-        <Slide>
-          To tell this story, we’re going to have to take a step back.
-        </Slide>
-        <Slide>
-          What is configuration?
-        </Slide>
-        <Slide>
-          Sounds great, right?
-        </Slide>
-        <Slide>
-          Well... 4 industry phenomena
-          <ul>
-            <li>
-              JavaScript Fatigue (each new project has to have decisions made, new tooling coming out)
-            </li>
-            <li>
-              Maintainer burnout (support requests multiply by number of configuration options)
-            </li>
-            <li>
-              High mental load in teams (where was that last webpack config change? which was that webpack source map option that actually worked? team responsibility)
-            </li>
-            <li>
-              Endless bikeshedding about configuration opinions (linting with ESLint)
-            </li>
-          </ul>
-        </Slide>
-        <Slide>
-          So what’s the answer? Let’s go back to our definition of configuration...
-        </Slide>
-        <Slide>
-          Fifth industry phenomenon (and our topic tonight): the rise of low configuration tooling
-        </Slide>
-        <Slide>
-          Examples of new tooling:
-          <ul>
-            <li>prettier</li>
-            <li>create-react-app</li>
-            <li>more</li>
-          </ul>
-          Examples of existing tooling being improved:
-          <ul>
-            <li>webpack source map options</li>
-            <li>Jest?</li>
-            <li>more</li>
-          </ul>
-        </Slide>
-        <Slide>
-          Talk about escape hatches still? (how to configure more without losing all the benefits of the community best-practices config)
-          <ul>
-            <li>When does this apply? Only to CRA?</li>
-            <li>
-              Is an abstracted config with an escape hatch overengineered?
-            </li>
-          </ul>
-        </Slide>
-        <Slide>
-          Take a more opinionated stance and resist adding configuration to your tooling
-        </Slide>
-        <Slide>
-          Takeaways
-        </Slide>
-        <Slide>
-          <Text textSize={50} lineHeight={1.4}>
-            How
-            {" "}
-            <Code textSize={55} bgColor="#fff3c7" textColor="secondary">
-              create-react-app
-            </Code>
-            {" "}
-            inspired low-configuration tooling at kununu
-          </Text>
+        <Slide notes="<ul><li>greetings</li><li>about yourself</li><li>where to find the slides</li><li>to tell this story, let's make sure we're clear on definitions first</li></ul>">
+          <Heading size={2} textColor="secondary" lineHeight={1.4}>
+            The Rise of
+          </Heading>
+          <Heading size={2} textColor="secondary" lineHeight={1.4}>
+            Low-Configuration Tooling
+          </Heading>
+          <br />
           <Text margin="10px 0 0" textColor="tertiary" textSize={40}>
             by @karlhorky
           </Text>
         </Slide>
 
-        <Slide>
+        <Slide notes="For instance: what is configuration">
           <Heading size={2} textColor="secondary">
             What is configuration?
           </Heading>
@@ -182,7 +116,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="<ul><li>how can we describe this?</li><li>what is webpack? a code bundler</li><li>why is it being configured? to adapt to a specific application</li></ul>"
+          notes="<ul><li>how can we generalize this?</li><li>first of all, what is webpack? a code bundler</li><li>why is it being configured in this case? to adapt it for a specific web application</li></ul>"
           align="center top"
         >
           <Layout>
@@ -212,8 +146,15 @@ export default class Presentation extends React.Component {
             What is configuration?
           </Text>
           <Heading size={3} textColor="secondary">
-            Adapting a code bundler to a specific application.
-            <br />
+            Settings to adapt<br />
+            <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
+              a code bundler
+            </Code><br />
+            for<br />
+            <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
+              a specific web app.
+            </Code>
+            <br /><br />
             <Image height="1.5em" src={images.thinking} />
           </Heading>
         </Slide>
@@ -227,7 +168,14 @@ export default class Presentation extends React.Component {
             What is configuration?
           </Text>
           <Heading size={3} textColor="secondary">
-            Settings to adapt something generic to multiple use cases
+            Settings to adapt<br />
+            <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
+              something generic
+            </Code><br />
+            for<br />
+            <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
+              multiple use cases
+            </Code>
           </Heading>
         </Slide>
 
