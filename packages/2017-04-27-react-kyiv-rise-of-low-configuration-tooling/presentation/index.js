@@ -116,7 +116,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="<ul><li>how can we generalize this?</li><li>first of all, what is webpack? a code bundler</li><li>why is it being configured in this case? to adapt it for a specific web application</li></ul>"
+          notes="<ul><li>how can we generalize this?</li><li>first of all, what is webpack? a code bundler</li><li>why is it being configured in this case? to adapt it to a specific web application</li></ul>"
           align="center top"
         >
           <Layout>
@@ -138,7 +138,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="<ul><li>We're getting started on a definition.</li><li>But can we make it more generic?</li></ul>"
+          notes="<ul><li>We're getting started on a definition.</li><li>But can we make it more general?</li></ul>"
           align="center top"
         >
           <br />
@@ -150,9 +150,9 @@ export default class Presentation extends React.Component {
             <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
               a code bundler
             </Code><br />
-            for<br />
+            to<br />
             <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
-              a specific web app.
+              a specific web app
             </Code>
             <br /><br />
             <Image height="1.5em" src={images.thinking} />
@@ -160,7 +160,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="<ul><li>code bundler => something generic</li><li>your specific application => many use cases</li></ul>"
+          notes="<ul><li>How about this?</li><li>code bundler => a generic tool</li><li>your specific application => many use cases</li></ul>"
           align="center top"
         >
           <br />
@@ -170,9 +170,9 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">
             Settings to adapt<br />
             <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
-              something generic
+              a generic tool
             </Code><br />
-            for<br />
+            to<br />
             <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
               multiple use cases
             </Code>
