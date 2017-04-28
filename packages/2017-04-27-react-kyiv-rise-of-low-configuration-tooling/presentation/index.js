@@ -531,33 +531,6 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide>
-          <Heading size={3} textColor="secondary">
-            Is this overengineered? 🤓
-          </Heading>
-        </Slide>
-
-        <Slide>
-          <Heading size={3} textColor="secondary">
-            It can be, if:
-          </Heading>
-          <List>
-            <Appear><ListItem>You have a small team</ListItem></Appear>
-            <Appear>
-              <ListItem>You have a low amount of config</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>You have a low number of projects</ListItem>
-            </Appear>
-          </List>
-        </Slide>
-
-        <Slide>
-          <Heading size={3} textColor="secondary">
-            Otherwise, try it out and decide for yourself! 🖖
-          </Heading>
-        </Slide>
-
         <Slide
           notes="<ul><li>JS fatigue - among other things</li></ul>"
           align="center top"
