@@ -7,7 +7,7 @@ module.exports = {
   entry: ["babel-polyfill", "./index"],
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "bundle4.js",
+    filename: "bundle5.js",
     publicPath: "/talks/packages/2017-04-27-react-kyiv-rise-of-low-configuration-tooling/dist/"
   },
   plugins: [

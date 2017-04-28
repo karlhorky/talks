@@ -553,7 +553,7 @@ export default class Presentation extends React.Component {
               <ListItem>Config contributes to reduced team efficiency</ListItem>
             </Appear>
             <Appear>
-              <ListItem>New zero-configuration tooling can help</ListItem>
+              <ListItem>New low-configuration tooling can help</ListItem>
             </Appear>
             <Appear>
               <ListItem>Resist adding configuration in new tools</ListItem>
