@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle2.js",
-    publicPath: "/talks/packages/2017-02-10-react-vienna-cra-low-config-tooling/dist/"
+    publicPath: "/talks/packages/2017-04-27-react-kyiv-rise-of-low-configuration-tooling/dist/"
   },
   plugins: [
     new webpack.DefinePlugin({
