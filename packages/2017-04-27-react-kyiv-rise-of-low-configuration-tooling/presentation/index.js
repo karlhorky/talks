@@ -84,7 +84,7 @@ export default class Presentation extends React.Component {
         theme={theme}
         progress="none"
       >
-        <Slide notes="<ul><li>greetings</li><li>about yourself</li><li>where to find the slides</li><li>to tell this story, let's make sure we're clear on definitions first</li></ul>">
+        <Slide notes="<ul><li>greetings / title change</li><li>about yourself</li><li>where to find the slides</li><li>to tell this story, let's make sure we're clear on definitions first</li></ul>">
           <Heading size={2} textColor="secondary" lineHeight={1.4}>
             The Rise of
           </Heading>
