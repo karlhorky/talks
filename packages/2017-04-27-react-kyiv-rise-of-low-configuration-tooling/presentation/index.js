@@ -40,8 +40,10 @@ const images = {
   createUniversalReactApp: require("../assets/create-universal-react-app.png"),
   danCRA: require("../assets/dan-cra.png"),
   danTweetTragedyOfTheCommons: require("../assets/dan-tweet-tragedy-of-the-commons.png"),
+  eslintRulesBikeshedding: require("../assets/eslint-rules-bikeshedding.png"),
   georgeUnderDesk: require("../assets/george-under-desk.gif"),
   jerryExhausted: require("../assets/jerry-exhausted.gif"),
+  jest: require("../assets/jest.png"),
   kramerHead: require("../assets/kramer-head.gif"),
   moduleSpecificWebpackConfig: require("../assets/module-specific-webpack-config.png"),
   newmanDrinking: require("../assets/newman-drinking.gif"),
@@ -49,11 +51,13 @@ const images = {
   reactScriptsPackages: require("../assets/react-scripts-packages.png"),
   reactServerIntegration: require("../assets/react-server-integration.png"),
   reactServerRc: require("../assets/reactserverrc.png"),
+  statueFight: require("../assets/statue-fight.gif"),
   thinking: require("../assets/thinking.png"),
   thinkingCat: require("../assets/thinking-cat.jpg"),
   tired: require("../assets/tired.jpg"),
   webpackIssues: require("../assets/webpack-issues.png"),
-  webpackConfigSearch: require("../assets/webpack-config-search.png")
+  webpackConfigSearch: require("../assets/webpack-config-search.png"),
+  webpackSourceMapOptions: require("../assets/webpack-source-map-options.png")
 };
 
 preloader(images);
@@ -160,7 +164,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="<ul><li>How about this?</li><li>code bundler => a generic tool</li><li>your specific application => many use cases</li></ul>"
+          notes="<ul><li>How about this?</li><li>code bundler => generic tooling</li><li>your specific application => many use cases</li></ul>"
           align="center top"
         >
           <br />
@@ -170,7 +174,7 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="secondary">
             Settings to adapt<br />
             <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
-              a generic tool
+              generic tooling
             </Code><br />
             to<br />
             <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
@@ -206,20 +210,21 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgColor="tertiary">
+        <Slide
+          notes="<ul><li>config. of existing tooling</li><li>keeping up with the constant barrage of new tooling coming out and knowing how to use and configure it</li></ul>"
+          bgColor="tertiary"
+        >
           <BlockQuote>
             <Quote>...every project required decisions to be made...</Quote>
-            <Appear>
-              <Cite textColor="quartenary">
-                Eric Clemmons, "JavaScript Fatigue"
-              </Cite>
-            </Appear>
+            <Cite textColor="quartenary">
+              Eric Clemmons, "JavaScript Fatigue"
+            </Cite>
           </BlockQuote>
         </Slide>
 
         <Slide>
           <Heading size={2} textColor="secondary">
-            Configuration represents author decisions
+            Configuration contributes to programmer fatigue
           </Heading>
         </Slide>
 
@@ -237,6 +242,17 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="primary">
             Maintainer Burnout
           </Heading>
+          <Text
+            textSize={20}
+            textColor="primary"
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "-14%"
+            }}
+          >
+            atob("cmVhY3RreWl2")
+          </Text>
         </Slide>
 
         <Slide
@@ -246,13 +262,13 @@ export default class Presentation extends React.Component {
           <Image width="100%" src={images.webpackIssues} />
         </Slide>
 
-        <Slide notes="<ul><li>Dan Abramov: this situation -> Tragedy of the Commons</li><li>describes situation: many individuals competing for shared resource</li><li>in this case, maintainer effort</li></ul>">
+        <Slide notes="<ul><li>Dan Abramov: this situation -> Tragedy of the Commons</li><li>describes situation: many individuals competing for shared resource (ex. fishing of fish in the ocean)</li><li>describes in this case, maintainer effort</li></ul>">
           <Image width="80%" src={images.danTweetTragedyOfTheCommons} />
         </Slide>
 
-        <Slide notes="<ul><li>Triaging, answering and investigating issues with configuration</li><li>Writing and maintaining tests and functionality for every possible configuration</li></ul>">
+        <Slide notes="<ul><li>Triaging, answering and investigating issues with configuration</li><li>Writing and maintaining tests and compatibility for every possible configuration</li></ul>">
           <Heading size={2} textColor="secondary">
-            Configuration represents maintainer effort
+            Configuration contributes to maintainer burnout
           </Heading>
           <List>
             <Appear><ListItem>Issues with configuration</ListItem></Appear>
@@ -269,7 +285,7 @@ export default class Presentation extends React.Component {
           </Text>
           <br />
           <Heading size={2} textColor="primary">
-            High mental load in teams
+            High mental burden on teams
           </Heading>
         </Slide>
 
@@ -281,15 +297,43 @@ export default class Presentation extends React.Component {
           <Image src={images.webpackConfigSearch} />
         </Slide>
 
+        <Slide
+          bgColor="quaternary"
+          notes="<ul><li>Or, what was the source map option that works in webpack?</li><li>A lot of these configuration options don't work fully and would be good candidates for removal.</li></ul>"
+        >
+          <Image width="80%" src={images.webpackSourceMapOptions} />
+        </Slide>
+
         <Slide notes="Every team member who works with the tool needs to understand it and its configuration options.">
           <Heading size={2} textColor="secondary">
-            Configuration represents team responsibility
+            Configuration contributes to burden on teams
           </Heading>
+        </Slide>
+
+        <Slide bgImage={images.statueFight} bgDarken={0.3} align="center top">
+          <br />
+          <Text textSize={50} textColor="primary">
+            Industry phenomenon #4
+          </Text>
+          <br />
+          <Heading size={2} textColor="primary">
+            Endless bikeshedding about configuration
+          </Heading>
+        </Slide>
+
+        <Slide notes="<ul><li>discussion in Airbnb's JavaScript rules repo about alternate configurations</li><li>this one is a well-reasoned thread, and it still has over 75 comments</li><li>this happens often in companies, leading to... (next) reduced team efficiency</li></ul>">
+          <Image src={images.eslintRulesBikeshedding} width="100%" />
         </Slide>
 
         <Slide>
           <Heading size={2} textColor="secondary">
-            So what's the answer?
+            Configuration contributes to reduced team efficiency
+          </Heading>
+        </Slide>
+
+        <Slide notes="So what can we do?">
+          <Heading size={2} textColor="secondary">
+            So what’s the answer?
             <br />
           </Heading>
           <Appear>
@@ -307,9 +351,15 @@ export default class Presentation extends React.Component {
           <Text textSize={50}>
             What is configuration?
           </Text>
-          <br />
           <Heading size={3} textColor="secondary">
-            Settings to adapt something generic to multiple use cases
+            Settings to adapt<br />
+            <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
+              generic tooling
+            </Code><br />
+            to<br />
+            <Code textSize={68} bgColor="#fff3c7" textColor="secondary">
+              multiple use cases
+            </Code>
           </Heading>
         </Slide>
 
@@ -317,11 +367,16 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="secondary">
             Can we avoid multiple use cases?
           </Heading>
+          <Appear>
+            <Heading size={4} textColor="secondary">
+              Probably not - our new projects will still have new requirements...
+            </Heading>
+          </Appear>
         </Slide>
 
-        <Slide notes="...but, can we standardize the settings in our tools? hm...">
+        <Slide notes="...but, if we choose intelligent defaults, can we reduce the configurability of our tools, simplifying them? hm...">
           <Heading size={2} textColor="secondary">
-            Can we standardize the settings in our tools?
+            Can we decide on intelligent defaults to simplify our tools?
           </Heading>
         </Slide>
 
@@ -329,50 +384,81 @@ export default class Presentation extends React.Component {
           bgImage={images.newmanDrinking}
           bgDarken={0.6}
           align="center top"
+          notes="<ul><li>a trend lately: tooling with less options</li><li>the level of configurability is a spectrum</li></ul>"
         >
           <br />
           <Text textSize={50} textColor="primary">
-            Industry phenomenon #4
+            Industry phenomenon #5
           </Text>
           <br />
           <Heading size={2} textColor="primary">
-            The rise of zero configuration tooling
+            The rise of low configuration tooling
           </Heading>
         </Slide>
 
-        <Slide align="center top">
-          <Text textSize={50}>
-            jlongster/prettier
+        <Slide align="center top" notes="For instance, Jest">
+          <Text textSize={50} textColor="secondary">
+            facebook/jest
             <br />
           </Text>
-          <Image width="100%" src={images.prettier} />
+          <br />
+          <Image width="100%" src={images.jest} />
         </Slide>
 
-        <Slide bgColor="tertiary">
+        <Slide
+          bgColor="tertiary"
+          notes="it covers many use cases out of the box, but may need to be configured to reproduce complex webpack configs"
+        >
           <BlockQuote>
             <Quote>
-              Unlike eslint, there aren't a million configuration options and rules.
+              One of Jest’s philosophies is to provide an integrated “zero-configuration” experience.
             </Quote>
-            <Appear>
-              <Cite textColor="quartenary">
-                James Long, "A Prettier JavaScript Formatter"
-              </Cite>
-            </Appear>
+            <Cite textColor="quartenary">
+              Jest Docs
+            </Cite>
           </BlockQuote>
         </Slide>
 
         <Slide
-          notes="One of Dan Abramov's first projects after joining Facebook: a scaffolder for React apps to:<ul><li>abstract away configuration and dependencies</li><li>...in order to make it easier to get started with React</li></ul>"
+          align="center top"
+          notes="prettier by James Long keeps options to a minimum as well"
+        >
+          <Text textSize={50} textColor="secondary">
+            prettier/prettier
+          </Text>
+          <br />
+          <Image width="100%" src={images.prettier} />
+        </Slide>
+
+        <Slide
+          bgColor="tertiary"
+          notes="how does it achieve this? <ul><li>Prettier approaches code style from the perspective of a formatter instead of a configurable linter</li><li>dramatically reduced bikeshedding!</li></ul>"
+        >
+          <BlockQuote>
+            <Quote>
+              Unlike ESLint, there aren’t a million configuration options and rules.
+            </Quote>
+            <Cite textColor="quartenary">
+              James Long, "A Prettier JavaScript Formatter"
+            </Cite>
+          </BlockQuote>
+        </Slide>
+
+        <Slide
+          notes="<ul><li>create-react-app goes further with zero configuration</li><li>One of Dan Abramov's first projects after joining Facebook: a scaffolder for React apps to abstract away configuration and dependencies...</li></ul>"
           align="center top"
         >
-          <Text textSize={50}>
+          <Text textSize={50} textColor="secondary">
             facebookincubator/create-react-app
             <br />
           </Text>
           <Image width="80%" src={images.danCRA} />
         </Slide>
 
-        <Slide bgColor="tertiary">
+        <Slide
+          notes="...in order to make it easier to get started with React"
+          bgColor="tertiary"
+        >
           <BlockQuote>
             <Quote>Create React apps with no build configuration.</Quote>
             <Cite textColor="quartenary">create-react-app</Cite>
@@ -380,7 +466,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="So what's in the box?<ul><li>packages</li><li>react-scripts</li></ul>"
+          notes="So ?<ul><li>packages</li><li>react-scripts</li></ul>"
           align="center top"
         >
           <Text textSize={50}>
@@ -430,53 +516,13 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide
-          notes="Not having to bikeshed or yak-shave configuration is becoming popular in some teams"
+          notes="Not having to bikeshed or yak-shave configuration is becoming popular in some teams, including Buzzfeed"
           align="center top"
         >
           <Text textSize={50}>
             create-react-app
           </Text>
           <Image src={images.buzzfeedCra} width="60%" />
-        </Slide>
-
-        <Slide
-          notes="I first tried out create-react-app for a side project. When I first tried out create-react-app, first instinct was to eject. I was a power user! And I wanted full control! This was my developer instinct to want to configure."
-          align="center top"
-        >
-          <Text textSize={50}>
-            create-react-app
-          </Text>
-          <Image
-            src={images.craEjecting}
-            width="120%"
-            style={{ marginLeft: "-10%", marginRight: "-10%" }}
-          />
-        </Slide>
-
-        <Slide
-          notes="Unfortunately, there are some significant downsides of ejecting."
-          align="center top"
-        >
-          <Text textSize={50} style={{ marginLeft: "-8%", marginRight: "-8%" }}>
-            create-react-app
-          </Text>
-          <Heading size={3} textColor="secondary">
-            Downsides of Ejecting
-          </Heading>
-          <br />
-          <List style={{ margin: "0 -4%" }}>
-            <Appear>
-              <ListItem>All configuration is scoped to the project</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                All configuration is your responsibility again
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Applying updates is a manual task</ListItem>
-            </Appear>
-          </List>
         </Slide>
 
         <Slide notes="When building tooling:<ul><li>taking a more opinionated stance with sensible default behavior</li><li>resist your developer instinct to configure and add configuration</li></ul>To<ul><li>reduce your effort (so that you as a maintainer don't burn out)</li><li>the effort of others in your team or the community (if you're writing open source tooling)</li></ul>">
@@ -522,20 +568,22 @@ export default class Presentation extends React.Component {
           </Heading>
           <List style={{ marginLeft: "-8%", marginRight: "-8%" }}>
             <Appear>
-              <ListItem>Config contributes to JavaScript fatigue</ListItem>
+              <ListItem>Config contributes to programmer fatigue</ListItem>
             </Appear>
             <Appear>
               <ListItem>Config contributes to maintainer burnout</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Config contributes to high team mental load</ListItem>
+              <ListItem>Config contributes to mental burden on teams</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Config contributes to reduced team efficiency</ListItem>
             </Appear>
             <Appear>
               <ListItem>New zero-configuration tooling can help</ListItem>
             </Appear>
-            <Appear><ListItem>You may need an escape hatch</ListItem></Appear>
             <Appear>
-              <ListItem>Resist configuration in your own tools</ListItem>
+              <ListItem>Resist adding configuration in new tools</ListItem>
             </Appear>
           </List>
           <Appear>
