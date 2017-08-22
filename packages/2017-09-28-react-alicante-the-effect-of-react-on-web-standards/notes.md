@@ -57,8 +57,16 @@ React.
 - Who made it?
   - How they are involved in web standards
 - Quick comparison to web components contrast (maybe throughout this section)
+- Influences on other libraries
+  - polymer 3 (html imports -> ES Modules, bower -> npm, yarn)
+    - https://react-etc.net/entry/polymer-3-0-moves-to-npm-and-es6-modules-with-templates-in-javascript?ref=webdesignernews.com
+    - https://www.youtube.com/watch?v=JH6jEcLxJEI
+  - https://react-etc.net/entry/lit-html-javascript-templating-from-polymer-team-google
+  - https://github.com/PolymerLabs/lit-html
 
 ### Section 3: The Standardization efforts
+
+// TODO: Split into high-level and low-level?
 
 - Philosophy of Reinvention
 - Specs and proposals by the React team (+ how React uses them)
