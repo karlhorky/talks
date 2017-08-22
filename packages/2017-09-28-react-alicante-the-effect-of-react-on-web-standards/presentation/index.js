@@ -12,11 +12,11 @@ import {
   // Image,
   // Layout,
   // Link,
-  // ListItem,
-  // List,
+  ListItem,
+  List,
   // Quote,
-  Slide
-  // Text
+  Slide,
+  Text
 } from "spectacle";
 
 // Import image preloader util
@@ -78,10 +78,52 @@ export default class Presentation extends React.Component {
         progress="none"
         theme={theme}
         transition={["fade"]}
-        transitionDuration={500}
+        transitionDuration={0}
       >
         <Slide bgColor="white">
-          <Heading size={6}>Blah</Heading>
+          <Heading size={1}>The Effect of React on Web Standards</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>History</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>dissatisfaction with web standards</Heading>
+          <List>
+            <ListItem>verbosity of APIs</ListItem>
+            <ListItem>boilerplate</ListItem>
+            <ListItem>not being able to remember syntax</ListItem>
+            <ListItem>examples: xhr, toggling visibility</ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>simplified apis</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={4}>simplified apis</Heading>
+          <Heading size={5}>jQuery</Heading>
+          <Text>
+            influenced several web standards, including document.querySelector &
+            document.querySelectorAll
+          </Text>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={4}>simplified apis</Heading>
+          <Heading size={5}>CoffeeScript</Heading>
+          <Text>
+            influenced ES6, including arrow functions and for-of loops
+            https://news.ycombinator.com/item?id=9266517
+          </Text>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={4}>simplified apis</Heading>
+          <Heading size={5}>Angular / Ember</Heading>
+          <Text>DOM Updates (Data binding), XHR</Text>
         </Slide>
       </Deck>
     );
