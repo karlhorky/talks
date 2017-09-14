@@ -85,7 +85,71 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          <Heading size={2}>History</Heading>
+          <List>
+            <ListItem>web apis</ListItem>
+            <ListItem>attempts to improve web apis</ListItem>
+            <ListItem>react: new paradigms</ListItem>
+            <ListItem>react: standardization efforts</ListItem>
+            <ListItem>react: other influence</ListItem>
+            <ListItem>future</ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Web Standards</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>web standards</Heading>
+          <Heading size={4}>
+            small selection of representation on standards bodies (W3C TAG,
+            TC39, CSS Houdini task force, WICG, etc)
+          </Heading>
+          <Text>TODO: Make sure this isnt too boring</Text>
+          <List>
+            <ListItem>w3c</ListItem>
+            <ListItem>google</ListItem>
+            <ListItem>mozilla</ListItem>
+            <ListItem>microsoft</ListItem>
+            <ListItem>apple</ListItem>
+            <ListItem>facebook</ListItem>
+            <ListItem>samsung</ListItem>
+            <ListItem>
+              smaller companies like Fastly, Odd Concepts, etc
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>web standards</Heading>
+          <Heading size={4}>implementers (browser vendors)</Heading>
+          <Text>TODO: Make sure this isnt too boring</Text>
+          <List>
+            <ListItem>google</ListItem>
+            <ListItem>mozilla</ListItem>
+            <ListItem>microsoft</ListItem>
+            <ListItem>apple</ListItem>
+            <ListItem>standards recommendations can be ignored</ListItem>
+            <ListItem>
+              browser vendors can implement their own proposals easily
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>web standards</Heading>
+          <Heading size={4}>consensus-based</Heading>
+          <List>
+            <ListItem>changes need to be agreed upon by multiple,</ListItem>
+            <ListItem>
+              fundamentally different than library API development with single
+              owner and monoculture
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Dissatisfaction with Web Standards</Heading>
         </Slide>
 
         <Slide bgColor="white">
@@ -93,6 +157,10 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>verbosity of APIs</ListItem>
             <ListItem>boilerplate</ListItem>
+            <ListItem>
+              insufficient component primitives (Why we Need an App Browser by
+              Ken Wheeler)
+            </ListItem>
             <ListItem>not being able to remember syntax</ListItem>
             <ListItem>examples: xhr, toggling visibility</ListItem>
           </List>
@@ -103,11 +171,23 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          <Heading size={4}>simplified apis</Heading>
-          <Heading size={5}>jQuery</Heading>
+          <Heading size={4}>simplified apis, widgets</Heading>
+          <Heading size={5}>jQuery, Dojo, MooTools (~2006)</Heading>
           <Text>
-            influenced several web standards, including document.querySelector &
-            document.querySelectorAll
+            tools to simplify programming instead of using overcomplicated,
+            fragmented DOM APIs (Why we need an app browser by Ken Wheeler)
+          </Text>
+          <Text>
+            provided UI widgets which are not part of the web platform (Why we
+            need an app browser by Ken Wheeler)
+          </Text>
+          <Text>
+            influenced several JS web standards, including
+            document.querySelector & document.querySelectorAll
+          </Text>
+          <Text>
+            influenced several HTML web standards, including canvas, video,
+            input[type=datepicker] (Why we need an app browser by Ken Wheeler)
           </Text>
         </Slide>
 
@@ -124,6 +204,104 @@ export default class Presentation extends React.Component {
           <Heading size={4}>simplified apis</Heading>
           <Heading size={5}>Angular / Ember</Heading>
           <Text>DOM Updates (Data binding), XHR</Text>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>React</Heading>
+          <Heading size={3}>A new library is born</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>new paradigms</Heading>
+          <List>
+            <ListItem>declarative data updates / virtual DOM</ListItem>
+            <ListItem>
+              functions instead of strings - functional programming (use
+              JavaScript instead of passing strings back and forth between JS
+              and HTML)
+            </ListItem>
+            <ListItem>unidirectional data flow</ListItem>
+            <ListItem>component model</ListItem>
+            <ListItem>minimalism</ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>declarative data updates / virtual DOM</Heading>
+          <List>
+            <ListItem>
+              Tries to improve upon flaws and shortcomings in the DOM (seb
+              markbage DOM as 2nd class citizen talk, ken wheeler DOM criticism
+              tweets)
+            </ListItem>
+            <ListItem>
+              declaratively define how your view should look instead of
+              imperatively mutating DOM using JS APIs
+            </ListItem>
+            <ListItem>decouple renderer from DOM</ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>
+            functions instead of strings - functional programming
+          </Heading>
+          <List>
+            <ListItem>
+              use JavaScript instead of passing strings back and forth between
+              JS and HTML
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>unidirectional data flow</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>component model</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>minimalism</Heading>
+          <List>
+            <ListItem>
+              "no abstraction is better than the wrong abstraction" - sebastian
+              markbage
+            </ListItem>
+            <ListItem>
+              "Instead of providing many framework features, React is trying to
+              utilize patterns, paradigms and JavaScript language features to
+              accomplish the same tasks that other frameworks have dedicated
+              APIs for." - sebastian markbage
+            </ListItem>
+            <ListItem>
+              "React is only the view layer - only a handful of APIs to remember
+              and no need to google stuff all the time" dan abramov
+              http://threedevsandamaybe.com/the-history-of-react-and-flux-with-dan-abramov/
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>who made it + is making it still</Heading>
+          <Text>their involvement with web standards</Text>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={3}>quick compare / contrast to web components</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Standardization efforts</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Influence</Heading>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Future</Heading>
         </Slide>
       </Deck>
     );
