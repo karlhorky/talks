@@ -57,12 +57,6 @@ React.
 - Who made it?
   - How they are involved in web standards
 - Quick comparison to web components contrast (maybe throughout this section)
-- Influences on other libraries
-  - polymer 3 (html imports -> ES Modules, bower -> npm, yarn)
-    - https://react-etc.net/entry/polymer-3-0-moves-to-npm-and-es6-modules-with-templates-in-javascript?ref=webdesignernews.com
-    - https://www.youtube.com/watch?v=JH6jEcLxJEI
-  - https://react-etc.net/entry/lit-html-javascript-templating-from-polymer-team-google
-  - https://github.com/PolymerLabs/lit-html
 
 ### Section 3: The Standardization efforts
 
@@ -78,13 +72,23 @@ React.
   - binary AST
   - quick mention of Unity Component Spec (expanded upon more in Future)
 
-### Section 4: Present and Future
+### Section 4: Influence on other libraries and other influences on the web
+
+- Influences on other libraries
+  - polymer 3 (html imports -> ES Modules, bower -> npm, yarn)
+    - https://react-etc.net/entry/polymer-3-0-moves-to-npm-and-es6-modules-with-templates-in-javascript?ref=webdesignernews.com
+    - https://www.youtube.com/watch?v=JH6jEcLxJEI
+  - https://react-etc.net/entry/lit-html-javascript-templating-from-polymer-team-google
+  - https://github.com/PolymerLabs/lit-html
+
+### Section 5: Future
 
 - Efforts for interop and convergence
   - using web components in React
   - SSR for optimizing for how browsers work best (?)
   - embracing CSS syntax with CSS in JS (glam using standards)
   - Unity Component Spec
+  - Ken Wheeler's App Browser
 
 ### Section X: Compare and contrast
 
