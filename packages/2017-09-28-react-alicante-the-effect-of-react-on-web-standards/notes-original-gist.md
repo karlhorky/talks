@@ -56,8 +56,13 @@ https://www.youtube.com/watch?v=aV1271hd9ew
 https://www.youtube.com/watch?v=ZCuYPiUIONs
 - Sebastian Markbage on The React Core Team, React Fiber and Web Assembly (from https://medium.com/this-dot/react-react-fiber-react-gamekit-serverless-architecture-and-react-loadable-3fee712a55c1)
 https://www.youtube.com/watch?v=qYFEbDc5-JI
+- Sebastian Markbage on DOM as a 2nd-class citizen within React https://www.youtube.com/watch?v=Zemce4Y1Y-A
 - James Kyle Talks React, React Loadable, and the Open Source Community
 https://www.youtube.com/watch?v=615O4etSkE4
+- Douglas Crockford - Upgrading the web ("DOM is the worst API ever invented", "JavaScript is a hot mess") https://www.youtube.com/watch?v=6UTWAEJlhww
+- Why we Need an App Browser by Ken Wheeler ("open source") https://www.youtube.com/watch?v=WEQx3wz8QeY
+- Ken Wheeler's "App Browser" conversation on Twitter https://convopage.com/c/854699025928531968 (full twitter feed: https://twitter.com/ken_wheeler/status/854699025928531968)
+- Pete Hunt - The Secrets of React's Virtual DOM (FutureJS 2014) https://www.youtube.com/watch?v=-DX3vJiqxm4
 - look at your "Talks to watch"
 
 ## Project ideas
