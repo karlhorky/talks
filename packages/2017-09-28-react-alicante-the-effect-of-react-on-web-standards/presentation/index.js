@@ -85,9 +85,15 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
+          <Heading size={2}>Clickbaity cliffhanger</Heading>
+          TODO: think of something interesting to open with, with record-scratch
+          effect
+        </Slide>
+
+        <Slide bgColor="white">
           <List>
-            <ListItem>web apis</ListItem>
-            <ListItem>attempts to improve web apis</ListItem>
+            <ListItem>web standards</ListItem>
+            <ListItem>attempts to improve web standards</ListItem>
             <ListItem>react: new paradigms</ListItem>
             <ListItem>react: standardization efforts</ListItem>
             <ListItem>react: other influence</ListItem>
@@ -102,8 +108,9 @@ export default class Presentation extends React.Component {
         <Slide bgColor="white">
           <Heading size={3}>web standards</Heading>
           <Heading size={4}>
-            small selection of representation on standards bodies (W3C TAG,
-            TC39, CSS Houdini task force, WICG, etc)
+            small selection of current and historical representation on
+            standards bodies (for example: W3C TAG, TC39, CSSWG, CSS Houdini
+            task force, WHATWG, WICG, etc)
           </Heading>
           <Text>TODO: Make sure this isnt too boring</Text>
           <List>
@@ -113,6 +120,8 @@ export default class Presentation extends React.Component {
             <ListItem>microsoft</ListItem>
             <ListItem>apple</ListItem>
             <ListItem>facebook</ListItem>
+            <ListItem>opera</ListItem>
+            <ListItem>yahoo</ListItem>
             <ListItem>samsung</ListItem>
             <ListItem>
               smaller companies like Fastly, Odd Concepts, etc
@@ -129,10 +138,6 @@ export default class Presentation extends React.Component {
             <ListItem>mozilla</ListItem>
             <ListItem>microsoft</ListItem>
             <ListItem>apple</ListItem>
-            <ListItem>standards recommendations can be ignored</ListItem>
-            <ListItem>
-              browser vendors can implement their own proposals easily
-            </ListItem>
           </List>
         </Slide>
 
@@ -140,7 +145,26 @@ export default class Presentation extends React.Component {
           <Heading size={3}>web standards</Heading>
           <Heading size={4}>consensus-based</Heading>
           <List>
-            <ListItem>changes need to be agreed upon by multiple,</ListItem>
+            <ListItem>
+              changes need to be agreed upon by multiple stakeholders
+            </ListItem>
+            <ListItem>standards recommendations can be ignored</ListItem>
+            <ListItem>
+              browser vendors can choose to forge their own paths (IE's JScript
+              & AJAX, Chrome's default passive touch listeners & SPDY)
+            </ListItem>
+            <ListItem>
+              This is getting better, with browser vendors pledging to support
+              more standards-based development ("our policy on thoughtfully
+              augmenting the platform" - Chrome)
+              https://www.chromium.org/blink/developer-faq#TOC-What-s-stopping-Chrome-from-shipping-proprietary-features-
+            </ListItem>
+            <ListItem>
+              TODO: Make this recurring theme more of a main point example of
+              conflict: Microsoft blocking ES4 (recurring theme: "I think it was
+              polarized as a consequence of the ES4 team refusing to consider
+              any other opinions" - Douglas Crockford)
+            </ListItem>
             <ListItem>
               fundamentally different than library API development with single
               owner and monoculture
@@ -172,7 +196,9 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           <Heading size={4}>simplified apis, widgets</Heading>
-          <Heading size={5}>jQuery, Dojo, MooTools (~2006)</Heading>
+          <Heading size={5}>
+            Prototype, jQuery, Dojo, MooTools (2005-2006)
+          </Heading>
           <Text>
             tools to simplify programming instead of using overcomplicated,
             fragmented DOM APIs (Why we need an app browser by Ken Wheeler)
@@ -202,12 +228,21 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           <Heading size={4}>simplified apis</Heading>
-          <Heading size={5}>Angular / Ember</Heading>
-          <Text>DOM Updates (Data binding), XHR</Text>
+          <Heading size={5}>Angular, Knockout, Ember (2009-2011)</Heading>
+          <List>
+            <ListItem>
+              Simpler, declarative DOM Updates (via data binding) (Prior art -
+              .NET WPF with XAML)<br />
+              "Data binding makes the UI (a dynamic process) look more like a
+              static program relative to your data model" - Pete Hunt
+              (https://www.youtube.com/watch?v=-DX3vJiqxm4)
+            </ListItem>
+            <ListItem>AJAX APIs</ListItem>
+          </List>
         </Slide>
 
         <Slide bgColor="white">
-          <Heading size={2}>React</Heading>
+          <Heading size={2}>React (2013)</Heading>
           <Heading size={3}>A new library is born</Heading>
         </Slide>
 
