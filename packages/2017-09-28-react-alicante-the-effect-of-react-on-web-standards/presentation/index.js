@@ -86,8 +86,8 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           <Heading size={2}>Clickbaity cliffhanger</Heading>
-          TODO: think of something interesting to open with, with record-scratch
-          effect
+          TODO: think of some interesting situation to open with, with
+          record-scratch effect
         </Slide>
 
         <Slide bgColor="white">
