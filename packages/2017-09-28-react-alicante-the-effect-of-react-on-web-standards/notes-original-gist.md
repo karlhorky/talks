@@ -70,7 +70,9 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - ECMAScript "Harmony" https://mail.mozilla.org/pipermail/es-discuss/2008-August/003400.html
 - "Dissecting Web Components FUD - @csuwildcat" (discussion with Dan Abramov about downsides of web components) https://twitter.com/csuwildcat/status/769282628608401408
 - look at your "Talks to watch"
-- look at the links in your email
+
+- look at the links in your email:
+- HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645
 
 - "There's an *awful lot* of JavaScript that exists solely because the developer didn't know CSS well enough." - @chriseppstein https://twitter.com/chriseppstein/status/908332267394580481
 
