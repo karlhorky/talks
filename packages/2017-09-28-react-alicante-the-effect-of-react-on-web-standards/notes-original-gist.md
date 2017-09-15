@@ -63,7 +63,16 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Why we Need an App Browser by Ken Wheeler ("open source") https://www.youtube.com/watch?v=WEQx3wz8QeY
 - Ken Wheeler's "App Browser" conversation on Twitter https://convopage.com/c/854699025928531968 (full twitter feed: https://twitter.com/ken_wheeler/status/854699025928531968)
 - Pete Hunt - The Secrets of React's Virtual DOM (FutureJS 2014) https://www.youtube.com/watch?v=-DX3vJiqxm4
+- W3C working groups http://www.onsman.com/w3c-working-groups-future-web/
+- A brief history of JavaScript https://auth0.com/blog/a-brief-history-of-javascript/
+- Data binding compared in JavaScript frameworks http://engineering.paiza.io/entry/2015/03/12/145216
+- Angular - The modern HTML5 Answer to Silverlight's MVVM https://csharperimage.jeremylikness.com/2014/03/angular-modern-html5-answer-to.html
+- ECMAScript "Harmony" https://mail.mozilla.org/pipermail/es-discuss/2008-August/003400.html
+- "Dissecting Web Components FUD - @csuwildcat" (discussion with Dan Abramov about downsides of web components) https://twitter.com/csuwildcat/status/769282628608401408
 - look at your "Talks to watch"
+- look at the links in your email
+
+- "There's an *awful lot* of JavaScript that exists solely because the developer didn't know CSS well enough." - @chriseppstein https://twitter.com/chriseppstein/status/908332267394580481
 
 ## Project ideas
 - Do one or more blog posts on the topic
