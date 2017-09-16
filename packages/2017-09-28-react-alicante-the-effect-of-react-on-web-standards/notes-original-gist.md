@@ -69,10 +69,22 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Angular - The modern HTML5 Answer to Silverlight's MVVM https://csharperimage.jeremylikness.com/2014/03/angular-modern-html5-answer-to.html
 - ECMAScript "Harmony" https://mail.mozilla.org/pipermail/es-discuss/2008-August/003400.html
 - "Dissecting Web Components FUD - @csuwildcat" (discussion with Dan Abramov about downsides of web components) https://twitter.com/csuwildcat/status/769282628608401408
+- Sebastian McKenzie - Improving Your Workflow With Code Transformation at react-europe 2015 (new syntax Jeff Morison's ECMAScript proposal ~ 20 minutes) https://www.youtube.com/watch?v=OFuDvqZmUrE
+- Your tweet to Addy https://twitter.com/karlhorky/status/908670835937902592
+- Extensible Web Manifesto https://github.com/extensibleweb/manifesto
 - look at your "Talks to watch"
 
-- look at the links in your email:
 - HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645
+- Unity component specification https://github.com/TheLarkInn/unity-component-specification/issues/2 https://twitter.com/_developit/status/899412282136039424 https://twitter.com/TheLarkInn/status/899388245057785856 https://github.com/TheLarkInn/unity-component-specification
+- TC39 July 2017 meeting notes https://twitter.com/left_pad/status/891020320630595586?s=03
+
+- References for jQuery influencing web standards:
+
+https://books.google.at/books?id=Wlu8DAAAQBAJ&pg=SA8-PA58&lpg=SA8-PA58&dq=queryselector+queryselectorall+influence+jquery&source=bl&ots=bR-sn2HaYv&sig=qqkCLQxzMjTZlvx_FMdPbQX8Y-o&hl=en&sa=X&ved=0ahUKEwim34Ts4-vVAhUEYVAKHdIWCpw4ChDoAQhFMAQ#v=onepage&q=queryselector%20queryselectorall%20influence%20jquery&f=false
+
+https://books.google.at/books?id=t-VrBgAAQBAJ&pg=PA174&lpg=PA174&dq=jquery+influence+web+standards&source=bl&ots=8i05lxQOLf&sig=-Y7CVE11SfpImWNv3zAfo55ih04&hl=en&sa=X&ved=0ahUKEwinuNy35OvVAhUEU1AKHaJVCYQQ6AEIZzAJ#v=onepage&q=jquery%20influence%20web%20standards&f=false
+
+- Custom Elements Everywhere from Rob https://twitter.com/rob_dodson/status/900020457075822594
 
 - "There's an *awful lot* of JavaScript that exists solely because the developer didn't know CSS well enough." - @chriseppstein https://twitter.com/chriseppstein/status/908332267394580481
 
