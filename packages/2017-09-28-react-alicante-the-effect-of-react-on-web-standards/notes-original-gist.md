@@ -72,6 +72,12 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Sebastian McKenzie - Improving Your Workflow With Code Transformation at react-europe 2015 (new syntax Jeff Morison's ECMAScript proposal ~ 20 minutes) https://www.youtube.com/watch?v=OFuDvqZmUrE
 - Your tweet to Addy https://twitter.com/karlhorky/status/908670835937902592
 - Extensible Web Manifesto https://github.com/extensibleweb/manifesto
+- From Ember to React https://medium.com/@eluciano11/from-ember-to-react-5c2faa0e8d10
+- Ember 2.0 Best Practices: Data Down, Actions Up https://dockyard.com/blog/2015/10/14/best-practices-data-down-actions-up
+- Cheng Lou - Taming the Meta Language - React Conf 2017 https://www.youtube.com/watch?v=_0T5OSSzxms
+- What's in a language? - Cheng Lou, React London 2017 https://www.youtube.com/watch?v=24S5u_4gx7w
+- Imperfection - Cheng Lou aka @_chenglou at @ReactEurope 2017 https://www.youtube.com/watch?v=tCVXp6gFD8o
+- Cheng Lou - On the Spectrum of Abstraction at react-europe 2016 https://www.youtube.com/watch?v=mVVNJKv9esE
 - look at your "Talks to watch"
 
 - HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645

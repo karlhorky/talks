@@ -281,7 +281,7 @@ export default class Presentation extends React.Component {
             <ListItem>
               use JavaScript more instead of domain-specific languages (JSX)
             </ListItem>
-            <ListItem>unidirectional data flow</ListItem>
+            <ListItem>immutability / unidirectional data flow</ListItem>
             <ListItem>component model</ListItem>
             <ListItem>minimalism</ListItem>
           </List>
@@ -332,13 +332,65 @@ export default class Presentation extends React.Component {
             <ListItem>
               use JavaScript more instead of domain-specific languages (JSX)
             </ListItem>
+            <ListItem>
+              What if I built (something) where everything would be a string - a
+              function would be a string, a number would be a string? What do we
+              lose here? If you try to use a linter, if you try to use a static
+              analyser, they will all fail, because everything is a string now.
+              The struggle is, which level of uniformity do you want? (Cheng Lou
+              13:00 https://www.youtube.com/watch?v=mVVNJKv9esE)
+            </ListItem>
+            <ListItem>
+              On Grunt vs Gulp: Declarative DSLs work really well when your
+              domain is well-defined and because on the level of abstraction
+              they are very tightly constrained things - theyre almost near
+              their leaf nodes. So when your build system does what you want, it
+              works well. Build systems are not well-defined problems in
+              computer science. Build system is a moving target. When the
+              requirements are constantly changing, do you want a declarative
+              DSL or do you want functions that dont change over time? You want
+              functions. Flexible enough to accomodate future use cases you
+              havent thought of yet. (Cheng Lou 17:42
+              https://www.youtube.com/watch?v=mVVNJKv9esE)
+            </ListItem>
+            <ListItem>
+              On React vs Templates: What are templates? Templates are data.
+              Even if they have if statements in them, they are ad-hoc if
+              statements. Data is very nice. It is much lower in the level of
+              abstraction, so it is what you want. But, the web has changed. We
+              are no longer writing just interactive forms anymore. We are
+              writing Turing-complete complex applications. So maybe we should
+              step up a level of abstraction. (Cheng Lou 21:12
+              https://www.youtube.com/watch?v=mVVNJKv9esE)
+            </ListItem>
           </List>
         </Slide>
 
         <Slide bgColor="white">
           <Heading size={3}>React: new / improved paradigms</Heading>
-          <Heading size={3}>unidirectional data flow</Heading>
-          TODO: Research
+          <Heading size={3}>immutability / unidirectional data flow</Heading>
+          <List>
+            <ListItem>
+              "In our React community the answer has been immutability,
+              unidirectional data flow - this is very easy to reason about. ...
+              It's like in a typed language ... where you don't feel like you're
+              fumbling in the dark." - Cheng Lou 29:23
+              https://www.youtube.com/watch?v=24S5u_4gx7w
+            </ListItem>
+            <ListItem>
+              Unidirection data flow - it takes engineering maturity to
+              understand that even though sometimes data actually does flow in
+              both directions, in most circumstances unidirectional data flow is
+              enough. Some things are not meant to be optimized. (Cheng Lou 8:33
+              https://www.youtube.com/watch?v=tCVXp6gFD8o)
+            </ListItem>
+            <ListItem>
+              On Mutability vs Immutability: Why would I choose something less
+              powerful? Its not about how much power you have, its about the
+              potential properties that you gain by doing less. (Cheng Lou 25:45
+              https://www.youtube.com/watch?v=mVVNJKv9esE)
+            </ListItem>
+          </List>
         </Slide>
 
         <Slide bgColor="white">
@@ -358,6 +410,12 @@ export default class Presentation extends React.Component {
               The React Component: an idempotent functions describing your UI at
               any point in time (Pete Hunt React - Rethinking Best Practices
               https://www.youtube.com/watch?v=DgVS-zXgMTk)
+            </ListItem>
+            <ListItem>
+              Even though UI is actually a graph (sibling communication, popups,
+              etc), 80% or more realistically 95% of the time Reacts tree format
+              is enough and ok (Cheng Lou 8:33
+              https://www.youtube.com/watch?v=tCVXp6gFD8o)
             </ListItem>
             <ListItem>
               "React is a component model for abstractions" Reacts component
@@ -385,6 +443,16 @@ export default class Presentation extends React.Component {
               with standard JavaScript" - sebastian markbage
               https://www.youtube.com/watch?v=4anAwXYqLG8
             </ListItem>
+            <ListItem>
+              "When they're using React, it feels like they're just using
+              JavaScript" - Cheng Lou 11:11
+              https://www.youtube.com/watch?v=_0T5OSSzxms
+            </ListItem>
+            <ListItem>
+              "Feature bloat ironically is caused by folks who don't grasp the
+              sweet spot but want to still contribute." - Cheng Lou 29:23
+              https://www.youtube.com/watch?v=24S5u_4gx7w
+            </ListItem>
           </List>
         </Slide>
 
@@ -410,6 +478,15 @@ export default class Presentation extends React.Component {
               "Standard JavaScript syntax represents an intermediate format that
               can be shared across libraries" - sebastian markbage
               https://www.youtube.com/watch?v=4anAwXYqLG8
+            </ListItem>
+            <ListItem>
+              "The tragic reality of the JavaScript ecosystem is: I consider
+              myself relatively decent in JavaScript but that doesn't mean that
+              I can be productive with a codebase built with hundreds of little
+              libraries. I can speak JavaScript, I can write JavaScript, but it
+              still takes me as much time as an intermediate or newcomer for
+              mastering a library and becoming productive in a library" - Cheng
+              Lou 22:16 https://www.youtube.com/watch?v=_0T5OSSzxms
             </ListItem>
             <ListItem>
               "the next thing I want to work on is basically just formalizing
@@ -450,6 +527,11 @@ export default class Presentation extends React.Component {
               with this, we just think that the functional approach taken by
               React means that we can drop so much more of the surface area" -
               sebastian markbage https://www.youtube.com/watch?v=4anAwXYqLG8
+            </ListItem>
+            <ListItem>
+              "That's the theme of this talk - dragging things down - dragging
+              things down into the language" - Cheng Lou 18:15
+              https://www.youtube.com/watch?v=_0T5OSSzxms
             </ListItem>
             <ListItem>
               React can take advatage of things in the web components
@@ -549,7 +631,30 @@ export default class Presentation extends React.Component {
           Since React focuses on a minimal API surface, relying often on
           JavaScript language features within JSX, a lot of the standards
           proposals focus on improving JavaScript instead of shoehorning React
-          proprietary features into the language.
+          proprietary features into the language.<br />
+          Also a bit hand-wavey because not everyone in the React ecosystem is
+          part of Facebook or even motivated by React with their proposal.
+          <List>
+            <ListItem>
+              "One day when React isn't needed anymore, in a few years or so..."
+              - cheng lou 11:21 https://www.youtube.com/watch?v=_0T5OSSzxms
+            </ListItem>
+            <ListItem>
+              "I represent facebook on the TC39 standards committee, but don't
+              worry, the bad parts are not mine, they're somone else's" -
+              sebastian markbage https://www.youtube.com/watch?v=4anAwXYqLG8
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Standardization efforts</Heading>
+          Since React focuses on a minimal API surface, relying often on
+          JavaScript language features within JSX, a lot of the standards
+          proposals focus on improving JavaScript instead of shoehorning React
+          proprietary features into the language.<br />
+          Also a bit hand-wavey because not everyone in the React ecosystem is
+          part of Facebook or even motivated by React with their proposal.
           <List>
             <ListItem>
               "I represent facebook on the TC39 standards committee, but don't
@@ -560,9 +665,77 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          @sebmarkbage (Facebook) - Immutable JS<br />
-          ECMAScript Immutable Data structures (functional programming)
+          Standardization efforts: Boilerplate reduction
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) - Rest / Spread properties (stage 3)<br />
+          Rest / Spread properties<br />
+          Significance: language-level boilerplate reduction<br />
+          ```
+          // From React Docs https://facebook.github.io/react/docs/jsx-in-depth.html#spread-attributes
+          function App2() {
+            const props = {firstName: 'Ben', lastName: 'Hector'};
+            return <Greeting {...props} />;
+          }
+          // From Redux Docs
+          function todoApp(state = initialState, action) {
+            switch (action.type) {
+              case SET_VISIBILITY_FILTER:
+                return { ...state, visibilityFilter: action.filter }
+              default:
+                return state
+            }
+          }
+          ```<br />
+          https://github.com/tc39/proposal-object-rest-spread
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) - Silent Property Access on null/undefined for
+          ECMAScript (I do not think it was yet proposed)<br />
+          Significance: language-level boilerplate reduction<br />
+          Probably obsolete due to https://github.com/tc39/proposal-optional-chaining<br />
+          https://github.com/sebmarkbage/ecmascript-undefined-propagation
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) - Scoped Constructor Arguments for
+          ECMAScript (not yet a concrete proposal)<br />
+          Significance: Boilerplate reduction / Enabling features of other proposal (Field declarations of ESnext class features for JavaScript)<br />
+          https://github.com/sebmarkbage/ecmascript-scoped-constructor-arguments
+        </Slide>
+
+        <Slide bgColor="white">
+          Standardization efforts: Functional programming
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) & @bterlson (Microsoft) - Pattern Matching Syntax (stage 0)<br />
+          Significance: Pattern matching (functional programming)<br />
+          https://github.com/tc39/proposal-pattern-matching
+        </Slide>
+
+        <Slide bgColor="white">
+          Standardization efforts: Immutability
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) - Immutable JS (presented in 2015, no further progress)<br />
+          ECMAScript Immutable Data structures (immutability)<br />
+          Significance: Immutability / performance<br />
+          Immutability and referential transparency has many known benefits and ability for optimization. Several modern JavaScript libraries take advantage of this, and many more functional compile-to-JS languages.<br />
           https://github.com/sebmarkbage/ecmascript-immutable-data-structures
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) - Shallow Object Equality Test for ECMAScript (not yet proposed)<br />
+          Significance: immutability / performance<br />
+          Programming paradigms that rely on immutable data structures use memoization as an optimization technique of pure functions. Libraries like React and others currently rely heavily on doing object comparisons to know if a calculation can bail out. A memoized result can then be reused.<br />
+          To avoid this problem, libraries implement shallow comparisons of object by comparing the values one level deep:<br />
+          You can create an optimized path for specific known object signatures if you know them upfront but these generic variants are not optimized by VMs and requires lots of introspection into the internal hidden class representations to look up the keys in the respective class.<br />
+          Meanwhile, on native architectures the equivalent operation can be as little as a few CPU instructions depending on architecture and optimizations.<br />
+          https://github.com/sebmarkbage/ecmascript-shallow-equal
         </Slide>
 
         <Slide bgColor="white">
@@ -577,6 +750,29 @@ export default class Presentation extends React.Component {
           "The essential use case here is cleanup - I want to hide the 'loading'
           spinner on my AJAX request"
           https://github.com/tc39/proposal-promise-finally/
+        </Slide>
+
+        <Slide bgColor="white">
+          @ljharb (Airbnb) - Object.values / Object.entries<br />
+          Many libraries have a “values” function: lodash/underscore, jQuery, Backbone, etc.<br />
+          https://github.com/tc39/proposal-object-values-entries
+        </Slide>
+
+        <Slide bgColor="white">
+          @ljharb (Airbnb) - Object.getOwnPropertyDescriptors<br />
+          In these days more than ever, where functional programming and immutable objects are essential parts of complex applications, every framework or library is implementing its own boilerplate in order to properly copy properties between composed objects or prototypes.<br />
+          https://github.com/tc39/proposal-object-getownpropertydescriptors
+        </Slide>
+
+        <Slide bgColor="white">
+          Tooling improvements
+        </Slide>
+
+        <Slide bgColor="white">
+          @jeffmo (Facebook) - Trailing commas in functions (stage 4)<br />
+          Significance: Tooling improvements (version control)<br />
+          Not having two lines changed in diffs when function parameters or arguments are split across multiple lines<br />
+          https://github.com/tc39/proposal-trailing-function-commas
         </Slide>
 
         <Slide bgColor="white">
@@ -600,17 +796,56 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           <Heading size={2}>React: Other Influence</Heading>
-          TODO: Fill this in<br />
+          A bit hand-wavey as well, because its not easy to prove influence<br />
           - angular: single-direction data flow<br />
+          - ember: "In recent years React influenced many JavaScript frameworks,
+          Ember was not the exception. Ember 2.0 adopted a component first view,
+          a very similar life-cycle, an actions up, data down system and
+          others."
+          https://medium.com/@eluciano11/from-ember-to-react-5c2faa0e8d10<br />
+          Ember 2.0 React inspirations: virtual DOM (although now different
+          approach with Glimmer), unidirectional data flow
+          https://github.com/emberjs/rfcs/pull/15<br />
+          - polymer: imports<br />
           - vue: API similarities incl. single-file components, provide/inject
           (similar to Reacts context) 2.2.0, higher-order component improvements
           2.4.0<br />
-          - polymer: imports
         </Slide>
 
         <Slide bgColor="white">
           <Heading size={2}>Future</Heading>
-          TODO: Research / fill this in
+          <List>
+            <ListItem>
+              Using web components with React:<br />
+              - "The golden use case for WCs would be as primitive leaf components, like third party UI component libraries such as Material UI or Elemental UI." https://staltz.com/react-could-love-web-components.html<br />
+              - Also mentioned in the React docs: Web Components provide strong encapsulation for reusable components, while React provides a declarative library that keeps the DOM in sync with your data. The two goals are complementary. As a developer, you are free to use React in your Web Components, or to use Web Components in React, or both. https://facebook.github.io/react/docs/web-components.html<br />
+            </ListItem>
+            <ListItem>
+              Unity component Spec<br />
+            </ListItem>
+            <ListItem>
+              ReasonML "No need to draft a spec, read Sebastian's spec, agree
+              with it, disagree with it" - Cheng Lou 17:05
+              https://www.youtube.com/watch?v=_0T5OSSzxms
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Future: Re-spec of the DOM or alternate model</Heading>
+          <List>
+            <ListItem>
+              Douglas Crockfords "helper app" 23:39 https://www.youtube.com/watch?v=6UTWAEJlhww&feature=youtu.be&t=23m39s<br />
+            </ListItem>
+            <ListItem>
+              Ken Wheelers "App Browser"<br />
+            </ListItem>
+          </List>
+        </Slide>
+
+        <Slide bgColor="white">
+          <Heading size={2}>Future: Conclusion</Heading>
+          Conclusion: Just like everyone, I cannot tell prophesize the future.
         </Slide>
       </Deck>
     );
