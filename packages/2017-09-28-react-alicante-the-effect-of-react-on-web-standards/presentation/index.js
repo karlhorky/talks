@@ -703,6 +703,7 @@ export default class Presentation extends React.Component {
           @sebmarkbage (Facebook) - Scoped Constructor Arguments for
           ECMAScript (not yet a concrete proposal)<br />
           Significance: Boilerplate reduction / Enabling features of other proposal (Field declarations of ESnext class features for JavaScript)<br />
+          The proposed Class Instance Fields leaves one question open: How do you create constant fields with access to constructor arguments?<br />
           https://github.com/sebmarkbage/ecmascript-scoped-constructor-arguments
         </Slide>
 
@@ -717,7 +718,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          Standardization efforts: Immutability
+          Standardization efforts: Immutability / Performance
         </Slide>
 
         <Slide bgColor="white">
@@ -740,6 +741,8 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           @sebmarkbage (Facebook) - Realm Snapshot for ECMAScript<br />
+          Significance: Performance<br />
+          An API that allows an ECMAScript program to have its heap and parsed functions serialized into an opaque VM specific format. This can then be stored in caches, transferred between workers and restored for fast start-up times.<br />
           https://github.com/sebmarkbage/ecmascript-realm-snapshot
         </Slide>
 
@@ -824,9 +827,11 @@ export default class Presentation extends React.Component {
               Unity component Spec<br />
             </ListItem>
             <ListItem>
-              ReasonML "No need to draft a spec, read Sebastian's spec, agree
+              ReasonML
+              - "No need to draft a spec, read Sebastian's spec, agree
               with it, disagree with it" - Cheng Lou 17:05
-              https://www.youtube.com/watch?v=_0T5OSSzxms
+              https://www.youtube.com/watch?v=_0T5OSSzxms<br />
+              - React features being inspired by OCaml / ReasonML https://github.com/facebook/react/issues/10581
             </ListItem>
           </List>
         </Slide>
@@ -845,7 +850,8 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           <Heading size={2}>Future: Conclusion</Heading>
-          Conclusion: Just like everyone, I cannot tell prophesize the future.
+          Conclusion: Just like everyone, I cannot prophesize the future.<br />
+          TODO: More
         </Slide>
       </Deck>
     );
