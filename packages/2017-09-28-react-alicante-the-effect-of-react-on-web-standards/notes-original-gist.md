@@ -79,6 +79,7 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Imperfection - Cheng Lou aka @_chenglou at @ReactEurope 2017 https://www.youtube.com/watch?v=tCVXp6gFD8o
 - Cheng Lou - On the Spectrum of Abstraction at react-europe 2016 https://www.youtube.com/watch?v=mVVNJKv9esE
 - stage-0 to stage-4 ECMAscript proposals https://github.com/hemanth/es-next
+- "React: RESTful UI Rendering" by Pete Hunt https://www.youtube.com/watch?v=IVvHPPcl2TM
 - look at your "Talks to watch"
 
 - HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645
