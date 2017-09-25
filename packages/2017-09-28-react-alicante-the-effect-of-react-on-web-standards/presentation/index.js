@@ -141,8 +141,9 @@ export default class Presentation extends React.Component {
             <ListItem>opera</ListItem>
             <ListItem>yahoo</ListItem>
             <ListItem>samsung</ListItem>
+            <ListItem>paypal</ListItem>
             <ListItem>
-              smaller companies like Airbnb, Fastly, Odd Concepts, etc
+              smaller companies like Airbnb, Fastly, Odd Concepts, Bocoup, etc
             </ListItem>
           </List>
         </Slide>
@@ -628,6 +629,10 @@ export default class Presentation extends React.Component {
 
         <Slide bgColor="white">
           <Heading size={2}>Standardization efforts</Heading>
+          Proposals to standardize features:<br />
+          - by React contributors and users<br />
+          - to lower paradigms promoted by React into the language<br />
+          <br />
           Since React focuses on a minimal API surface, relying often on
           JavaScript language features within JSX, a lot of the standards
           proposals focus on improving JavaScript instead of shoehorning React
@@ -648,31 +653,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          <Heading size={2}>Standardization efforts</Heading>
-          Since React focuses on a minimal API surface, relying often on
-          JavaScript language features within JSX, a lot of the standards
-          proposals focus on improving JavaScript instead of shoehorning React
-          proprietary features into the language.<br />
-          Also a bit hand-wavey because not everyone in the React ecosystem is
-          part of Facebook or even motivated by React with their proposal.
-          <List>
-            <ListItem>
-              "I represent facebook on the TC39 standards committee, but don't
-              worry, the bad parts are not mine, they're somone else's" -
-              sebastian markbage https://www.youtube.com/watch?v=4anAwXYqLG8
-            </ListItem>
-          </List>
-        </Slide>
-
-        <Slide bgColor="white">
-          Standardization efforts: Boilerplate reduction
+          Standardization efforts: Declarativity / Boilerplate reduction
         </Slide>
 
         <Slide bgColor="white">
           @sebmarkbage (Facebook) - Rest / Spread properties (stage 3)<br />
           Rest / Spread properties<br />
-          Significance: language-level boilerplate reduction<br />
-          ```
+          Significance: Declarativity / language-level boilerplate reduction<br />
+          {`
           // From React Docs https://facebook.github.io/react/docs/jsx-in-depth.html#spread-attributes
           function App2() {
             const props = {firstName: 'Ben', lastName: 'Hector'};
@@ -687,23 +675,48 @@ export default class Presentation extends React.Component {
                 return state
             }
           }
-          ```<br />
+          `}
+          <br />
           https://github.com/tc39/proposal-object-rest-spread
         </Slide>
 
         <Slide bgColor="white">
           @sebmarkbage (Facebook) - Silent Property Access on null/undefined for
-          ECMAScript (I do not think it was yet proposed)<br />
-          Significance: language-level boilerplate reduction<br />
-          Probably obsolete due to https://github.com/tc39/proposal-optional-chaining<br />
+          ECMAScript (not yet proposed)<br />
+          Significance: Declarativity / language-level boilerplate reduction<br />
+          Alternative approach to optional chaining operator here:
+          https://github.com/tc39/proposal-optional-chaining<br />
           https://github.com/sebmarkbage/ecmascript-undefined-propagation
         </Slide>
 
         <Slide bgColor="white">
-          @sebmarkbage (Facebook) - Scoped Constructor Arguments for
-          ECMAScript (not yet a concrete proposal)<br />
-          Significance: Boilerplate reduction / Enabling features of other proposal (Field declarations of ESnext class features for JavaScript)<br />
-          The proposed Class Instance Fields leaves one question open: How do you create constant fields with access to constructor arguments?<br />
+          @littledan (Igalia), @jeffmo (Facebook) - Class fields (stage 3)<br />
+          Significance: Declarativity / language-level boilerplate reduction<br />
+          Today ES classes are currently limited to declarative specification of
+          methods, but declarative specification of fields is left to ad-hoc
+          expando mutations on class instances in various places. This proposal
+          aims to provide a declarative mechanism for specifying fields intended
+          to be placed on classes. Such a mechanism is useful for both
+          developers and tooling alike as it provides a place to specify the
+          intended properties.<br />
+          {`
+            // From React docs https://facebook.github.io/react/docs/handling-events.html
+            class LoggingButton extends React.Component {
+              handleClick = () => console.log('this is:', this);
+              render() {
+                return <button onClick={this.handleClick}>Click me</button>;
+              }
+            }
+          `}
+          https://github.com/tc39/proposal-class-fields
+        </Slide>
+
+        <Slide bgColor="white">
+          @sebmarkbage (Facebook) - Scoped Constructor Arguments for ECMAScript
+          (not yet a concrete proposal)<br />
+          Significance: Declarativity / Boilerplate reduction<br />
+          The proposed Class Instance Fields leaves one question open: How do
+          you create constant fields with access to constructor arguments?<br />
           https://github.com/sebmarkbage/ecmascript-scoped-constructor-arguments
         </Slide>
 
@@ -712,9 +725,33 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          @sebmarkbage (Facebook) & @bterlson (Microsoft) - Pattern Matching Syntax (stage 0)<br />
+          @sebmarkbage (Facebook) & @bterlson (Microsoft) - Pattern Matching
+          Syntax (stage 0)<br />
           Significance: Pattern matching (functional programming)<br />
           https://github.com/tc39/proposal-pattern-matching
+        </Slide>
+
+        <Slide bgColor="white">
+          @dherman (Mozilla) - Do Expressions (stage 0)<br />
+          Significance: Do expressions (functional programming)<br />
+          {`
+          return (
+            <nav>
+              <Home />
+              {
+                do {
+                  if (loggedIn) {
+                    <LogoutButton />
+                  } else {
+                    <LoginButton />
+                  }
+                }
+              }
+            </nav>
+          )
+          `}
+          <br />
+          https://github.com/tc39/proposal-do-expressions
         </Slide>
 
         <Slide bgColor="white">
@@ -722,27 +759,45 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          @sebmarkbage (Facebook) - Immutable JS (presented in 2015, no further progress)<br />
+          @sebmarkbage (Facebook) - Immutable JS (presented in 2015, no further
+          progress)<br />
           ECMAScript Immutable Data structures (immutability)<br />
           Significance: Immutability / performance<br />
-          Immutability and referential transparency has many known benefits and ability for optimization. Several modern JavaScript libraries take advantage of this, and many more functional compile-to-JS languages.<br />
+          Immutability and referential transparency has many known benefits and
+          ability for optimization. Several modern JavaScript libraries take
+          advantage of this, and many more functional compile-to-JS languages.<br />
           https://github.com/sebmarkbage/ecmascript-immutable-data-structures
         </Slide>
 
         <Slide bgColor="white">
-          @sebmarkbage (Facebook) - Shallow Object Equality Test for ECMAScript (not yet proposed)<br />
+          @sebmarkbage (Facebook) - Shallow Object Equality Test for ECMAScript
+          (stage 0)<br />
           Significance: immutability / performance<br />
-          Programming paradigms that rely on immutable data structures use memoization as an optimization technique of pure functions. Libraries like React and others currently rely heavily on doing object comparisons to know if a calculation can bail out. A memoized result can then be reused.<br />
-          To avoid this problem, libraries implement shallow comparisons of object by comparing the values one level deep:<br />
-          You can create an optimized path for specific known object signatures if you know them upfront but these generic variants are not optimized by VMs and requires lots of introspection into the internal hidden class representations to look up the keys in the respective class.<br />
-          Meanwhile, on native architectures the equivalent operation can be as little as a few CPU instructions depending on architecture and optimizations.<br />
+          Programming paradigms that rely on immutable data structures use
+          memoization as an optimization technique of pure functions. Libraries
+          like React and others currently rely heavily on doing object
+          comparisons to know if a calculation can bail out. A memoized result
+          can then be reused.<br />
+          To avoid this problem, libraries implement shallow comparisons of
+          object by comparing the values one level deep:<br />
+          You can create an optimized path for specific known object signatures
+          if you know them upfront but these generic variants are not optimized
+          by VMs and requires lots of introspection into the internal hidden
+          class representations to look up the keys in the respective class.<br />
+          Meanwhile, on native architectures the equivalent operation can be as
+          little as a few CPU instructions depending on architecture and
+          optimizations.<br />
           https://github.com/sebmarkbage/ecmascript-shallow-equal
         </Slide>
 
         <Slide bgColor="white">
-          @sebmarkbage (Facebook) - Realm Snapshot for ECMAScript<br />
+          TODO: dont include? @sebmarkbage (Facebook) - Realm Snapshot for
+          ECMAScript (not yet presented)<br />
           Significance: Performance<br />
-          An API that allows an ECMAScript program to have its heap and parsed functions serialized into an opaque VM specific format. This can then be stored in caches, transferred between workers and restored for fast start-up times.<br />
+          An API that allows an ECMAScript program to have its heap and parsed
+          functions serialized into an opaque VM specific format. This can then
+          be stored in caches, transferred between workers and restored for fast
+          start-up times.<br />
           https://github.com/sebmarkbage/ecmascript-realm-snapshot
         </Slide>
 
@@ -756,25 +811,28 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="white">
-          @ljharb (Airbnb) - Object.values / Object.entries<br />
-          Many libraries have a “values” function: lodash/underscore, jQuery, Backbone, etc.<br />
+          @ljharb (Airbnb) - Object.values / Object.entries (ES2017)<br />
+          Many libraries have a “values” function: lodash/underscore, jQuery,
+          Backbone, etc.<br />
           https://github.com/tc39/proposal-object-values-entries
         </Slide>
 
         <Slide bgColor="white">
-          @ljharb (Airbnb) - Object.getOwnPropertyDescriptors<br />
-          In these days more than ever, where functional programming and immutable objects are essential parts of complex applications, every framework or library is implementing its own boilerplate in order to properly copy properties between composed objects or prototypes.<br />
+          @ljharb (Airbnb) - Object.getOwnPropertyDescriptors (ES2017)<br />
+          In these days more than ever, where functional programming and
+          immutable objects are essential parts of complex applications, every
+          framework or library is implementing its own boilerplate in order to
+          properly copy properties between composed objects or prototypes.<br />
           https://github.com/tc39/proposal-object-getownpropertydescriptors
         </Slide>
 
-        <Slide bgColor="white">
-          Tooling improvements
-        </Slide>
+        <Slide bgColor="white">Tooling improvements</Slide>
 
         <Slide bgColor="white">
-          @jeffmo (Facebook) - Trailing commas in functions (stage 4)<br />
+          @jeffmo (Facebook) - Trailing commas in functions (ES2017)<br />
           Significance: Tooling improvements (version control)<br />
-          Not having two lines changed in diffs when function parameters or arguments are split across multiple lines<br />
+          Not having two lines changed in diffs when function parameters or
+          arguments are split across multiple lines<br />
           https://github.com/tc39/proposal-trailing-function-commas
         </Slide>
 
@@ -820,27 +878,38 @@ export default class Presentation extends React.Component {
           <List>
             <ListItem>
               Using web components with React:<br />
-              - "The golden use case for WCs would be as primitive leaf components, like third party UI component libraries such as Material UI or Elemental UI." https://staltz.com/react-could-love-web-components.html<br />
-              - Also mentioned in the React docs: Web Components provide strong encapsulation for reusable components, while React provides a declarative library that keeps the DOM in sync with your data. The two goals are complementary. As a developer, you are free to use React in your Web Components, or to use Web Components in React, or both. https://facebook.github.io/react/docs/web-components.html<br />
+              - "The golden use case for WCs would be as primitive leaf
+              components, like third party UI component libraries such as
+              Material UI or Elemental UI."
+              https://staltz.com/react-could-love-web-components.html<br />
+              - Also mentioned in the React docs: Web Components provide strong
+              encapsulation for reusable components, while React provides a
+              declarative library that keeps the DOM in sync with your data. The
+              two goals are complementary. As a developer, you are free to use
+              React in your Web Components, or to use Web Components in React,
+              or both. https://facebook.github.io/react/docs/web-components.html<br />
             </ListItem>
             <ListItem>
               Unity component Spec<br />
             </ListItem>
             <ListItem>
-              ReasonML
-              - "No need to draft a spec, read Sebastian's spec, agree
+              ReasonML - "No need to draft a spec, read Sebastian's spec, agree
               with it, disagree with it" - Cheng Lou 17:05
               https://www.youtube.com/watch?v=_0T5OSSzxms<br />
-              - React features being inspired by OCaml / ReasonML https://github.com/facebook/react/issues/10581
+              - React features being inspired by OCaml / ReasonML
+              https://github.com/facebook/react/issues/10581
             </ListItem>
           </List>
         </Slide>
 
         <Slide bgColor="white">
-          <Heading size={2}>Future: Re-spec of the DOM or alternate model</Heading>
+          <Heading size={2}>
+            Future: Re-spec of the DOM or alternate model
+          </Heading>
           <List>
             <ListItem>
-              Douglas Crockfords "helper app" 23:39 https://www.youtube.com/watch?v=6UTWAEJlhww&feature=youtu.be&t=23m39s<br />
+              Douglas Crockfords "helper app" 23:39
+              https://www.youtube.com/watch?v=6UTWAEJlhww&feature=youtu.be&t=23m39s<br />
             </ListItem>
             <ListItem>
               Ken Wheelers "App Browser"<br />
