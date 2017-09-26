@@ -67,11 +67,21 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={4}>The Effect of React on Web Standards</Heading>
           <List>
-            <ListItem>Web Standards</ListItem>
-            <ListItem>Simplified APIs</ListItem>
-            <ListItem>React</ListItem>
-            <ListItem>Web Standards Proposals</ListItem>
-            <ListItem>Future</ListItem>
+            <Appear>
+              <ListItem>Web Standards</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Simplified APIs</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>React</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Web Standards Proposals</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Future</ListItem>
+            </Appear>
           </List>
           <Notes>
             <List>
