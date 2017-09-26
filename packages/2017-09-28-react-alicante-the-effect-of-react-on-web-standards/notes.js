@@ -75,12 +75,15 @@ export default (
         <ListItem>apple</ListItem>
         <ListItem>adobe</ListItem>
         <ListItem>facebook</ListItem>
+        <ListItem>intel</ListItem>
         <ListItem>opera</ListItem>
+        <ListItem>ebay</ListItem>
         <ListItem>yahoo</ListItem>
         <ListItem>samsung</ListItem>
         <ListItem>paypal</ListItem>
         <ListItem>
-          smaller companies like Airbnb, Fastly, Odd Concepts, Bocoup, etc
+          smaller companies like Airbnb, Fastly, Odd Concepts, Bocoup, jQuery
+          Foundation, etc
         </ListItem>
       </List>
     </Slide>
@@ -797,6 +800,9 @@ export default (
       - vue: API similarities incl. single-file components, provide/inject
       (similar to Reacts context) 2.2.0, higher-order component improvements
       2.4.0<br />
+      - Web components: "React is awesome and drives a ton of discussion among
+      folks who work on Web Components."
+      https://robdodson.me/regarding-the-broken-promise-of-web-components/<br />
     </Slide>
 
     <Slide bgColor="white">
@@ -807,12 +813,18 @@ export default (
           - "The golden use case for WCs would be as primitive leaf components,
           like third party UI component libraries such as Material UI or
           Elemental UI." https://staltz.com/react-could-love-web-components.html<br />
+          - Addy Osmani Also:
+          https://addyosmani.com/blog/component-interop-with-react-and-custom-elements/<br />
           - Also mentioned in the React docs: Web Components provide strong
           encapsulation for reusable components, while React provides a
           declarative library that keeps the DOM in sync with your data. The two
           goals are complementary. As a developer, you are free to use React in
           your Web Components, or to use Web Components in React, or both.
           https://facebook.github.io/react/docs/web-components.html<br />
+          - Lib: Reactive Elements
+          http://pixelscommander.com/polygon/reactive-elements/example/<br />
+          - Lib: SkateJS https://github.com/skatejs/skatejs - Lib: Stencil
+          https://stenciljs.com/
         </ListItem>
         <ListItem>
           Unity component Spec<br />

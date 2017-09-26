@@ -4886,8 +4886,8 @@ spdx-license-ids@^1.0.2:
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
 spectacle@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-2.2.0.tgz#1943db51ba3b6d902b6852cc07c435da6605081b"
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-2.2.2.tgz#db2ac55a2bec5f8d8d017d73490aa000a1173863"
   dependencies:
     component-playground "^2.0.0"
     history "^4.6.1"

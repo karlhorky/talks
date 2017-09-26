@@ -6,6 +6,7 @@
 
 - React: Not just a library
 - Web Standards: What, Who, How
+- Discontent with Web Standards
 
 ---
 
@@ -33,7 +34,7 @@
 
 ---
 
-# Web Standards: Dissatisfaction
+# Web Standards: Discontent
 
 ---
 

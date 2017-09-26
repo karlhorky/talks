@@ -80,6 +80,10 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Cheng Lou - On the Spectrum of Abstraction at react-europe 2016 https://www.youtube.com/watch?v=mVVNJKv9esE
 - stage-0 to stage-4 ECMAscript proposals https://github.com/hemanth/es-next
 - "React: RESTful UI Rendering" by Pete Hunt https://www.youtube.com/watch?v=IVvHPPcl2TM
+- Broken promises of Web Components https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/
+- Regarding the broken promise of Web Components https://robdodson.me/regarding-the-broken-promise-of-web-components/
+- React / Angular meeting Day  https://docs.google.com/document/d/1QZxArgMwidgCrAbuSikcB2iBxkffH6w0YB0C1qCsuH0/edit
+- jQuery vs Vanilla https://gist.github.com/liamcurry/2597326
 - look at your "Talks to watch"
 
 - HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645
