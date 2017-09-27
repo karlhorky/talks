@@ -134,7 +134,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: What</Heading>
+          <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>DOM Manipulation</Heading>
           <br />
           <CodePane
@@ -145,7 +145,7 @@ export default class Presentation extends React.Component {
           <Notes>DOM Manipulation</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: What</Heading>
+          <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>this keyword</Heading>
           <br />
           <CodePane
@@ -156,7 +156,7 @@ export default class Presentation extends React.Component {
           <Notes>this</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: What</Heading>
+          <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>&lt;video&gt; tag</Heading>
           <br />
           <CodePane
@@ -167,7 +167,7 @@ export default class Presentation extends React.Component {
           <Notes>Video Tag</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: What</Heading>
+          <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>XMLHttpRequest</Heading>
           <br />
           <CodePane
@@ -178,7 +178,7 @@ export default class Presentation extends React.Component {
           <Notes>XmlHttpRequest(AJAX)</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: What</Heading>
+          <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>Custom Elements</Heading>
           <br />
           <CodePane
@@ -189,7 +189,7 @@ export default class Presentation extends React.Component {
           <Notes>Custom Elements (web components)</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: Who</Heading>
+          <Heading size={4}>Web Standards: Who?</Heading>
           <Heading size={5}>Relevant Spec Groups</Heading>
           <List>
             <ListItem>W3C TAG</ListItem>
@@ -212,7 +212,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: Who</Heading>
+          <Heading size={4}>Web Standards: Who?</Heading>
           <Heading size={5}>Who is on the spec groups?</Heading>
           <Appear>
             <div style={{ marginLeft: -20, marginRight: -20 }}>
@@ -355,7 +355,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: Who</Heading>
+          <Heading size={4}>Web Standards: Who?</Heading>
           <Heading size={5}>Implementers</Heading>
           <Appear>
             <div style={{ marginLeft: -20, marginRight: -20 }}>
@@ -403,7 +403,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: How</Heading>
+          <Heading size={4}>Web Standards: How?</Heading>
           <Heading size={5}>Consensus-Based</Heading>
           <List>
             <Appear>
@@ -473,7 +473,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
+          <Heading size={1} textColor="#fff7de" fit>
             Discontent &<br /> New Approaches
           </Heading>
         </Slide>
@@ -689,7 +689,7 @@ export default class Presentation extends React.Component {
           <Heading size={4}>React: Discontent with Standards</Heading>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
+          <Heading size={1} textColor="#fff7de" fit>
             Web Components
           </Heading>
         </Slide>
