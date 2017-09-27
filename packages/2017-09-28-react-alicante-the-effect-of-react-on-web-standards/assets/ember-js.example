@@ -1,0 +1,9 @@
+// routes/index.js
+export default Ember.Route.extend({
+  model() {
+    return [{
+      title: "Rails is omakase",
+      body: "There are lots of à la carte software environments in this world."
+    }];
+  }
+});

@@ -94,7 +94,7 @@ export default class Presentation extends React.Component {
               </ListItem>
               <ListItem>Web Standards Proposals</ListItem>
               <ListItem>
-                Future: Integration efforts, specs, DOM alternatives, new
+                Future: Integration efforts, specs, alternatives to the DOM, new
                 languages
               </ListItem>
             </List>
@@ -589,7 +589,7 @@ export default class Presentation extends React.Component {
           <Heading size={5}>CoffeeScript (2009)</Heading>
           <br />
           <CodePane
-            lang="js"
+            lang="coffeescript"
             source={require("raw-loader!../assets/coffeescript-arrow-functions.example")}
             textSize={27}
           />
@@ -599,19 +599,178 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>Angular, Knockout, Ember (2009-11)</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/angular.example")}
+            textSize={27}
+          />
+          <Notes>
+            Come 2009, a wave of frameworks started to appear. These frameworks
+            would promote a new approach to DOM manipulation called data
+            binding, prior seen in the .NET Windows Presentation Foundation
+            (XAML).
+          </Notes>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>Angular, Knockout, Ember (2009-11)</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/ember-js.example")}
+            textSize={20}
+          />
+          <br />
+          <CodePane
+            lang="handlebars"
+            source={require("raw-loader!../assets/ember-hbs.example")}
+            textSize={20}
+          />
+          <Notes>
+            Data binding was a declarative way of describing UI and how your
+            data model gets applied to that UI.
+          </Notes>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            React
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            New and Improved Paradigms
+          </Heading>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Data binding</Heading>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Virtual DOM</Heading>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>JSX, Functional Programming</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Immutability, Unidirectional Data Flow</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Component Model</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Minimalism</Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            React
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            Embracing Web Standards
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Embracing Standards</Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            React
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            Discontent with Standards
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Discontent with Standards</Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Web Components
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Web Components</Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Web Standards Proposals
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Functional Programming</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Immutability, Performance</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Tooling Improvements</Heading>
+          <Notes>TODO: Remove me?</Notes>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Why hasn&rsquo;t there been more progress?
+          </Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            React: Other influence
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Other influence</Heading>
+          <Heading size={5}>
+            Angular, Ember, Polymer, Vue, Web Components
+          </Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Future
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            Integration efforts
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future: Integration efforts</Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Future
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            Alternatives to the DOM
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future: Alternatives to the DOM</Heading>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Future
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            New languages
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future: New Languages</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={1}>Summary / Conclusion</Heading>
+          something like: just like everyone, I cannot prophesize the future,
+          but we see some interesting trends here...
         </Slide>
       </Deck>
     );
