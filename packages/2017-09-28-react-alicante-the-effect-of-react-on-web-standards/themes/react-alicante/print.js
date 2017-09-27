@@ -4,7 +4,7 @@ const defaultColors = {
   primary: "black",
   secondary: "black",
   tertiary: "black",
-  quarternary: "black"
+  quartenary: "black"
 };
 
 const defaultFonts = {
@@ -51,7 +51,7 @@ const print = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         outline: 0
       },
       prevIcon: {
-        fill: colors.quarternary
+        fill: colors.quartenary
       },
       next: {
         position: "absolute",
@@ -64,7 +64,7 @@ const print = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         outline: 0
       },
       nextIcon: {
-        fill: colors.quarternary
+        fill: colors.quartenary
       }
     },
     progress: {

@@ -4,7 +4,7 @@ const defaultColors = {
   primary: "#f9c300",
   secondary: "black",
   tertiary: "white",
-  quarternary: "white"
+  quartenary: "white"
 };
 
 const defaultFonts = {
@@ -89,7 +89,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         outline: 0
       },
       prevIcon: {
-        fill: colors.quarternary
+        fill: colors.quartenary
       },
       next: {
         position: "absolute",
@@ -102,7 +102,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         outline: 0
       },
       nextIcon: {
-        fill: colors.quarternary
+        fill: colors.quartenary
       }
     },
     progress: {
@@ -128,7 +128,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           height: "10px",
           borderTopLeftRadius: "10px",
           borderTopRightRadius: "10px",
-          background: colors.quarternary
+          background: colors.quartenary
         },
         pacmanBottom: {
           position: "absolute",
@@ -137,7 +137,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           height: "10px",
           borderBottomLeftRadius: "10px",
           borderBottomRightRadius: "10px",
-          background: colors.quarternary,
+          background: colors.quartenary,
           top: "10px"
         },
         point: {
@@ -148,7 +148,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           height: "10px",
           borderWidth: 2,
           borderStyle: "solid",
-          borderColor: colors.quarternary,
+          borderColor: colors.quartenary,
           borderRadius: "50%",
           transition: "all 0.01s ease-out 0.4s"
         }
@@ -165,7 +165,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         },
         bar: {
           height: "100%",
-          background: colors.quarternary,
+          background: colors.quartenary,
           transition: "all 0.3s ease-out"
         }
       },
@@ -175,7 +175,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
           bottom: 10,
           right: 10,
           zIndex: 1000,
-          color: colors.quarternary
+          color: colors.quartenary
         }
       }
     },

@@ -71,7 +71,7 @@ export default class Presentation extends React.Component {
               <ListItem>Web Standards</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Simplified APIs</ListItem>
+              <ListItem>Discontent, New Approaches</ListItem>
             </Appear>
             <Appear>
               <ListItem>React</ListItem>
@@ -128,8 +128,10 @@ export default class Presentation extends React.Component {
             </List>
           </Notes>
         </Slide>
-        <Slide>
-          <Heading size={1}>Web Standards</Heading>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Web Standards
+          </Heading>
         </Slide>
         <Slide>
           <Heading size={4}>Web Standards: What</Heading>
@@ -348,7 +350,8 @@ export default class Presentation extends React.Component {
           </Appear>
           <Notes>
             Who are these specifications developed by? Well, mostly large
-            companies. And some invited experts...
+            companies and a few invited experts. With organizations like the
+            TC39 you need to pay a fee to be a member.
           </Notes>
         </Slide>
         <Slide>
@@ -469,14 +472,123 @@ export default class Presentation extends React.Component {
             </List>
           </Notes>
         </Slide>
-        <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Discontent &<br /> New Approaches
+          </Heading>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>Discontent with Web Standards</Heading>
+          <List>
+            <Appear>
+              <ListItem textSize={50}>
+                excessive boilerplate (verbose APIs)
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize={50}>
+                incompatibile or missing implementations
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize={50}>insufficient components</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize={50}>
+                confusing or non-memorable syntax
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize={50}>imperative, stateful approach</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>
+                excessive boilerplate: standard APIs require lots of typing and
+                ceremony to do simple things
+              </ListItem>
+              <ListItem>
+                incompatibility: missing / non-standard implementations
+              </ListItem>
+              <ListItem>
+                insufficient components: some devs (such as Ken Wheeler)
+                critical: not enough common widgets available everywhere on the
+                platform (eg. autocomplete, time picker, better date picker)
+              </ListItem>
+              <ListItem>
+                confusing / non-memorable syntax: substr vs substring, ajax
+              </ListItem>
+              <ListItem>
+                imperative, stateful approach: relevant to talk topic, the react
+                community promotes declarative APIs to improve ability to
+                reasoning about code rather than trying to keep the state of the
+                program in your head
+              </ListItem>
+            </List>
+            TODO: Make this into 5 slides with examples instead?
+          </Notes>
         </Slide>
         <Slide>
-          <Heading size={1}>The Effect of React on Web Standards</Heading>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>Prototype, jQuery, Dojo, MooTools (2005-6)</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/jquery-post.example")}
+            textSize={40}
+          />
+          <Notes>
+            So some people took it into their own hands to try to solve some of
+            these problems. For instance, jQuerys take on AJAX.
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>Prototype, jQuery, Dojo, MooTools (2005-6)</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/dojo-dom.example")}
+            textSize={27}
+          />
+          <Notes>Or MooToolss approach to adding an element to the DOM</Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>Prototype, jQuery, Dojo, MooTools (2005-6)</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/jquery-querySelectorAll.example")}
+            textSize={27}
+          />
+          <Notes>
+            These libraries inspired improvements in the DOM, like
+            jQuery&rsquo;s inspiration of document.querySelectorAll and friends<br />
+            Source:
+            https://github.com/whatwg/html/issues/2791#issuecomment-311365657
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>CoffeeScript (2009)</Heading>
+          <br />
+          <CodePane
+            lang="coffeescript"
+            source={require("raw-loader!../assets/coffeescript.example")}
+            textSize={40}
+          />
+        </Slide>
+        <Slide>
+          <Heading size={4}>New Approaches</Heading>
+          <Heading size={5}>Prototype, jQuery, Dojo, MooTools (2005-6)</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/dojo-dom.example")}
+            textSize={27}
+          />
         </Slide>
         <Slide>
           <Heading size={1}>The Effect of React on Web Standards</Heading>

@@ -84,6 +84,7 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Regarding the broken promise of Web Components https://robdodson.me/regarding-the-broken-promise-of-web-components/
 - React / Angular meeting Day  https://docs.google.com/document/d/1QZxArgMwidgCrAbuSikcB2iBxkffH6w0YB0C1qCsuH0/edit
 - jQuery vs Vanilla https://gist.github.com/liamcurry/2597326
+- Building the web platform by Anne van Kesteren https://fronteers.nl/congres/2012/sessions/building-the-web-platform-anne-van-kesteren
 - look at your "Talks to watch"
 
 - HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645
