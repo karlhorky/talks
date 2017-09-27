@@ -192,7 +192,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         display: "block",
         color: colors.primary,
         fontSize: "4.9rem",
-        lineHeight: 1,
+        lineHeight: 1.2,
         fontWeight: "bold"
       },
       cite: {

@@ -440,7 +440,6 @@ export default class Presentation extends React.Component {
             </List>
           </Notes>
         </Slide>
-
         <Slide bgColor="tertiary">
           <BlockQuote>
             <Quote>
@@ -645,26 +644,150 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Data binding</Heading>
+          <Text lineHeight={1.4} textSize={60}>
+            Forget about the implementation details of data binding
+          </Text>
+          <Notes>
+            React&rsquo;s data binding is much more like regular JavaScript.
+          </Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              There&rsquo;s not a single data binding artifact here ...
+              you&rsquo;re just writing JavaScript.
+            </Quote>
+            <Cite textColor="primary">
+              Pete Hunt, "The Secrets of React's Virtual DOM"
+            </Cite>
+          </BlockQuote>
+          <Notes>
+            because the data binding is just done with JavaScript functions
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Virtual DOM</Heading>
+          <Text lineHeight={1.4} textSize={60}>
+            Re-render everything without the performance hit
+          </Text>
+          <Notes>
+            How is this improved data binding achieved? Through a concept called
+            the Virtual DOM.<br />
+            <br />
+            With the Virtual DOM, you just declare how you want your UI to
+            appear at any point in time and the actual minimal imperative DOM
+            updates are done for you by React.
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
-          <Heading size={5}>JSX, Functional Programming</Heading>
+          <Heading size={5}>JSX</Heading>
+          <List>
+            <Appear>
+              <ListItem textSize={44}>
+                JavaScript instead of a domain-specific language
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize={44}>functions instead of strings</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            How does one declare what should go into the Virtual DOM to be
+            updated? React proposes JSX, which is a declarative, familiar
+            HTML-like syntax sugar over {"function"} calls.<br />
+            JS instead of DSL: This allows use of the full power of JavaScript
+            instead of a domain-specific language...<br />
+            functions instead of strings: ...since components are built using
+            functions and not strings.<br />
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Functional Programming</Heading>
+          <List>
+            <Appear>
+              <ListItem textSize={44}>roots in functional programming</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize={44}>pragmatic functional approach</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            The functional approach is promoted in ways other than JSX.<br />
+            roots: from React&rsquo;s roots having early prototypes built in
+            StandardML...<br />
+            pragmatic functional approach: To the pragmatic functional approach
+            taken today<br />
+          </Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              While it is influenced by ... functional programming, staying
+              accessible to ... developers with different skills and experience
+              levels is an explicit goal of the project.
+            </Quote>
+            <Cite textColor="primary">React Docs</Cite>
+          </BlockQuote>
+          <Notes>
+            The docs highlight this, emphasizing the pragmatism of staying
+            accessible instead of idealism of a purely functional style
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Immutability, Unidirectional Data Flow</Heading>
+          <Text lineHeight={1.4} textSize={60}>
+            Less power over data interactions is easier to reason about
+          </Text>
+          <Notes>
+            less potential interactions with your data results in an app
+            that&rsquo;s easier to reason about
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Component Model</Heading>
+          <List>
+            <Appear>
+              <ListItem>reusable, composable, testable</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>decoupled from output target like the DOM</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            reusable, composable, testable: React components can be easily
+            reused, composed and tested due to their functional nature<br />
+            decoupled: because the component model is decoupled from the this
+            allows for the component model to be used for other targets, like
+            native apps,
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Minimalism</Heading>
+          <List>
+            <Appear>
+              <ListItem>deliberately low API surface area</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>embraces language features when possible</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>using React feels like using JavaScript</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            kept deliberately minimal: the "expense" of React is kept low by
+            limiting API surface area<br />
+            embraces language features: React attempts to avoid adding
+            proprietary APIs for things that the language can do<br />
+            using React feels like using JavaScript: not many things to
+            remember. Many problems can be solved using standard JavaScript
+          </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">

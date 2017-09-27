@@ -210,7 +210,7 @@ export default (
       <Heading size={3}>React: new / improved paradigms</Heading>
       <List>
         <ListItem>
-          declarative data updates via data-binding with virtual DOM
+          declarative data updates via data binding with virtual DOM
         </ListItem>
         <ListItem>
           functions instead of strings - functional programming (use JavaScript
