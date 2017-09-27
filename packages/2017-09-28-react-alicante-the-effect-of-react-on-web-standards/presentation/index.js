@@ -579,16 +579,24 @@ export default class Presentation extends React.Component {
             source={require("raw-loader!../assets/coffeescript.example")}
             textSize={40}
           />
+          <Notes>
+            CoffeeScript was a new compile-to-JS language created to make
+            JavaScript easier and nicer to use, while also adding new features
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>New Approaches</Heading>
-          <Heading size={5}>Prototype, jQuery, Dojo, MooTools (2005-6)</Heading>
+          <Heading size={5}>CoffeeScript (2009)</Heading>
           <br />
           <CodePane
             lang="js"
-            source={require("raw-loader!../assets/dojo-dom.example")}
+            source={require("raw-loader!../assets/coffeescript-arrow-functions.example")}
             textSize={27}
           />
+          <Notes>
+            Some new features such as the arrow function also influenced
+            standards https://news.ycombinator.com/item?id=9266517
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={1}>The Effect of React on Web Standards</Heading>

@@ -1,1 +1,8 @@
 # CoffeeScript
+class Car
+  price: 5
+  sell: =>
+    alert "Ok, #{@price} euro please."
+
+car = new Car
+$('.sell').click(car.sell)
