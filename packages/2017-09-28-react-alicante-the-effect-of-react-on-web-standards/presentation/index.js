@@ -30,6 +30,8 @@ import { theme } from "../themes/react-alicante/";
 require("normalize.css");
 
 const images = {
+  intro1: require("../assets/intro1.jpg"),
+  intro2: require("../assets/intro2.jpg"),
   logoAdobe: require("../assets/logo-adobe.svg"),
   logoAirbnb: require("../assets/logo-airbnb.svg"),
   logoApple: require("../assets/logo-apple.svg"),
@@ -61,6 +63,12 @@ export default class Presentation extends React.Component {
         contentWidth={1200}
         contentHeight={900}
       >
+        <Slide bgColor="#fff">
+          <Image src={images.intro1} />
+        </Slide>
+        <Slide bgColor="#fff">
+          <Image src={images.intro2} />
+        </Slide>
         <Slide>
           <Heading size={1}>The Effect of React on Web Standards</Heading>
         </Slide>
