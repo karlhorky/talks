@@ -62,6 +62,7 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - Douglas Crockford - Upgrading the web ("DOM is the worst API ever invented", "JavaScript is a hot mess") https://www.youtube.com/watch?v=6UTWAEJlhww
 - Why we Need an App Browser by Ken Wheeler ("open source") https://www.youtube.com/watch?v=WEQx3wz8QeY
 - Ken Wheeler's "App Browser" conversation on Twitter https://convopage.com/c/854699025928531968 (full twitter feed: https://twitter.com/ken_wheeler/status/854699025928531968)
+- This.JavaScript 08/10 (pronunciation of Markbåge) https://www.youtube.com/watch?v=R4vjqnYHlmY
 - Pete Hunt - The Secrets of React's Virtual DOM (FutureJS 2014) https://www.youtube.com/watch?v=-DX3vJiqxm4
 - W3C working groups http://www.onsman.com/w3c-working-groups-future-web/
 - A brief history of JavaScript https://auth0.com/blog/a-brief-history-of-javascript/

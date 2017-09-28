@@ -1,0 +1,12 @@
+let a;
+let abc;
+a = null;
+abc = a.b.c; // undefined
+a = undefined;
+abc = a.b.c; // undefined
+a = { b: null };
+abc = a.b.c; // undefined
+a = { b: { c: null } };
+abc = a.b.c; // null
+a = { b: null };
+delete a.b.c; // throws a TypeError
