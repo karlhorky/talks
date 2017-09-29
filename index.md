@@ -16,3 +16,6 @@ Talks and presentations by [@karlhorky](https://twitter.com/karlhorky).
 ### May
 
 * [React Europe: The Rise of Low-Configuration Tooling](packages/2017-05-18-react-europe-rise-of-low-configuration-tooling/)
+
+### September
+* [React Alicante: The Effect of React on Web Standards](packages/2017-09-28-react-alicante-the-effect-of-react-on-web-standards/)
