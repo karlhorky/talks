@@ -1,0 +1,10 @@
+// Proposed syntax
+function clownPuppiesEverywhere(
+  param1,
+  param2, // the next property to be added doesn't modify this line
+) { /* ... */ }
+
+clownPuppiesEverywhere(
+  'foo',
+  'bar', // the next property to be added doesn't modify this line
+);

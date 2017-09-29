@@ -1,1 +1,12 @@
-.
+// Version control changed lines
+function clownPuppiesEverywhere(
+  param1,
+  param2, // changed to add a comma
+  param3  // changed to add new parameter
+) { /* ... */ }
+
+clownPuppiesEverywhere(
+  'foo',
+  'bar', // changed to add a comma
+  'baz'  // changed to add new parameter
+);

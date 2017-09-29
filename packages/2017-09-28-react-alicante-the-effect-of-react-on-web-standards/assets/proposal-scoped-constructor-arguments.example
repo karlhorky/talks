@@ -1,1 +1,12 @@
-.
+class Point2D (inX, inY) {
+  x = inX;
+  y = inY;
+}
+
+// Desugars to
+class Point2D {
+  constructor(inX, inY) {
+    this.x = inX;
+    this.y = inY;
+  }
+}

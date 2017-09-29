@@ -191,7 +191,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
         paddingLeft: 40,
         display: "block",
         color: colors.primary,
-        fontSize: "4.9rem",
+        fontSize: "3.9rem",
         lineHeight: 1.2,
         fontWeight: "bold"
       },
@@ -209,7 +209,7 @@ const screen = (colorArgs = defaultColors, fontArgs = defaultFonts) => {
       codePane: {
         pre: {
           margin: "auto",
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
           fontWeight: "normal",
           fontFamily: fonts.tertiary,
           minWidth: "100%",

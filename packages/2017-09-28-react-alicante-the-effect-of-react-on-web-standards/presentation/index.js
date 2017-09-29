@@ -60,15 +60,11 @@ export default class Presentation extends React.Component {
         transition={["fade"]}
         transitionDuration={0}
         controls={false}
-        contentWidth={1200}
-        contentHeight={900}
+        contentWidth={1024}
+        contentHeight={768}
       >
-        <Slide bgColor="#fff">
-          <Image src={images.intro1} />
-        </Slide>
-        <Slide bgColor="#fff">
-          <Image src={images.intro2} />
-        </Slide>
+        <Slide bgImage={images.intro1} />
+        <Slide bgImage={images.intro2} />
         <Slide>
           <Heading size={1}>The Effect of React on Web Standards</Heading>
         </Slide>
@@ -148,7 +144,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/web-standards-dom.example")}
-            textSize={32}
+            textSize={27}
           />
           <Notes>DOM Manipulation</Notes>
         </Slide>
@@ -1254,21 +1250,268 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Sebastian Markbåge - Scoped Constructor Arguments (unproposed)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-scoped-constructor-arguments.example")}
+            textSize={22}
+          />
+          <Notes>
+            Sebastian builds on the class fields proposal in his scoped
+            constructor arguments spec, which allows for more declarative
+            initialization of properties from constructor arguments, instead of
+            having to mutate ad-hoc in various places.
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Sebastian Markbåge - Scoped Constructor Arguments (unproposed)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-scoped-constructor-arguments-2.example")}
+            textSize={22}
+          />
+          <Notes>
+            It also allows for captured arguments, which refer to a private slot
+            on `this`
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Functional Programming</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Brian Terlson, Sebastian Markbåge - Pattern Matching (Stage 0)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-pattern-matching.example")}
+            textSize={22}
+          />
+          <Notes>
+            Brian Terlson and Sebastian Markbåge propose the functional pattern
+            matching paradigm, drawing inspiration from Rust and F#.
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Functional Programming</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Dave Herman - Do Expressions (Stage 0)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-do-expressions.example")}
+            textSize={22}
+          />
+          <Notes>
+            Dave Herman proposes functional programming&rsquo;s do expressions
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Functional Programming</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Dave Herman - Do Expressions (Stage 0)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-do-expressions-react.example")}
+            textSize={22}
+          />
+          <Notes>
+            Do expressions can be useful to conditionally return components in
+            templating languages like JSX
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Functional Programming</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Jordan Harband - Object.values / Object.entries (ES2017)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-object-values-entries.example")}
+            textSize={22}
+          />
+          <Notes>
+            Object.values and Object.entries by Jordan Hardband of Airbnb allow
+            iterating over the values or the entries (both the keys and the
+            values) similar to Object.keys() that can be helpful in functional
+            programming
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Immutability, Performance</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Sebastian Markbåge - Immutable Data Structures (presented in 2015)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-immutable-js.example")}
+            textSize={22}
+          />
+          <Notes>
+            Sebastian Markbåge presented ideas for immutable data structures to
+            the TC39 in 2015. However the value of having it in the engine was
+            unproven and due to the large implementation effort of doubling the
+            data structures, it was not pursued any further.
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Tooling Improvements</Heading>
-          <Notes>TODO: Remove me?</Notes>
+          <Heading size={5}>Immutability, Performance</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Sebastian Markbåge - Shallow Equality Test (Stage 0)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-shallow-object-equality.example")}
+            textSize={22}
+          />
+          <Notes>
+            To further enable use of immutable data structures, Sebastian also
+            proposed a shallow equality test for objects, useful in memoization
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Immutability, Performance</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Jordan Harband - Object.getOwnPropertyDescriptors (ES2017)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-getOwnPropertyDescriptors.example")}
+            textSize={22}
+          />
+          <Notes>
+            Jordan Harband of Airbnb proposes a way to get all properties of an
+            object to facilitate proper copying of objects. This has made it
+            into the standard in ES2017.
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Developer Experience</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Jeff Morrison - Trailing commas in functions (ES2017)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-trailing-commas.example")}
+            textSize={22}
+          />
+          <Notes>
+            On the developer experience front, Jeff Morrison proposed grammar to
+            allow trailing commas in function declarations and calls, allowing
+            for less changed lines in version control when adding new parameters<br />
+            <br />
+            For example, this example shows that two lines have been modified
+            for each addition (such as param2 and param3 in the declaration or
+            bar and baz in the call) have been
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Standards Proposals</Heading>
+          <Heading size={5}>Developer Experience</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Jeff Morrison - Trailing commas in functions (ES2017)
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/proposal-trailing-commas-2.example")}
+            textSize={22}
+          />
+          <Notes>
+            The proposal allows for trailing commas on the last parameter or
+            argument, mitigating this problem.
+          </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
             Why hasn&rsquo;t there been more progress?
           </Heading>
+          <Notes>
+            So why don&rsquo;t we see proposals for bigger changes, like a full
+            declarative component API?
+          </Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              Unfortunately, I think this might be too radical. ... [browser
+              vendors] would probably build [the virtual DOM] on top of the
+              existing imperative API.
+            </Quote>
+            <Cite textColor="primary">
+              Sebastian Markbåge, "DOM as a Second-class citizen (2015)"
+            </Cite>
+          </BlockQuote>
+          <Notes>
+            Sebastian Markbåge&rsquo;s idea back in 2015 was that such a large
+            change would be built on top of the existing DOM, bringing all its
+            problems with it.
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Why hasn&rsquo;t there been more progress?</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                can&rsquo;t remove anything from the web (don&rsquo;t break the
+                web)
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                deliberately slow process to wait for maturity
+              </ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>
+                can&rsquo;t remove anything from the web: once features are
+                shipped on the web, they cannot be removed again, due to the
+                tenet of the web "don&rsquo;t break the web"
+              </ListItem>
+              <ListItem>
+                deliberately slow process to wait for maturity: because nothing
+                can be removed from the web again, ideas are tested over time
+                and very carefully considered and weighed against alternatives
+              </ListItem>
+            </List>
+          </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">

@@ -1,0 +1,12 @@
+// Captured arguments
+class Point2D (x, y) {
+  measure() {
+    return Math.sqrt(x * x + y * y);
+  }
+}
+
+class Point2D (x, y) {
+  static compare(a, b) {
+    return x; // syntax error?
+  }
+}

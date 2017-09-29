@@ -1,1 +1,3 @@
-.
+const a = { 0: 1, x: 2 };
+const b = { 0: 1, x: 2 };
+Object.shallowEqual(a, b); // true
