@@ -511,26 +511,20 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>
             <List>
-              <ListItem>
-                excessive boilerplate: standard APIs require lots of typing and
-                ceremony to do simple things
+              <ListItem textSize={20}>
+                excessive boilerplate: standard APIs: lots of typing and
+                ceremony for simple things
               </ListItem>
-              <ListItem>
-                incompatibility: missing / non-standard implementations
+              <ListItem textSize={20}>missing / non-standard impl.s</ListItem>
+              <ListItem textSize={20}>
+                some devs (ex Ken Wheeler) critical: not enough std common
+                widgets (eg. autocomplete, time picker, better date picker)
               </ListItem>
-              <ListItem>
-                insufficient components: some devs (such as Ken Wheeler)
-                critical: not enough common widgets available everywhere on the
-                platform (eg. autocomplete, time picker, better date picker)
-              </ListItem>
-              <ListItem>
-                confusing / non-memorable syntax: substr vs substring, ajax
-              </ListItem>
-              <ListItem>
-                imperative, stateful approach: relevant to talk topic, the react
-                community promotes declarative APIs to improve ability to
-                reasoning about code rather than trying to keep the state of the
-                program in your head
+              <ListItem textSize={20}>substr vs substring, ajax</ListItem>
+              <ListItem textSize={20}>
+                relevant to talk topic, react community promotes decl. APIs to
+                improve ability to reason about code vs. keeping the state of
+                the program in your head
               </ListItem>
             </List>
             TODO: Make this into 5 slides with examples instead?
