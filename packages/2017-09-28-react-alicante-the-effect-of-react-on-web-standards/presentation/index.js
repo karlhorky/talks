@@ -32,6 +32,8 @@ require("normalize.css");
 const images = {
   intro1: require("../assets/intro1.jpg"),
   intro2: require("../assets/intro2.jpg"),
+  jeffMorrison: require("../assets/jeffMorrison.jpg"),
+  jordanHarband: require("../assets/jordanHarband.jpg"),
   logoAdobe: require("../assets/logo-adobe.svg"),
   logoAirbnb: require("../assets/logo-airbnb.svg"),
   logoApple: require("../assets/logo-apple.svg"),
@@ -46,7 +48,9 @@ const images = {
   logoPaypal: require("../assets/logo-paypal.svg"),
   logoSamsung: require("../assets/logo-samsung.svg"),
   logoW3C: require("../assets/logo-w3c.svg"),
-  logoYahoo: require("../assets/logo-yahoo.svg")
+  logoYahoo: require("../assets/logo-yahoo.svg"),
+  sebastianMarkbage: require("../assets/sebastianMarkbage.jpg"),
+  sebastianMarkbage2: require("../assets/sebastianMarkbage-2.jpg")
 };
 
 preloader(images);
@@ -639,11 +643,15 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
-            React
+            React (2013)
           </Heading>
           <Heading size={2} textColor="#fff7de">
             New and Improved Paradigms
           </Heading>
+          <Notes>
+            React came on the scene in 2013 to improve on the ideas presented by
+            these frameworks and introduced new paradigms of its own.
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
@@ -1054,18 +1062,102 @@ export default class Presentation extends React.Component {
             Web Standards Proposals
           </Heading>
           <Notes>
-            Some members of React&rsquo;s community like Facebook&rsquo;s
-            Sebastian Markbåge (Markboge), Jeff Morrison and Jordan Harband from
-            Airbnb are part of the TC39, the standards committee that specifies
-            ECMAScript, the spec which defines which features become a part of
-            JavaScript<br />
-            TODO: make this more interesting? Make into 2 slides with faces or
-            names and stages
+            There are, however initiatives to change and add to web standards to
+            better support React&rsquo;s paradigms.
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Web Standards Proposals</Heading>
+          <Heading size={5}>
+            React ecosystem representation in the spec groups
+          </Heading>
+          <div style={{ marginLeft: -20, marginRight: -20 }}>
+            <Image
+              src={images.sebastianMarkbage}
+              style={{
+                height: 240,
+                borderRadius: 5,
+                marginTop: 64
+              }}
+            />
+            <Image
+              src={images.jeffMorrison}
+              style={{
+                height: 240,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 64
+              }}
+            />
+            <Image
+              src={images.jordanHarband}
+              style={{
+                height: 240,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 64
+              }}
+            />
+          </div>
+          <Notes>
+            Many of the proposals we&rsquo;ll be reviewing today came from
+            members of React&rsquo;s community like Facebook&rsquo;s Sebastian
+            Markbåge (Markboge) and Jeff Morrison and Jordan Harband. They are
+            part of the TC39, the standards committee that specifies ECMAScript,
+            the spec which defines which features become a part of JavaScript.<br />
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Web Standards Proposals</Heading>
+          <Heading size={5}>Specification process</Heading>
+          <List>
+            <Appear>
+              <ListItem>Stage 0 (strawman): request input</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Stage 1 (proposal): challenges, polyfill, etc.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Stage 2 (draft): formal, precise language</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Stage 3 (candidate): signed-off spec text, needs implementations
+                and user feedback
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Stage 4 (finished): two compatible implementations shipped,
+                ready for inclusion in spec
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Inclusion in specification</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>Standards: What, Who, How, Discontent</ListItem>
+              <ListItem>Simplified APIs</ListItem>
+              <ListItem>
+                React: Paradigms, Embracing standards, discontent with
+                standards, comparison to web components, who is involved, other
+                influences
+              </ListItem>
+              <ListItem>Web Standards Proposals</ListItem>
+              <ListItem>
+                Future: Integration efforts, specs, alternatives to the DOM, new
+                languages
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Goals</Heading>
+          <Heading size={5}>React Goals</Heading>
           <List>
             <Appear>
               <ListItem>lower React paradigms into the language</ListItem>
@@ -1081,6 +1173,8 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
           <Notes>
+            I posit that React contributors working in standards are aiming to
+            achieve the following goals.
             <List>
               <ListItem>
                 lower React paradigms into the language: paradigms like
@@ -1166,7 +1260,7 @@ export default class Presentation extends React.Component {
             textSize={26}
           />
           <Notes>
-            Sebastian also drafted a specification in 2016 in order for
+            Sebastian also wrote a rough specification in 2016 in order for
             JavaScript to return undefined and not throw an error when an
             property is accessed on undefined or null<br />
             (explain syntax)<br />
@@ -1497,6 +1591,9 @@ export default class Presentation extends React.Component {
                 deliberately slow process to wait for maturity
               </ListItem>
             </Appear>
+            <Appear>
+              <ListItem>a way forward: expose more browser APIs</ListItem>
+            </Appear>
           </List>
           <Notes>
             <List>
@@ -1510,19 +1607,96 @@ export default class Presentation extends React.Component {
                 can be removed from the web again, ideas are tested over time
                 and very carefully considered and weighed against alternatives
               </ListItem>
+              <ListItem>
+                a way forward: expose more browser APIs: expose more APIs that
+                browsers already implement
+              </ListItem>
             </List>
+          </Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              Expose more APIs [that browsers already implement]. That&rsquo;s
+              what the extensible web manifesto is all about. And that&rsquo;s
+              really good.
+            </Quote>
+            <Cite textColor="primary">
+              Sebastian Markbåge, "DOM as a Second-class Citizen"
+            </Cite>
+          </BlockQuote>
+          <Notes>
+            Thats what the extensible web manifesto proposes: to expose more
+            APIs that are already there, including low level features.
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
             React: Other influence
           </Heading>
+          <Notes>
+            Outside of web standards proposals, React paradigms have also had an
+            effect on many frameworks and libraries.
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>React: Other influence</Heading>
-          <Heading size={5}>
-            Angular, Ember, Polymer, Vue, Web Components
-          </Heading>
+          <List>
+            <Appear>
+              <ListItem>Angular.js</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Ember</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Polymer</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Vue</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Web Components</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>
+                Angular: after the outburst in popularity of React, Angular
+                provided a method for doing single-direction data flow
+              </ListItem>
+              <ListItem>
+                Ember: also unidirectional data flow, component-first view
+              </ListItem>
+              <ListItem>
+                Polymer: at the last polymer summit in 2017, announcement about
+                move from HTML imports to es6 modules, which React strongly
+                pushes
+              </ListItem>
+              <ListItem>
+                Vue: API similarities, single-file components, other borrowed
+                ideas like higher order component improvements
+              </ListItem>
+              <ListItem>
+                Web Components: React drives discussion among web components
+                folks
+              </ListItem>
+            </List>
+          </Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              React is awesome and drives a ton of discussion among folks who
+              work on Web Components.
+            </Quote>
+            <Cite textColor="primary">
+              Rob Dodson, "Regarding the broken promise of Web Components"
+            </Cite>
+          </BlockQuote>
+          <Notes>
+            Rob mentions that here, how people are watching what React is
+            proposing
+          </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
@@ -1531,9 +1705,67 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="#fff7de">
             Integration efforts
           </Heading>
+          <Notes>
+            There have been proposals of integration of web components with
+            React
+          </Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              The golden use case for WCs would be as primitive leaf components
+            </Quote>
+            <Cite textColor="primary">
+              André Staltz, "React Could Love Web Components"
+            </Cite>
+          </BlockQuote>
+          <Notes>
+            Such as the suggestion by André Staltz to use web components as leaf
+            nodes (so that they can be used within React)
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Future: Integration efforts</Heading>
+          <Heading size={5}>Libraries</Heading>
+          <List>
+            <Appear>
+              <ListItem>Reactive Elements</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>SkateJS</ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            Some alternative approaches to mixing React and Web Components can
+            be seen with Reactive Elements and SkateJS
+          </Notes>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            Future
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            Alternative Specifications
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future: Alternative Specifications</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                Sean Larkin&rsquo;s Unity Component Specification
+              </ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>
+                In August Sean Larkin proposed a specification to codify how
+                single-file components look, to attempt to achieve
+                interoperability between frameworks.
+              </ListItem>
+            </List>
+          </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
@@ -1545,6 +1777,36 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={4}>Future: Alternatives to the DOM</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                Douglas Crockford&rsquo;s "Helper App" ("Upgrading the Web" at
+                AngularU 2015)
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Ken Wheeler&rsquo;s "App Browser" ("Why We Need An App Browser"
+                at Chain React 2017)
+              </ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>
+                Douglas Crockford&rsquo;s "Helper App": in 2015 Douglas
+                Crockford described a technique of upgrading the web that would
+                allow for discarding the old model of the DOM in favor of
+                something more robust.
+              </ListItem>
+              <ListItem>
+                Ken Wheeler&rsquo;s "App Browser": Ken Wheeler described an App
+                Browser, a program similar to a web browser that would allow
+                users to navigate to native apps. This would also enable an
+                alternative model to the DOM.
+              </ListItem>
+            </List>
+          </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
@@ -1553,14 +1815,73 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="#fff7de">
             New languages
           </Heading>
+          <Notes>
+            New languages offer the capability to explore new features and
+            paradigms without having to wait for the standards process
+          </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Future: New Languages</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40}>
+            ReasonML
+          </Text>
+          <br />
+          <CodePane
+            lang="ocaml"
+            source={require("raw-loader!../assets/reason.example")}
+            textSize={17}
+          />
+          <Notes>
+            ...Such as ReasonML, Facebooks new syntax on top of Ocaml
+          </Notes>
         </Slide>
         <Slide>
-          <Heading size={1}>Summary / Conclusion</Heading>
-          something like: just like everyone, I cannot prophesize the future,
-          but we see some interesting trends here...
+          <Heading size={1}>Takeaways</Heading>
+          <List>
+            <Appear>
+              <ListItem>standards move slowly, need consensus</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>React: embracing sound standards</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>we need a better model than the DOM</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                lowering React paradigms into the language helps
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                New low-level APIs enable alternative approaches
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                DOM alternatives, new languages may offer better models in the
+                future
+              </ListItem>
+            </Appear>
+          </List>
+          <Notes>
+            <List>
+              <ListItem>standards move slowly, need consensus</ListItem>
+              <ListItem>React: embracing sound standards</ListItem>
+              <ListItem>we need a better model than the DOM</ListItem>
+              <ListItem>
+                lowering React paradigms into the language helps
+              </ListItem>
+              <ListItem>
+                New low-level APIs enable alternative approaches
+              </ListItem>
+              <ListItem>
+                DOM alternatives, new languages may offer better models in the
+                future
+              </ListItem>
+            </List>
+          </Notes>
         </Slide>
       </Deck>
     );
