@@ -159,7 +159,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/web-standards-this.example")}
-            textSize={32}
+            textSize={28}
           />
           <Notes>this</Notes>
         </Slide>
@@ -170,7 +170,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/web-standards-video.example")}
-            textSize={18}
+            textSize={15}
           />
           <Notes>Video Tag</Notes>
         </Slide>
@@ -181,7 +181,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/web-standards-xhr.example")}
-            textSize={32}
+            textSize={28}
           />
           <Notes>XmlHttpRequest(AJAX)</Notes>
         </Slide>
@@ -192,7 +192,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/web-standards-custom-elements.example")}
-            textSize={19}
+            textSize={16}
           />
           <Notes>Custom Elements (web components)</Notes>
         </Slide>
@@ -223,135 +223,135 @@ export default class Presentation extends React.Component {
           <Heading size={4}>Web Standards: Who?</Heading>
           <Heading size={5}>Who is on the spec groups?</Heading>
           <Appear>
-            <div style={{ marginLeft: -20, marginRight: -20 }}>
+            <div style={{ marginLeft: -10, marginRight: -10 }}>
               <Image
                 src={images.logoW3C}
-                style={{ height: 76, borderRadius: 5, marginTop: 64 }}
+                style={{ height: 56, borderRadius: 5, marginTop: 30 }}
               />
               <Image
                 src={images.logoGoogle}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoMozilla}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoMicrosoft}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoApple}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoAdobe}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoFacebook}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoIntel}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoOpera}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoEbay}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoYahoo}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoSamsung}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoPaypal}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoAirbnb}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoJquery}
                 style={{
-                  height: 76,
+                  height: 56,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
             </div>
@@ -370,37 +370,37 @@ export default class Presentation extends React.Component {
               <Image
                 src={images.logoGoogle}
                 style={{
-                  height: 76,
+                  height: 50,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoMozilla}
                 style={{
-                  height: 76,
+                  height: 50,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoMicrosoft}
                 style={{
-                  height: 76,
+                  height: 50,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
               <Image
                 src={images.logoApple}
                 style={{
-                  height: 76,
+                  height: 50,
                   borderRadius: 5,
                   marginLeft: 54,
-                  marginTop: 64
+                  marginTop: 30
                 }}
               />
             </div>
@@ -543,7 +543,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/jquery-post.example")}
-            textSize={40}
+            textSize={33}
           />
           <Notes>
             So some people took it into their own hands to try to solve some of
@@ -557,7 +557,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/dojo-dom.example")}
-            textSize={27}
+            textSize={22}
           />
           <Notes>Or MooToolss approach to adding an element to the DOM</Notes>
         </Slide>
@@ -568,7 +568,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/jquery-querySelectorAll.example")}
-            textSize={27}
+            textSize={29}
           />
           <Notes>
             These libraries inspired improvements in the DOM, like
@@ -584,7 +584,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="coffeescript"
             source={require("raw-loader!../assets/coffeescript.example")}
-            textSize={40}
+            textSize={32}
           />
           <Notes>
             CoffeeScript was a new compile-to-JS language created to make
@@ -612,7 +612,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/angular.example")}
-            textSize={27}
+            textSize={22}
           />
           <Notes>
             Come 2009, a wave of frameworks started to appear. These frameworks
@@ -628,13 +628,13 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/ember-js.example")}
-            textSize={20}
+            textSize={18}
           />
           <br />
           <CodePane
             lang="handlebars"
             source={require("raw-loader!../assets/ember-hbs.example")}
-            textSize={20}
+            textSize={18}
           />
           <Notes>
             Data binding was a declarative way of describing UI and how your
@@ -1222,7 +1222,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-rest-spread-properties.example")}
-            textSize={26}
+            textSize={22}
           />
           <Notes>
             So a first example of declarativity, a React paradigm, being
@@ -1239,7 +1239,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-rest-spread-properties-react-redux.example")}
-            textSize={26}
+            textSize={21}
           />
           <Notes>
             Here it&rsquo;s being used in the React docs to spread properties
@@ -1257,7 +1257,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-silent-property-access-undefined.example")}
-            textSize={26}
+            textSize={22}
           />
           <Notes>
             Sebastian also wrote a rough specification in 2016 in order for
@@ -1279,7 +1279,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-optional-chaining.example")}
-            textSize={28}
+            textSize={24}
           />
           <Notes>
             However, it has not been proposed yet, and in the meantime another
@@ -1299,7 +1299,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-optional-chaining-2.example")}
-            textSize={22}
+            textSize={19}
           />
           <Notes>
             Optional chaining also defines semantics for how function and method
@@ -1317,7 +1317,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-class-fields.example")}
-            textSize={26}
+            textSize={25}
           />
           <Notes>
             Facebook&rsquo;s Jeff Morrison and Daniel Ehrenberg from Igalia are
@@ -1338,7 +1338,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-class-fields-react.example")}
-            textSize={26}
+            textSize={22}
           />
           <Notes>This also made it into the React documentation</Notes>
         </Slide>
@@ -1484,7 +1484,7 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/proposal-shallow-object-equality.example")}
-            textSize={22}
+            textSize={27}
           />
           <Notes>
             To further enable use of immutable data structures, Sebastian also
@@ -1761,8 +1761,9 @@ export default class Presentation extends React.Component {
             <List>
               <ListItem>
                 In August Sean Larkin proposed a specification to codify how
-                single-file components look, to attempt to achieve
-                interoperability between frameworks.
+                single-file components look for component interoperability
+                between frameworks. It borrows ideas from React, Vue and web
+                components.
               </ListItem>
             </List>
           </Notes>

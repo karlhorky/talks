@@ -1,4 +1,3 @@
-# CoffeeScript
 class Car
   price: 5
   sell: =>
