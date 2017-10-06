@@ -87,6 +87,10 @@ https://www.youtube.com/watch?v=615O4etSkE4
 - jQuery vs Vanilla https://gist.github.com/liamcurry/2597326
 - Building the web platform by Anne van Kesteren https://fronteers.nl/congres/2012/sessions/building-the-web-platform-anne-van-kesteren
 - React through the ages slides https://speakerdeck.com/zpao/react-through-the-ages
+- Sex, Houdini and the Extensible Web https://dev.opera.com/articles/houdini/
+- Web Standards https://en.wikipedia.org/wiki/Web_standards
+- Web Standards Project Mission https://www.webstandards.org/about/mission/
+- Rules for Standards makers http://scripting.com/2017/05/09/rulesForStandardsmakers.html
 - look at your "Talks to watch"
 
 - HTML Module imports (and React's aversion): https://github.com/w3c/webcomponents/issues/645
