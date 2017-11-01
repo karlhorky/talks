@@ -7,9 +7,9 @@ module.exports = {
   entry: ["babel-polyfill", "./index"],
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "bundle3.js",
+    filename: "bundle4.js",
     publicPath:
-      "/talks/packages/2017-09-28-react-alicante-the-effect-of-react-on-web-standards/dist/"
+      "/talks/packages/2017-11-01-react-alicante-the-effect-of-react-on-web-standards/dist/"
   },
   plugins: [
     new webpack.DefinePlugin({
