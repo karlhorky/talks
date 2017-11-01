@@ -1725,7 +1725,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="#2e3138">
             Future
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#2e3138" fit>
             Integration / Interop
           </Heading>
           <Notes>
