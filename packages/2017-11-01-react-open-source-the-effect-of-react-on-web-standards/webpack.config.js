@@ -8,7 +8,7 @@ module.exports = {
   entry: ["webpack-hot-middleware/client", "babel-polyfill", "./index"],
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "bundle4.js",
+    filename: "bundle5.js",
     publicPath: "/dist/"
   },
   plugins: [
