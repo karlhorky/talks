@@ -1,0 +1,9 @@
+const shallowClone = (object) => Object.create(
+  Object.getPrototypeOf(object),
+  Object.getOwnPropertyDescriptors(object)
+);
+
+const shallowMerge = (target, source) => Object.defineProperties(
+  target,
+  Object.getOwnPropertyDescriptors(source)
+);

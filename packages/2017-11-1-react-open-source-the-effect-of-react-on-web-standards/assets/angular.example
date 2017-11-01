@@ -1,0 +1,14 @@
+angular.module('app', []).component('userDetails', {
+  controller: function () {
+    this.user = {
+      age: 35,
+      location: 'Alicante'
+    };
+  },
+  template: `
+    <div class="section">
+      <p>Age: {{ $ctrl.user.age }}</p>
+      <p>Location: {{ $ctrl.user.location }}</p>
+    </div>
+  `
+});

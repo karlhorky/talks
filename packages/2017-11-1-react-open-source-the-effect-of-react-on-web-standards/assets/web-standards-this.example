@@ -1,0 +1,10 @@
+const logger = function () {
+  console.log('this:', this);
+};
+
+const button = document.querySelector('button');
+button.addEventListener('click', logger, false);
+// this: <button>
+
+logger();
+// this: [object Window]

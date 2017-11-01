@@ -1,0 +1,7 @@
+# CoffeeScript
+sell = (price) =>
+  alert "Ok, #{price} euro please."
+
+# Standards
+const sell = (price) =>
+  alert(`Ok, ${price} euro please.`);

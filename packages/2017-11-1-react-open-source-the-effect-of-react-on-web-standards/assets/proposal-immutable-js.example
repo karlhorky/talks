@@ -1,0 +1,7 @@
+// Record
+const xy = #{ x: 1, y: 2 }; // frozen value type
+const xyz = #{ ...xy, z: 3 }; // functional extension
+
+// Immutable Vector
+const xy = #[ x, y ]; // frozen value type
+const xyz = #[ ...xy, z ]; // functional extension
