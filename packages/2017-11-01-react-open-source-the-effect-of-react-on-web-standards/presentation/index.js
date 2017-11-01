@@ -1748,7 +1748,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Future: Integration efforts</Heading>
+          <Heading size={4}>Future: Integration / Interop</Heading>
           <Heading size={5}>Libraries</Heading>
           <List>
             <Appear>
@@ -1764,7 +1764,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Future: Integration efforts</Heading>
+          <Heading size={4}>Future: Integration / Interop</Heading>
           <Image
             src={images.twitterTranspilation}
             style={{ width: 750, borderRadius: 5, marginTop: 30 }}
