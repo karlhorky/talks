@@ -19,3 +19,7 @@ Talks and presentations by [@karlhorky](https://twitter.com/karlhorky).
 
 ### September
 * [React Alicante: The Effect of React on Web Standards](packages/2017-09-28-react-alicante-the-effect-of-react-on-web-standards/)
+
+### November
+
+* [React Open Source Berlin: The Effect of React on Web Standards](packages/2017-11-01-react-open-source-the-effect-of-react-on-web-standards/)

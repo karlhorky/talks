@@ -48,7 +48,8 @@ const images = {
   logoW3C: require("../assets/logo-w3c.svg"),
   logoYahoo: require("../assets/logo-yahoo.svg"),
   sebastianMarkbage: require("../assets/sebastianMarkbage.jpg"),
-  sebastianMarkbage2: require("../assets/sebastianMarkbage-2.jpg")
+  sebastianMarkbage2: require("../assets/sebastianMarkbage-2.jpg"),
+  twitterTranspilation: require("../assets/twitter-transpilation.png")
 };
 
 preloader(images);
@@ -1725,7 +1726,7 @@ export default class Presentation extends React.Component {
             Future
           </Heading>
           <Heading size={2} textColor="#2e3138">
-            Integration efforts
+            Integration / Interop
           </Heading>
           <Notes>
             There have been proposals of integration of web components with
@@ -1762,6 +1763,18 @@ export default class Presentation extends React.Component {
             be seen with Reactive Elements and SkateJS
           </Notes>
         </Slide>
+        <Slide>
+          <Heading size={4}>Future: Integration efforts</Heading>
+          <Image
+            src={images.twitterTranspilation}
+            style={{ width: 750, borderRadius: 5, marginTop: 30 }}
+          />
+          <Notes>
+            Jason Miller also apparently has a project in the works that will
+            convert between, allowing for easy transition between frameworks,
+            possibly also targeting standards as an input or output format.
+          </Notes>
+        </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#2e3138">
             Future
@@ -1782,6 +1795,7 @@ export default class Presentation extends React.Component {
           <Notes>
             <List>
               <ListItem>
+                (kind of like what we saw with Jason Miller's project...)<br />
                 In August Sean Larkin proposed a specification to codify how
                 single-file components look for component interoperability
                 between frameworks. It borrows ideas from React, Vue and web
