@@ -42,10 +42,14 @@ const theme = createTheme(
   }
 );
 
-theme.screen.components.heading.h3.color = secondaryColor;
-theme.screen.components.heading.h4.color = secondaryColor;
-theme.screen.components.heading.h5.color = secondaryColor;
+theme.screen.components.codePane.fontSize = '0.7rem';
+theme.screen.components.heading.h2.color = tertiaryColor;
+theme.screen.components.heading.h3.color = tertiaryColor;
+theme.screen.components.heading.h4.color = tertiaryColor;
+theme.screen.components.heading.h5.color = tertiaryColor;
+theme.screen.components.image.display = 'inline';
 theme.screen.components.quote.fontSize = '3.9rem';
+theme.screen.components.quote.lineHeight = 1.2;
 theme.screen.components.text.color = secondaryColor;
 
 // Require CSS
