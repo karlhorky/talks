@@ -108,6 +108,7 @@ export default class Presentation extends React.Component {
             Talk
             <List>
               <ListItem>Canadian / Austrian JavaScript Engineer</ListItem>
+              <ListItem>slides top left</ListItem>
               <ListItem>Twitter handle top right</ListItem>
             </List>
           </Notes>
@@ -616,7 +617,7 @@ export default class Presentation extends React.Component {
           />
           <br />
           <Text lineHeight={1.6} textSize={30}>
-            Source: https://goo.gl/tE2SLC
+            Source: goo.gl/tE2SLC
           </Text>
           <Notes>
             <List>
@@ -656,7 +657,7 @@ export default class Presentation extends React.Component {
           />
           <br />
           <Text lineHeight={1.6} textSize={30}>
-            Source: https://goo.gl/txbD6C
+            Source: goo.gl/txbD6C
           </Text>
           <Notes>arrow func inflnc. on standards</Notes>
         </Slide>
@@ -721,10 +722,13 @@ export default class Presentation extends React.Component {
             Forget about the implementation details of data binding
           </Text>
           <Notes>
-            React&rsquo;s data binding is much more like regular JavaScript.
+            <List>
+              <ListItem>more like regular JS fns</ListItem>
+              <ListItem>no data binding artifacts</ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide bgColor="tertiary">
+        {/* <Slide bgColor="tertiary">
           <BlockQuote>
             <Quote>
               There&rsquo;s not a single data binding artifact here ...
@@ -737,7 +741,7 @@ export default class Presentation extends React.Component {
           <Notes>
             because the data binding is just done with JavaScript functions
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Virtual DOM</Heading>
