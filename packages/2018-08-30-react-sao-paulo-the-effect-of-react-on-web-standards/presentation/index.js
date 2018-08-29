@@ -41,16 +41,21 @@ const theme = createTheme(
     secondary: 'Montserrat',
   }
 );
-
+// console.log(theme.screen);
 theme.screen.components.codePane.fontSize = '0.7rem';
 theme.screen.components.heading.h2.color = tertiaryColor;
 theme.screen.components.heading.h3.color = tertiaryColor;
 theme.screen.components.heading.h4.color = tertiaryColor;
 theme.screen.components.heading.h5.color = tertiaryColor;
+theme.screen.components.heading.h6.color = tertiaryColor;
 theme.screen.components.image.display = 'inline';
 theme.screen.components.quote.fontSize = '3.9rem';
-theme.screen.components.quote.lineHeight = 1.2;
 theme.screen.components.text.color = secondaryColor;
+
+// Fix line height
+theme.screen.components.listItem.lineHeight = 1.28;
+theme.screen.components.quote.lineHeight = 1.28;
+theme.screen.components.text.lineHeight = 1.28;
 
 // Require CSS
 require('normalize.css');
@@ -97,15 +102,13 @@ export default class Presentation extends React.Component {
           <Notes>
             Personal intro
             <List>
-              <ListItem>CAN / AUT Freelance JS Engineer</ListItem>
-              <ListItem>twitter handle top right</ListItem>
+              <ListItem>Canadian / Austrian JavaScript Engineer</ListItem>
+              <ListItem>Twitter handle top right</ListItem>
             </List>
-            about talk
+            Talk
             <List>
-              <ListItem>
-                45 minute talk (at alicante) in 30 minutes - may skip some
-                things that will be available on YouTube when they publish
-              </ListItem>
+              <ListItem>Canadian / Austrian JavaScript Engineer</ListItem>
+              <ListItem>Twitter handle top right</ListItem>
             </List>
           </Notes>
         </Slide>
@@ -116,31 +119,21 @@ export default class Presentation extends React.Component {
             Web Standards
           </Heading>
           <List>
-            <Appear>
-              <ListItem>Web Standards</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Discontent, New Approaches</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>React</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Web Standards Proposals</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Future</ListItem>
-            </Appear>
+            <ListItem>Web Standards: Definitions</ListItem>
+            <ListItem>Discontent, New Approaches</ListItem>
+            <ListItem>React: Principles, Opinions</ListItem>
+            <ListItem>Web Standards Proposals</ListItem>
+            <ListItem>Future: Convergence</ListItem>
           </List>
           <Notes>
             <List>
               <ListItem>Standards: What, Who, How</ListItem>
               <ListItem>
-                Discontent with web standards and new approaches with Simplified
+                Discontent with web standards and new approaches with simplified
                 APIs
               </ListItem>
               <ListItem>
-                React: Paradigms, Embracing standards, discontent with
+                React: Principles, Embracing standards, discontent with
                 standards, comparison to web components, who is involved, other
                 influences
               </ListItem>
@@ -169,14 +162,17 @@ export default class Presentation extends React.Component {
           <Notes>
             <List>
               <ListItem>
-                paradigm: declaratively describe web UIs, native app, VR, even
-                command line interfaces or music
+                paradigm: declaratively describing UIs (ex. JSX). can be
+                extended to: native app, VR, command line interfaces, music
               </ListItem>
               <ListItem>
                 ecosystem: rich community, including members of standards
                 committees
               </ListItem>
-              <ListItem>philosophy: minimalism, fp, immutability</ListItem>
+              <ListItem>
+                philosophy: incl. minimalism, functional programming,
+                immutability
+              </ListItem>
             </List>
           </Notes>
         </Slide>
@@ -195,9 +191,14 @@ export default class Presentation extends React.Component {
             textSize={27}
             theme="external"
           />
-          <Notes>DOM Manipulation</Notes>
+          <Notes>
+            <List>
+              <ListItem>one of most basic things to want w. JS</ListItem>
+              <ListItem>verbosity</ListItem>
+            </List>
+          </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>this keyword</Heading>
           <br />
@@ -208,7 +209,7 @@ export default class Presentation extends React.Component {
             theme="external"
           />
           <Notes>this</Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>&lt;video&gt; tag</Heading>
@@ -221,7 +222,7 @@ export default class Presentation extends React.Component {
           />
           <Notes>Video Tag</Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Web Standards: What?</Heading>
           <Heading size={5}>XMLHttpRequest</Heading>
           <br />
@@ -232,10 +233,10 @@ export default class Presentation extends React.Component {
             theme="external"
           />
           <Notes>XmlHttpRequest(AJAX)</Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Web Standards: What?</Heading>
-          <Heading size={5}>Custom Elements</Heading>
+          <Heading size={5}>Web Components</Heading>
           <br />
           <CodePane
             lang="js"
@@ -243,7 +244,7 @@ export default class Presentation extends React.Component {
             textSize={16}
             theme="external"
           />
-          <Notes>Custom Elements (web components)</Notes>
+          <Notes>In this example: custom elements</Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Web Standards: Who?</Heading>
@@ -268,192 +269,203 @@ export default class Presentation extends React.Component {
             </List>
           </Notes>
         </Slide>
-        <Slide>
-          <Heading size={4}>Web Standards: Who?</Heading>
-          <Heading size={5}>Who is on the spec groups?</Heading>
-          <Appear>
-            <div style={{ marginLeft: -10, marginRight: -10, }}>
-              <Image
-                src={images.logoW3C}
-                style={{ height: 56, borderRadius: 5, marginTop: 30, }}
-              />
-              <Image
-                src={images.logoGoogle}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoMozilla}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoMicrosoft}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoApple}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoAdobe}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoFacebook}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoIntel}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoOpera}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoEbay}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoYahoo}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoSamsung}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoPaypal}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoAirbnb}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoJquery}
-                style={{
-                  height: 56,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-            </div>
-          </Appear>
+        <Slide bgColor="secondary">
+          <Heading size={4} textColor="primary">
+            Web Standards: Who?
+          </Heading>
+          <Heading size={5} textColor="primary">
+            Who is on the spec groups?
+          </Heading>
+          <div style={{ marginLeft: -30, marginRight: -30, }}>
+            <Image
+              src={images.logoW3C}
+              style={{ height: 56, borderRadius: 5, marginTop: 30, }}
+            />
+            <Image
+              src={images.logoGoogle}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoMozilla}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoMicrosoft}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoApple}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+                filter: 'drop-shadow( 0 0 10px #444 )',
+              }}
+            />
+            <Image
+              src={images.logoAdobe}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoFacebook}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoIntel}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoOpera}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoEbay}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoYahoo}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoSamsung}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoPaypal}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoAirbnb}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoJquery}
+              style={{
+                height: 56,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+          </div>
           <Notes>
-            Who are these specifications developed by? Well, mostly large
-            companies and a few invited experts. With organizations like the
-            TC39 you need to pay a fee to be a member.
+            <List>
+              <ListItem>
+                mostly large companies + a few invited experts
+              </ListItem>
+              <ListItem>
+                orgs such as the TC39 require a fee to be paid to be a member
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide>
-          <Heading size={4}>Web Standards: Who?</Heading>
-          <Heading size={5}>Implementers</Heading>
-          <Appear>
-            <div style={{ marginLeft: -20, marginRight: -20, }}>
-              <Image
-                src={images.logoGoogle}
-                style={{
-                  height: 50,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoMozilla}
-                style={{
-                  height: 50,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoMicrosoft}
-                style={{
-                  height: 50,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-              <Image
-                src={images.logoApple}
-                style={{
-                  height: 50,
-                  borderRadius: 5,
-                  marginLeft: 54,
-                  marginTop: 30,
-                }}
-              />
-            </div>
-          </Appear>
+        <Slide bgColor="secondary">
+          <Heading size={4} textColor="primary">
+            Web Standards: Who?
+          </Heading>
+          <Heading size={5} textColor="primary">
+            Implementers
+          </Heading>
+          <div style={{ marginLeft: -40, marginRight: -40, }}>
+            <Image
+              src={images.logoGoogle}
+              style={{
+                height: 50,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoMozilla}
+              style={{
+                height: 50,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoMicrosoft}
+              style={{
+                height: 50,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+              }}
+            />
+            <Image
+              src={images.logoApple}
+              style={{
+                height: 50,
+                borderRadius: 5,
+                marginLeft: 54,
+                marginTop: 30,
+                filter: 'drop-shadow(0 0 10px #444)',
+              }}
+            />
+          </div>
           <Notes>
             But who has the final word on if, when and how the standards get
             published to developers? Only a handful of large companies.
@@ -467,32 +479,28 @@ export default class Presentation extends React.Component {
               <ListItem textSize={60}>multiple stakeholders</ListItem>
             </Appear>
             <Appear>
-              <ListItem textSize={60}>recommendations can be ignored</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textSize={60}>non-standard paths</ListItem>
+              <ListItem textSize={60}>
+                ignored recommendations or proprietary APIs
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize={60}>vendors blocking standards</ListItem>
             </Appear>
           </List>
           <Notes>
+            3 bullets
             <List>
               <ListItem>
-                multiple stakeholders: changes need to be agreed upon by
-                multiple stakeholders
-              </ListItem>
-              <ListItem>recommendations can be ignored</ListItem>
-              <ListItem>
-                non-standard paths: browser vendors can choose non standard
-                paths, for example: IE's JScript & AJAX, Chrome's default
-                passive touch listeners & SPDY)
+                changes need to be agreed upon by multiple stakeholders
               </ListItem>
               <ListItem>
-                vendors blocking standards: example: Microsoft blocking ES4
-                (recurring theme: "I think it was polarized as a consequence of
-                the ES4 team refusing to consider any other opinions" - Douglas
-                Crockford)
+                dominant market share => potential to ignore recommendations or
+                create non-standard APIs: IE's JScript & AJAX, Chrome's default
+                passive touch listeners)
+              </ListItem>
+              <ListItem>
+                Microsoft blocking ES4 because ES4 team didn't want to consider
+                any other options
               </ListItem>
             </List>
           </Notes>
@@ -513,19 +521,16 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Standards: Fundamentally different</Heading>
+          <Heading size={4}>Web Standards</Heading>
+          <Heading size={5}>Different than userland</Heading>
           <br />
           <Text lineHeight={1.4} textSize={60}>
-            The web standards process is fundamentally different than library
-            API development with a single owner and monoculture
+            The web standards process is fundamentally different than
+            single-owner library API development
           </Text>
           <Notes>
-            <List>
-              <ListItem>
-                fundamentally different than library API development with single
-                owner and monoculture
-              </ListItem>
-            </List>
+            all of this goes to show process is very diff. than userland library
+            development where you may have monoculture
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
@@ -543,11 +548,8 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <ListItem textSize={50}>
-                incompatibile or missing implementations
+                missing, incompatible or inadequate implementations
               </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textSize={50}>insufficient components</ListItem>
             </Appear>
             <Appear>
               <ListItem textSize={50}>
@@ -559,24 +561,18 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
           <Notes>
+            4 bullets
             <List>
               <ListItem textSize={20}>
-                excessive boilerplate: standard APIs: lots of typing and
-                ceremony for simple things
+                verbose standard APIs w. lots of ceremony
               </ListItem>
-              <ListItem textSize={20}>missing / non-standard impl.s</ListItem>
               <ListItem textSize={20}>
-                some devs (ex Ken Wheeler) critical: not enough std common
-                widgets (eg. autocomplete, time picker, better date picker)
+                features missing from or incompatible with 1 or more browsers,
+                or features that just aren't good enough (ex. dialog element)
               </ListItem>
               <ListItem textSize={20}>substr vs substring, ajax</ListItem>
-              <ListItem textSize={20}>
-                relevant to talk topic, react community promotes decl. APIs to
-                improve ability to reason about code vs. keeping the state of
-                the program in your head
-              </ListItem>
+              <ListItem textSize={20}>vs. declarative, immutable APIs</ListItem>
             </List>
-            TODO: Make this into 5 slides with examples instead?
           </Notes>
         </Slide>
         <Slide>
@@ -590,8 +586,10 @@ export default class Presentation extends React.Component {
             theme="external"
           />
           <Notes>
-            So some people took it into their own hands to try to solve some of
-            these problems. For instance, jQuerys take on AJAX.
+            <List>
+              <ListItem>some people took things into own hands</ListItem>
+              <ListItem>ex. jQuery's take on AJAX</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
@@ -604,10 +602,10 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
-          <Notes>Or MooToolss approach to adding an element to the DOM</Notes>
+          <Notes>Ex. Dojo's take on DOM manipulation</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>New Approaches</Heading>
+          <Heading size={4}>New Approaches: Inspiration</Heading>
           <Heading size={5}>Prototype, jQuery, Dojo, MooTools (2005-6)</Heading>
           <br />
           <CodePane
@@ -616,12 +614,17 @@ export default class Presentation extends React.Component {
             textSize={29}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: https://goo.gl/tE2SLC
+          </Text>
           <Notes>
-            These libraries inspired improvements in the DOM, like
-            jQuery&rsquo;s inspiration of document.querySelectorAll and friends
-            <br />
-            Source:
-            https://github.com/whatwg/html/issues/2791#issuecomment-311365657
+            <List>
+              <ListItem>libs inspired improvements to web standards</ListItem>
+              <ListItem>
+                ex. jQuery inspr. of document.querySelectorAll
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
@@ -635,8 +638,10 @@ export default class Presentation extends React.Component {
             theme="external"
           />
           <Notes>
-            CoffeeScript was a new compile-to-JS language created to make
-            JavaScript easier and nicer to use, while also adding new features
+            <List>
+              <ListItem>CoffeeScript: new compile-to-JS language</ListItem>
+              <ListItem>easier, nicer JS; added new features</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
@@ -649,14 +654,15 @@ export default class Presentation extends React.Component {
             textSize={27}
             theme="external"
           />
-          <Notes>
-            Some new features such as the arrow function also influenced
-            standards https://news.ycombinator.com/item?id=9266517
-          </Notes>
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: https://goo.gl/txbD6C
+          </Text>
+          <Notes>arrow func inflnc. on standards</Notes>
         </Slide>
         <Slide>
           <Heading size={4}>New Approaches</Heading>
-          <Heading size={5}>Angular, Knockout, Ember (2009-11)</Heading>
+          <Heading size={6}>Angular, Knockout, Ember (2009-11)</Heading>
           <br />
           <CodePane
             lang="js"
@@ -664,16 +670,20 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Prior art: .NET Windows Presentation Foundation (XAML)
+          </Text>
           <Notes>
-            Come 2009, a wave of frameworks started to appear. These frameworks
-            would promote a new approach to DOM manipulation called data
-            binding, prior seen in the .NET Windows Presentation Foundation
-            (XAML).
+            <List>
+              <ListItem>2009: new wave of frameworks</ListItem>
+              <ListItem>data binding: new approach to DOM manip</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>New Approaches</Heading>
-          <Heading size={5}>Angular, Knockout, Ember (2009-11)</Heading>
+          <Heading size={6}>Angular, Knockout, Ember (2009-11)</Heading>
           <br />
           <CodePane
             lang="js"
@@ -688,10 +698,7 @@ export default class Presentation extends React.Component {
             textSize={18}
             theme="external"
           />
-          <Notes>
-            Data binding was a declarative way of describing UI and how your
-            data model gets applied to that UI.
-          </Notes>
+          <Notes>data binding in ember</Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
@@ -701,8 +708,10 @@ export default class Presentation extends React.Component {
             New and Improved Paradigms
           </Heading>
           <Notes>
-            React came on the scene in 2013 to improve on the ideas presented by
-            these frameworks and introduced new paradigms of its own.
+            <List>
+              <ListItem>improvements on existing ideas</ListItem>
+              <ListItem>introductions of new paradigms</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
