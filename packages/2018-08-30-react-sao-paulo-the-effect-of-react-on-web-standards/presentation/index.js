@@ -45,6 +45,8 @@ const theme = createTheme(
 theme.screen.components.heading.h3.color = secondaryColor;
 theme.screen.components.heading.h4.color = secondaryColor;
 theme.screen.components.heading.h5.color = secondaryColor;
+theme.screen.components.quote.fontSize = '3.9rem';
+theme.screen.components.text.color = secondaryColor;
 
 // Require CSS
 require('normalize.css');
@@ -175,7 +177,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Web Standards
           </Heading>
         </Slide>
@@ -187,6 +189,7 @@ export default class Presentation extends React.Component {
             lang="javascript"
             source={require('raw-loader!../assets/web-standards-dom.example')}
             textSize={27}
+            theme="external"
           />
           <Notes>DOM Manipulation</Notes>
         </Slide>
@@ -198,6 +201,7 @@ export default class Presentation extends React.Component {
             lang="javascript"
             source={require('raw-loader!../assets/web-standards-this.example')}
             textSize={28}
+            theme="external"
           />
           <Notes>this</Notes>
         </Slide>
@@ -209,6 +213,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/web-standards-video.example')}
             textSize={15}
+            theme="external"
           />
           <Notes>Video Tag</Notes>
         </Slide>
@@ -220,6 +225,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/web-standards-xhr.example')}
             textSize={28}
+            theme="external"
           />
           <Notes>XmlHttpRequest(AJAX)</Notes>
         </Slide>
@@ -231,6 +237,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/web-standards-custom-elements.example')}
             textSize={16}
+            theme="external"
           />
           <Notes>Custom Elements (web components)</Notes>
         </Slide>
@@ -518,7 +525,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138" fit>
+          <Heading size={1} textColor="#fff7de" fit>
             Discontent &<br /> New Approaches
           </Heading>
         </Slide>
@@ -576,6 +583,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/jquery-post.example')}
             textSize={33}
+            theme="external"
           />
           <Notes>
             So some people took it into their own hands to try to solve some of
@@ -590,6 +598,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/dojo-dom.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>Or MooToolss approach to adding an element to the DOM</Notes>
         </Slide>
@@ -601,6 +610,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/jquery-querySelectorAll.example')}
             textSize={29}
+            theme="external"
           />
           <Notes>
             These libraries inspired improvements in the DOM, like
@@ -618,6 +628,7 @@ export default class Presentation extends React.Component {
             lang="coffeescript"
             source={require('raw-loader!../assets/coffeescript.example')}
             textSize={32}
+            theme="external"
           />
           <Notes>
             CoffeeScript was a new compile-to-JS language created to make
@@ -632,6 +643,7 @@ export default class Presentation extends React.Component {
             lang="coffeescript"
             source={require('raw-loader!../assets/coffeescript-arrow-functions.example')}
             textSize={27}
+            theme="external"
           />
           <Notes>
             Some new features such as the arrow function also influenced
@@ -646,6 +658,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/angular.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Come 2009, a wave of frameworks started to appear. These frameworks
@@ -662,12 +675,14 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/ember-js.example')}
             textSize={18}
+            theme="external"
           />
           <br />
           <CodePane
             lang="handlebars"
             source={require('raw-loader!../assets/ember-hbs.example')}
             textSize={18}
+            theme="external"
           />
           <Notes>
             Data binding was a declarative way of describing UI and how your
@@ -675,10 +690,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             React (2013)
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             New and Improved Paradigms
           </Heading>
           <Notes>
@@ -847,10 +862,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             React
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             Embracing Web Standards
           </Heading>
           <Notes>
@@ -910,10 +925,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             React
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             Curating Web Standards
           </Heading>
           <Notes>
@@ -937,10 +952,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             React
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             Discontent with Standards
           </Heading>
           <Notes>
@@ -986,7 +1001,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138" fit>
+          <Heading size={1} textColor="#fff7de" fit>
             Web Components
           </Heading>
           <Notes>
@@ -1101,7 +1116,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Web Standards Proposals
           </Heading>
           <Notes>
@@ -1280,6 +1295,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-rest-spread-properties.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             So a first example of declarativity, a React paradigm, being
@@ -1298,6 +1314,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-rest-spread-properties-react-redux.example')}
             textSize={21}
+            theme="external"
           />
           <Notes>
             Here it&rsquo;s being used in the React docs to spread properties
@@ -1316,6 +1333,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-silent-property-access-undefined.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Sebastian also wrote a rough specification in 2016 in order for
@@ -1340,6 +1358,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-optional-chaining.example')}
             textSize={24}
+            theme="external"
           />
           <Notes>
             However, it has not been proposed yet, and in the meantime another
@@ -1360,6 +1379,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-optional-chaining-2.example')}
             textSize={19}
+            theme="external"
           />
           <Notes>
             Optional chaining also defines semantics for how function and method
@@ -1378,6 +1398,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-class-fields.example')}
             textSize={25}
+            theme="external"
           />
           <Notes>
             Facebook&rsquo;s Jeff Morrison and Daniel Ehrenberg from Igalia are
@@ -1400,6 +1421,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-class-fields-react.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>This also made it into the React documentation</Notes>
         </Slide>
@@ -1415,6 +1437,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-scoped-constructor-arguments.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Sebastian builds on the class fields proposal in his scoped
@@ -1435,6 +1458,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-scoped-constructor-arguments-2.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             It also allows for captured arguments, which refer to a private slot
@@ -1453,6 +1477,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-pattern-matching.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Brian Terlson and Sebastian Markbåge propose the functional pattern
@@ -1471,6 +1496,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-do-expressions.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Dave Herman proposes functional programming&rsquo;s do expressions
@@ -1488,6 +1514,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-do-expressions-react.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Do expressions can be useful to conditionally return components in
@@ -1506,6 +1533,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-object-values-entries.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Object.values and Object.entries by Jordan Hardband of Airbnb allow
@@ -1526,6 +1554,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-immutable-js.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Sebastian Markbåge presented ideas for immutable data structures to
@@ -1546,6 +1575,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-shallow-object-equality.example')}
             textSize={27}
+            theme="external"
           />
           <Notes>
             To further enable use of immutable data structures, Sebastian also
@@ -1564,6 +1594,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-getOwnPropertyDescriptors.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             Jordan Harband of Airbnb proposes a way to get all properties of an
@@ -1583,6 +1614,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-trailing-commas.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             On the developer experience front, Jeff Morrison proposed grammar to
@@ -1607,6 +1639,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require('raw-loader!../assets/proposal-trailing-commas-2.example')}
             textSize={22}
+            theme="external"
           />
           <Notes>
             The proposal allows for trailing commas on the last parameter or
@@ -1614,7 +1647,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Why hasn&rsquo;t there been more progress?
           </Heading>
           <Notes>
@@ -1693,7 +1726,7 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             React: Other influence
           </Heading>
           <Notes>
@@ -1761,10 +1794,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Future
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             Integration / Interop
           </Heading>
           <Notes>
@@ -1815,10 +1848,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Future
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             Alternative Specifications
           </Heading>
         </Slide>
@@ -1845,10 +1878,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Future
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             Alternatives to the DOM
           </Heading>
         </Slide>
@@ -1886,10 +1919,10 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#2e3138">
+          <Heading size={1} textColor="#fff7de">
             Future
           </Heading>
-          <Heading size={2} textColor="#2e3138">
+          <Heading size={2} textColor="#fff7de">
             New languages
           </Heading>
           <Notes>
@@ -1908,6 +1941,7 @@ export default class Presentation extends React.Component {
             lang="ocaml"
             source={require('raw-loader!../assets/reason.example')}
             textSize={17}
+            theme="external"
           />
           <Notes>
             ...Such as ReasonML, Facebooks new syntax on top of Ocaml
