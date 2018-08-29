@@ -49,6 +49,7 @@
     "is-buffer": "^1.1.5",
     "markdown-loader": "^2.0.1",
     "node-libs-browser": "^2.0.0",
+    "prettier": "^1.14.2",
     "prettier-eslint": "^8.8.2",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^3.1.1",
