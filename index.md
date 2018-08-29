@@ -2,6 +2,12 @@
 
 Talks and presentations by [@karlhorky](https://twitter.com/karlhorky).
 
+## 2018
+
+### August
+
+- [React São Paulo: The Effect of React on Web Standards](packages/2018-08-30-react-sao-paulo-the-effect-of-react-on-web-standards/)
+
 ## 2017
 
 ### November

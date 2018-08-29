@@ -1,0 +1,8 @@
+$.ajax({
+  url: 'https://www.example.com/resetpw',
+  data: { username },
+  headers: { 'Cat-Pics': 'Pls' },
+  success: function (data) {
+    console.log(data);
+  }
+})

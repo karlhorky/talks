@@ -1,0 +1,21 @@
+const video = document.querySelector('video');
+
+const playButton = document.querySelector('#play-btn');
+const muteButton = document.querySelector('#mute-btn');
+const fullScreenButton = document.querySelector('#full-screen-btn');
+
+playButton.addEventListener('click', function() {
+  if (video.paused === true) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+muteButton.addEventListener('click', function() {
+  if (video.muted === false) {
+    video.muted = true;
+  } else {
+    video.muted = false;
+  }
+});

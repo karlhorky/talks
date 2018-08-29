@@ -1,0 +1,10 @@
+return (
+  <nav>
+    <Home />
+    {do {
+      if (loggedIn && admin)      { <AdminButton /> }
+      elseif (loggedIn && !admin) { <SettingsButton /> }
+      else                        { <LoginButton /> }
+    }}
+  </nav>
+)

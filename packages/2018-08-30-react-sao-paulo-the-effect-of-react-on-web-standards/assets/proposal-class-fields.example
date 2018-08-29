@@ -1,0 +1,8 @@
+class MyClass {
+  instanceProperty = 0;
+  static staticProperty = 0;
+  #privateProperty = 0;
+  incPrivate() {
+    this.#privateProperty++;
+  }
+}

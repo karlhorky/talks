@@ -1,0 +1,10 @@
+let x = do {
+  let tmp = f();
+  tmp * tmp + 1
+};
+
+let x = do {
+  if (foo()) { f() }
+  else if (bar()) { g() }
+  else { h() }
+};

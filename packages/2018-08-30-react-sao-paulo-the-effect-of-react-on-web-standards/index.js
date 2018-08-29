@@ -6,7 +6,7 @@ import Redbox from "redbox-react";
 
 import Presentation from "./presentation";
 
-const CustomErrorReporter = ({ error }) => <Redbox error={ error } />;
+const CustomErrorReporter = ({ error }) => <Redbox error={error} />;
 
 CustomErrorReporter.propTypes = {
   error: PropTypes.instanceOf(Error).isRequired
@@ -16,16 +16,17 @@ ReactDOM.render(
   <AppContainer errorReporter={CustomErrorReporter}>
     <Presentation />
   </AppContainer>,
-  document.getElementById("root"),
+  document.getElementById("root")
 );
 
 if (module.hot) {
   module.hot.accept("./presentation", () => {
-    const NextPresentation = require("./presentation").default;    ReactDOM.render(
+    const NextPresentation = require("./presentation").default;
+    ReactDOM.render(
       <AppContainer errorReporter={CustomErrorReporter}>
         <NextPresentation />
       </AppContainer>,
-      document.getElementById("root"),
+      document.getElementById("root")
     );
   });
 }

@@ -1,0 +1,13 @@
+a = null
+a?.b() // undefined
+a?.()  // undefined
+
+a = undefined
+a?.b() // undefined
+a?.()  // undefined
+
+a = {b: 1}
+a?.b   // TypeError
+
+a = 1
+a?.()  // TypeError

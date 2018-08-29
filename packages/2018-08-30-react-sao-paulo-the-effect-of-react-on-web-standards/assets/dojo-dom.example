@@ -1,0 +1,1 @@
+dojo.create('h1', { innerHTML: 'Heading text' }, dojo.body());

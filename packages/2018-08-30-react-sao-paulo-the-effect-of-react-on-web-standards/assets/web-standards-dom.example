@@ -1,0 +1,4 @@
+const heading = document.createElement('h1');
+const text = document.createTextNode('Heading text');
+heading.appendChild(text);
+document.body.appendChild(heading);

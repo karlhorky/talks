@@ -1,0 +1,5 @@
+// jQuery
+$('button.btn-red')
+
+// Standards
+document.querySelectorAll('button.btn-red')
