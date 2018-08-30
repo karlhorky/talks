@@ -1,12 +1,9 @@
 let a;
 let abc;
-a = null;
+
+a = null; // also works with `undefined`
 abc = a.b.c; // undefined
-a = undefined;
+
+a = { b: undefined };
 abc = a.b.c; // undefined
-a = { b: null };
-abc = a.b.c; // undefined
-a = { b: { c: null } };
-abc = a.b.c; // null
-a = { b: null };
 delete a.b.c; // throws a TypeError

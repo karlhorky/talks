@@ -1,0 +1,14 @@
+function reject(obj, keys) {
+  var target = {};
+  for (var i in obj) {
+    if (keys.indexOf(i) >= 0 || !Object.prototype.hasOwnProperty.call(obj, i))
+      continue;
+    target[i] = obj[i];
+  }
+  return target;
+}
+
+const obj = { x: 1, y: 2, a: 3, b: 4 };
+const x = obj.x;
+const y = obj.y;
+const z = reject(obj, ["x", "y"]);

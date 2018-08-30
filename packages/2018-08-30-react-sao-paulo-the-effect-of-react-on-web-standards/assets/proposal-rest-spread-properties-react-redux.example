@@ -1,15 +1,10 @@
-// React Docs
-function App2() {
-  const props = {firstName: 'Ben', lastName: 'Hector'};
-  return <Greeting {...props} />;
-}
-
-// Redux Docs
-function todoApp(state = initialState, action) {
-  switch (action.type) {
-    case SET_VISIBILITY_FILTER:
-      return { ...state, visibilityFilter: action.filter }
-    default:
-      return state
-  }
+function FancyCheckbox(props) {
+  const {
+    checked,
+    // Rest property
+    ...other,
+  } = props;
+  const fancyClass = checked ? 'FancyChecked' : 'FancyUnchecked';
+  // Spread property
+  return <div {...other} className={fancyClass} />;
 }

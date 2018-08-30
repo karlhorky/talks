@@ -1,0 +1,68 @@
+<svg width="576" height="324" xmlns="http://www.w3.org/2000/svg">
+ <title>onchange_vdom_change</title>Created with Sketch (http://www.bohemiancoding.com/sketch)
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g fill-rule="evenodd" fill="none" id="vdom-change">
+   <path fill="#FFFEF0" stroke="#D4D4D4" id="Oval-7" d="m220,137c38.65993,0 70,-30.44464 70,-68c0,-37.55536 -31.34007,-68 -70,-68c-38.65993,0 -70,30.44464 -70,68c0,37.55536 31.34007,68 70,68z"/>
+   <path fill="#FFFEF0" stroke="#D4D4D4" id="Oval-7" d="m220,300c38.65993,0 70,-30.44464 70,-68c0,-37.55536 -31.34007,-68 -70,-68c-38.65993,0 -70,30.44464 -70,68c0,37.55536 31.34007,68 70,68z"/>
+   <path stroke-linecap="square" stroke="#417505" id="Line" d="m502.5,93.5l-30,29"/>
+   <path stroke-linecap="square" stroke="#417505" id="Line" d="m501.5,92.5l34,31"/>
+   <path stroke-linecap="square" stroke="#417505" id="Line" d="m471.5,142.5l-29,27"/>
+   <path stroke-linecap="square" stroke="#417505" id="Line" d="m472.5,140.5l31,29"/>
+   <path stroke-linecap="square" stroke="#417505" id="Line" d="m503.5,188.5l0,32"/>
+   <rect height="24" width="43" y="72" x="480" fill="#B8E986" stroke="#417505" id="Rectangle-1"/>
+   <rect height="24" width="43" y="121" x="451" fill="#B8E986" stroke="#417505" id="Rectangle-1"/>
+   <rect height="24" width="43" y="121" x="511" fill="#B8E986" stroke="#417505" id="Rectangle-1"/>
+   <rect height="24" width="43" y="168" x="421" fill="#D0011B" stroke="#417505" id="Rectangle-1"/>
+   <rect height="24" width="43" y="168" x="480" fill="#B8E986" stroke="#417505" id="Rectangle-1"/>
+   <rect height="24" width="43" y="214" x="480" fill="#B8E986" stroke="#417505" id="Rectangle-1"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m223.67742,24.33333l-19.35484,19.33334"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m223.32857,23.34375l22.34286,21.3125"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m203.68333,57.33929l-18.36666,18.32142"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m204.32813,56.33333l20.34375,19.33334"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m224.5,88.33333l0,21.33334"/>
+   <rect height="17" width="27" y="10" x="210" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="43" x="191" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="43" x="230" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="75" x="172" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="75" x="210" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="106" x="210" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m222.67742,190.33333l-19.35484,19.33334"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m222.32857,189.34375l22.34286,21.3125"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m202.68333,223.33929l-18.36666,18.32142"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m203.32813,222.33333l20.34375,19.33334"/>
+   <path stroke-linecap="square" stroke="#7ED321" id="Line" d="m223.5,254.33333l0,21.33334"/>
+   <rect height="17" width="27" y="176" x="209" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="209" x="190" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="209" x="229" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="241" x="171" fill="#D0011B" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="144" x="322" fill="#D0011B" stroke="#7ED321" id="Rectangle-1"/>
+   <path fill="#D0011B" stroke-linecap="square" stroke="#D0011B" id="Line" d="m276.5,110.5l45,32"/>
+   <path fill="#D0011B" stroke-linecap="square" stroke="#D0011B" d="m321.32254,142.37381c-2.47203,-3.0463 -4.59091,-5.65742 -7.06294,-8.70372c-1.217,1.7114 -2.26015,3.17832 -3.47715,4.88973c3.68903,1.33489 6.85106,2.47909 10.54009,3.81399c0,0 0,0 0,0z" id="Line-decoration-1"/>
+   <path fill="#D0011B" stroke-linecap="square" stroke="#D0011B" id="Line" d="m276.5,189.5l46,-28"/>
+   <path fill="#D0011B" stroke-linecap="square" stroke="#D0011B" d="m321.77252,161.94281c-3.77481,1.06849 -7.01037,1.98434 -10.78518,3.05283c1.09189,1.79382 2.02779,3.33138 3.11968,5.12519c2.68293,-2.8623 4.98258,-5.31571 7.6655,-8.17802c0,0 0,0 0,0z" id="Line-decoration-1"/>
+   <rect height="17" width="27" y="241" x="209" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <rect height="17" width="27" y="272" x="209" fill="#EDFFDA" stroke="#7ED321" id="Rectangle-1"/>
+   <text fill="#000000" font-weight="normal" font-size="12" font-family="Helvetica" id="Virtual-DOM">
+    <tspan id="svg_2" y="323" x="188">Virtual DOM</tspan>
+   </text>
+   <text fill="#000000" font-weight="normal" font-size="12" font-family="Helvetica" id="Diff">
+    <tspan id="svg_3" y="154" x="289">Diff</tspan>
+   </text>
+   <text fill="#000000" font-weight="normal" font-size="12" font-family="Helvetica" id="Patch">
+    <tspan id="svg_4" y="156" x="374">Patch</tspan>
+   </text>
+   <text fill="#000000" font-weight="normal" font-size="12" font-family="Helvetica" id="DOM">
+    <tspan id="svg_5" y="185" x="548">DOM</tspan>
+   </text>
+   <path fill="#D0011B" stroke-linecap="square" stroke="#D0011B" id="Line" d="m349.5,152.5l71,28"/>
+   <path fill="#D0011B" stroke-linecap="square" stroke="#D0011B" d="m420.20074,180.38198c-3.13122,-2.36354 -5.81512,-4.38944 -8.94634,-6.75299c-0.77042,1.95357 -1.43078,3.62806 -2.20121,5.58164c3.90165,0.40997 7.24591,0.76138 11.14755,1.17135c0,0 0,0 0,0z" id="Line-decoration-1"/>
+   <text font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Helvetica" font-size="12" id="svg_7" y="237" x="80.5" fill-opacity="null" stroke-width="null" fill="#000000">New State</text>
+   <text xml:space="preserve" text-anchor="start" font-family="Helvetica" font-size="12" id="svg_8" y="68" x="81.5" fill-opacity="null" stroke-width="null" fill="#000000">Old State</text>
+  </g>
+ </g></svg>

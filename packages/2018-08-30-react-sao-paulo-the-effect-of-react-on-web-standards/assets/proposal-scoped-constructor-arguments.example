@@ -1,12 +1,10 @@
-class Point2D (inX, inY) {
-  x = inX;
-  y = inY;
+class Point2D (paramX) {
+  x = paramX;
 }
 
-// Desugars to
+// Equivalent to:
 class Point2D {
-  constructor(inX, inY) {
-    this.x = inX;
-    this.y = inY;
+  constructor(paramX) {
+    this.x = paramX;
   }
 }

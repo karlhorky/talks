@@ -78,6 +78,7 @@ const images = {
   logoSamsung: require('../assets/logo-samsung.svg'),
   logoW3C: require('../assets/logo-w3c.svg'),
   logoYahoo: require('../assets/logo-yahoo.svg'),
+  reactVirtualDom: require('../assets/react-virtual-dom.svg'),
   sebastianMarkbage: require('../assets/sebastianMarkbage.jpg'),
   sebastianMarkbage2: require('../assets/sebastianMarkbage-2.jpg'),
   twitterTranspilation: require('../assets/twitter-transpilation.png'),
@@ -221,7 +222,6 @@ export default class Presentation extends React.Component {
             textSize={15}
             theme="external"
           />
-          <Notes>Video Tag</Notes>
         </Slide>
         {/* <Slide>
           <Heading size={4}>Web Standards: What?</Heading>
@@ -245,7 +245,7 @@ export default class Presentation extends React.Component {
             textSize={16}
             theme="external"
           />
-          <Notes>In this example: custom elements</Notes>
+          <Notes>custom elements spec</Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Web Standards: Who?</Heading>
@@ -477,15 +477,18 @@ export default class Presentation extends React.Component {
           <Heading size={5}>Consensus-Based</Heading>
           <List>
             <Appear>
-              <ListItem textSize={60}>multiple stakeholders</ListItem>
+              <ListItem textSize={50}>multiple stakeholders</ListItem>
             </Appear>
             <Appear>
-              <ListItem textSize={60}>
+              <ListItem textSize={50}>
                 ignored recommendations or proprietary APIs
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem textSize={60}>vendors blocking standards</ListItem>
+              <ListItem textSize={50}>
+                vendors blocking standards{' '}
+                <small style={{ opacity: 0.5, }}>⏎</small>
+              </ListItem>
             </Appear>
           </List>
           <Notes>
@@ -558,7 +561,10 @@ export default class Presentation extends React.Component {
               </ListItem>
             </Appear>
             <Appear>
-              <ListItem textSize={50}>imperative, stateful approach</ListItem>
+              <ListItem textSize={50}>
+                imperative, stateful approach{' '}
+                <small style={{ opacity: 0.5, }}>⏎</small>
+              </ListItem>
             </Appear>
           </List>
           <Notes>
@@ -717,14 +723,21 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
-          <Heading size={5}>Data binding</Heading>
-          <Text lineHeight={1.4} textSize={60}>
-            Forget about the implementation details of data binding
-          </Text>
+          <Heading size={6}>Simpler one-way data binding via JSX</Heading>
+          <br />
+          <CodePane
+            lang="js"
+            source={require('raw-loader!../assets/react-data-binding-jsx.example')}
+            textSize={22}
+            theme="external"
+          />
           <Notes>
             <List>
               <ListItem>more like regular JS fns</ListItem>
-              <ListItem>no data binding artifacts</ListItem>
+              <ListItem>
+                almost no impl. details of data binding from library
+              </ListItem>
+              <ListItem>no DSL allows full power of JS</ListItem>
             </List>
           </Notes>
         </Slide>
@@ -744,21 +757,37 @@ export default class Presentation extends React.Component {
         </Slide> */}
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
-          <Heading size={5}>Virtual DOM</Heading>
-          <Text lineHeight={1.4} textSize={60}>
-            Re-render everything without the performance hit
+          <Heading size={5}>Data binding: Virtual DOM</Heading>
+          <br />
+          <Image
+            src={images.reactVirtualDom}
+            style={{
+              // height: 56,
+              borderRadius: 5,
+              // marginLeft: 54,
+              // marginTop: 30,
+              border: 'solid #fff',
+              borderWidth: '20px 60px 20px 0',
+              background: '#fff',
+            }}
+          />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Credit: goo.gl/g8fWvi
           </Text>
           <Notes>
-            How is this improved data binding achieved? Through a concept called
-            the Virtual DOM.
-            <br />
-            <br />
-            With the Virtual DOM, you just declare how you want your UI to
-            appear at any point in time and the actual minimal imperative DOM
-            updates are done for you by React.
+            <List>
+              <ListItem>
+                React calculates diff + makes minimal DOM updates
+              </ListItem>
+              <ListItem>
+                user writes declarative components + doesn't need to touch
+                imperative DOM
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>JSX</Heading>
           <List>
@@ -783,30 +812,32 @@ export default class Presentation extends React.Component {
             functions and not strings.
             <br />
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Functional Programming</Heading>
           <List>
             <Appear>
-              <ListItem textSize={44}>roots in functional programming</ListItem>
+              <ListItem textSize={46}>roots in functional programming</ListItem>
             </Appear>
             <Appear>
-              <ListItem textSize={44}>pragmatic functional approach</ListItem>
+              <ListItem textSize={46}>
+                immutability easier to reason about{' '}
+                <small style={{ opacity: 0.5, }}>⏎</small>
+              </ListItem>
             </Appear>
           </List>
           <Notes>
             The functional approach is promoted in ways other than JSX.
-            <br />
-            roots: from React&rsquo;s roots having early prototypes built in
-            StandardML...
-            <br />
-            pragmatic functional approach: To the pragmatic functional approach
-            taken today
-            <br />
+            <List>
+              <ListItem>early prototypes of React built in StandardML</ListItem>
+              <ListItem>
+                immutability: less potential interactions with data
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide bgColor="tertiary">
+        {/* <Slide bgColor="tertiary">
           <BlockQuote>
             <Quote>
               While it is influenced by ... functional programming, staying
@@ -816,8 +847,10 @@ export default class Presentation extends React.Component {
             <Cite textColor="primary">React Docs</Cite>
           </BlockQuote>
           <Notes>
-            The docs highlight this, emphasizing the pragmatism of staying
-            accessible instead of idealism of a purely functional style
+            <List>
+              <ListItem>quote from React docs</ListItem>
+              <ListItem>pragmatism over idealism</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
@@ -830,102 +863,70 @@ export default class Presentation extends React.Component {
             less potential interactions with your data results in an app
             that&rsquo;s easier to reason about
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>React: Paradigms</Heading>
           <Heading size={5}>Component Model</Heading>
           <List>
             <Appear>
-              <ListItem>reusable, composable, testable</ListItem>
+              <ListItem textSize={53}>
+                simple, consistent composability
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>decoupled from output target like the DOM</ListItem>
-            </Appear>
-          </List>
-          <Notes>
-            reusable, composable, testable: because of their functional nature,
-            React components can be easily reused, composed and tested
-            <br />
-            decoupled: because the component model is decoupled from the this
-            allows for the component model to be used for other targets as
-            mentioned before, like strings for SSR, native apps, command line
-            applications
-          </Notes>
-        </Slide>
-        <Slide>
-          <Heading size={4}>React: Paradigms</Heading>
-          <Heading size={5}>Minimalism</Heading>
-          <List>
-            <Appear>
-              <ListItem>deliberately low API surface area</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>proprietary features being actively removed</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>using React feels like using JavaScript</ListItem>
-            </Appear>
-          </List>
-          <Notes>
-            kept deliberately minimal: the "expense" of React is kept low by
-            limiting API surface area
-            <br />
-            proprietary features being actively removed: React&rsquo;s
-            proprietary features are being actively removed, for instance to
-            instead use features available standards
-            <br />
-            using React feels like using JavaScript: not many things to
-            remember. Many problems can be solved using standard JavaScript
-          </Notes>
-        </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
-            React
-          </Heading>
-          <Heading size={2} textColor="#fff7de">
-            Embracing Web Standards
-          </Heading>
-          <Notes>
-            React has thus embraced standards, promoting web APIs whenever
-            possible
-          </Notes>
-        </Slide>
-        <Slide>
-          <Heading size={4}>React: Embracing Standards</Heading>
-          <List>
-            <Appear>
-              <ListItem>built on the ubiquity of JavaScript</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>use polyfills to write standards-based JS</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                {'JavaScript'}: an intermediate format for sharing across
-                libraries
+              <ListItem textSize={53}>
+                decoupled from output target (ex. DOM){' '}
+                <small style={{ opacity: 0.5, }}>⏎</small>
               </ListItem>
             </Appear>
           </List>
           <Notes>
             <List>
               <ListItem>
-                built on the ubiquity of JavaScript: Built on the ubiquity of
-                JavaScript instead of inventing many new abstractions
+                standardized model for how to write + what to be able to expect
+                from React components
               </ListItem>
+              <ListItem>allows other usages ex. native, SSR, etc.</ListItem>
+            </List>
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>React: Paradigms</Heading>
+          <Heading size={5}>Minimalism</Heading>
+          <Text lineHeight={1.4} textSize={60}>
+            React's API surface area is limited, with features actively being
+            removed.
+          </Text>
+          <Notes>amount of things to learn+remember kept low</Notes>
+        </Slide>
+        <Slide bgColor="quartenary">
+          <Heading size={1} textColor="#fff7de">
+            React
+          </Heading>
+          <Heading size={2} textColor="#fff7de">
+            Web Standards
+          </Heading>
+          <Notes>
+            <List>
               <ListItem>
-                use polyfills to write standards-based JS: instead of creating
-                proprietary APIs, use existing standards-based JS and new
-                proposals cross-browser with polyfills
-              </ListItem>
-              <ListItem>
-                {'JavaScript'}: an intermediate format for sharing across
-                libraries: The React team calls JavaScript syntax their chosen
-                intermediate format for sharing across libraries.
+                approach of embracing and curating standards when possible
               </ListItem>
             </List>
           </Notes>
         </Slide>
-        <Slide bgColor="tertiary">
+        <Slide>
+          <Heading size={4}>React</Heading>
+          <Heading size={4}>Embracing Standards</Heading>
+          <Text lineHeight={1.4} textSize={60}>
+            React builds on a curated set of JavaScript features, by polyfilling
+            proposals
+          </Text>
+          <Notes>
+            don't invent propreitary abstractions, use standards-based JS +
+            polyfill where necessary
+          </Notes>
+        </Slide>
+        {/* <Slide bgColor="tertiary">
           <BlockQuote>
             <Quote>
               Strategy to make a better library: listen to slow moving standards
@@ -940,18 +941,7 @@ export default class Presentation extends React.Component {
             philosophy, as noted by Sebastian Markbåge (Markboge), one of the
             core React contributors at Facebook
           </Notes>
-        </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
-            React
-          </Heading>
-          <Heading size={2} textColor="#fff7de">
-            Curating Web Standards
-          </Heading>
-          <Notes>
-            However, React doesn&rsquo;t blindly promote all web APIs.
-          </Notes>
-        </Slide>
+        </Slide> */}
         <Slide bgColor="tertiary">
           <BlockQuote>
             <Quote>
@@ -968,183 +958,82 @@ export default class Presentation extends React.Component {
             required to program in JavaScript can be reduced
           </Notes>
         </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
-            React
-          </Heading>
-          <Heading size={2} textColor="#fff7de">
-            Discontent with Standards
-          </Heading>
-          <Notes>
-            There are some standards that React cannot avoid, such as the DOM.
-          </Notes>
-        </Slide>
         <Slide>
-          <Heading size={4}>React: Discontent with Standards</Heading>
+          <Heading size={4}>React</Heading>
+          <Heading size={5}>Discontent with Standards</Heading>
           <List>
             <Appear>
-              <ListItem>imperative, verbose APIs</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>no declarative DOM updates</ListItem>
+              <ListItem>verbose, imperative APIs such as the DOM</ListItem>
             </Appear>
             <Appear>
               <ListItem>tight coupling</ListItem>
             </Appear>
             <Appear>
-              <ListItem>foundational quirks</ListItem>
+              <ListItem>
+                foundational quirks <small style={{ opacity: 0.5, }}>⏎</small>
+              </ListItem>
             </Appear>
           </List>
           <Notes>
             <List>
               <ListItem>
-                imperative, verbose APIs: modifying the DOM is an imperative,
-                verbose, stateful affair
+                as seen in first examples, verbosity. also imperative vs
+                declarative
               </ListItem>
               <ListItem>
-                no declarative DOM updates: nothing like a diffing algorithm
-                available for efficient, simple declarative updates
+                tight coupling between layers (ex. HTML + CSS coupled to DOM)
               </ListItem>
               <ListItem>
-                tight coupling: HTML and CSS are tightly coupled to the DOM,
-                making it difficult to optimize the DOM
-              </ListItem>
-              <ListItem>
-                foundational quirks: workarounds and hacks are needed to
-                abstract over quirks in the foundation and provide a uniform
-                interface
-              </ListItem>
-            </List>
-          </Notes>
-        </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de" fit>
-            Web Components
-          </Heading>
-          <Notes>
-            Web components held the promise of a way to declare custom
-            components using web standards.
-          </Notes>
-        </Slide>
-        <Slide>
-          <Heading size={4}>Web Components</Heading>
-          <Heading size={5}>Specifications</Heading>
-          <List>
-            <ListItem>custom elements</ListItem>
-            <ListItem>templates</ListItem>
-            <ListItem>shadow DOM</ListItem>
-            <ListItem>HTML Imports</ListItem>
-          </List>
-          <Notes>
-            Web components, as a refresher, is a set of 4 specifications:
-            <List>
-              <ListItem>
-                custom elements: define new custom DOM elements and their
-                behavior and styling
-              </ListItem>
-              <ListItem>
-                shadow DOM: allows for encapsulated DOM subtrees to be attached
-                to elements, preventing leaking of styling into or out of the
-                component
-              </ListItem>
-              <ListItem>
-                templates: define templates that will not be evaluated by the
-                browser until use
-              </ListItem>
-              <ListItem>
-                HTML Imports: declare template dependencies in HTML
+                workarounds + hacks needed to abstract over quirks (ex.
+                properties vs attributes)
               </ListItem>
             </List>
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Components</Heading>
-          <Heading size={5}>Advantages</Heading>
+          <Heading size={4}>React</Heading>
+          <Heading size={5}>Web Components Pros</Heading>
           <List>
-            <Appear>
-              <ListItem>shadow DOM encapsulation</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>could become interoperable standard</ListItem>
-            </Appear>
+            <ListItem>shadow DOM encapsulation</ListItem>
+            <ListItem>could become interoperable standard</ListItem>
           </List>
           <Notes>
             <List>
               <ListItem>
-                shadow DOM encapsulation: the shadow DOM provides strong
-                encapsulation previously unavailable using existing standards
+                strong encapsulation imposs. w. existing standards
               </ListItem>
               <ListItem>
-                could become interoperable standard: with enough adoption and
-                easy integration, Web Components could provide an interoperable
-                standard to be used across frameworks
+                with enough adoption and easy integration, Web Components could
+                provide an interoperable standard to be used across frameworks
               </ListItem>
             </List>
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Web Components</Heading>
-          <Heading size={5}>Discontent</Heading>
+          <Heading size={4}>React</Heading>
+          <Heading size={5}>Web Components Cons</Heading>
           <List>
-            <Appear>
-              <ListItem>no enforcement of declarative APIs</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>most web components assume imperative API</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>no focus on composability</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Web Components embraces the DOM</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>no alternative render targets</ListItem>
-            </Appear>
+            <ListItem>no enforcement of declarative APIs</ListItem>
+            <ListItem>most web components imperative</ListItem>
+            <ListItem>no focus on composability</ListItem>
+            <ListItem>Web Components embrace the DOM</ListItem>
           </List>
           <Notes>
             From React&rsquo;s perspective, Web Components do not live up to
             their promises
             <List>
+              <ListItem>no enforcement simpler declarative models</ListItem>
               <ListItem>
-                no enforcement of declarative APIs: Web Components do nothing to
-                simplify the model of interacting with the DOM with enforcing
-                declarative APIs
+                assumption of stateful, imperative API: harder to reason about
               </ListItem>
-              <ListItem>
-                most web components assume imperative API: They instead are
-                build using imperative APIs and are stateful, making them harder
-                to reason about
-              </ListItem>
-              <ListItem>
-                no focus on composability: web components don&rsq uo;t focus on
-                data flow between parent and child components
-              </ListItem>
-              <ListItem>
-                Web Components embraces the DOM: all of the problems that are
-                there with the DOM are also there with Web Components
-              </ListItem>
-              <ListItem>
-                no alternative render targets: because Web Components depend on
-                the DOM, there is no easy way to render to alternative targets
-                like SSR or alternative app platforms like native
-              </ListItem>
+              <ListItem>no focus on data flow between parent + child</ListItem>
+              <ListItem>all problems of DOM come with WCs</ListItem>
             </List>
           </Notes>
         </Slide>
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
             Web Standards Proposals
-          </Heading>
-          <Notes>
-            There are, however initiatives to change and add to web standards to
-            better support React&rsquo;s paradigms.
-          </Notes>
-        </Slide>
-        <Slide>
-          <Heading size={4}>Web Standards Proposals</Heading>
-          <Heading size={5}>
-            React ecosystem representation in the spec groups
           </Heading>
           <div style={{ marginLeft: -20, marginRight: -20, }}>
             <Image
@@ -1175,71 +1064,50 @@ export default class Presentation extends React.Component {
             />
           </div>
           <Notes>
-            Many of the proposals we&rsquo;ll be reviewing today came from
-            members of React&rsquo;s community like Facebook&rsquo;s Sebastian
-            Markbåge (Markboge) and Jeff Morrison and Jordan Harband. They are
-            part of the TC39, the standards committee that specifies ECMAScript,
-            the spec which defines which features become a part of JavaScript.
-            <br />
+            a few members of the community:
+            <List>
+              <ListItem>FB: Sebastian Markbåge (Markboge)</ListItem>
+              <ListItem>FB: Jeff Morrison</ListItem>
+              <ListItem>Airbnb: Jordan Harband</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Web Standards Proposals</Heading>
           <Heading size={5}>Specification process</Heading>
           <List>
-            <Appear>
-              <ListItem>Stage 0 (strawman): request input</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Stage 1 (proposal): challenges, polyfill, etc.
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Stage 2 (draft): formal, precise language</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Stage 3 (candidate): signed-off spec text, needs implementations
-                and user feedback
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Stage 4 (finished): two compatible implementations shipped,
-                ready for inclusion in spec
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>Inclusion in specification</ListItem>
-            </Appear>
+            <ListItem>Stage 0 (strawman): request input</ListItem>
+            <ListItem>Stage 1 (proposal): challenges, polyfill, etc.</ListItem>
+            <ListItem>Stage 2 (draft): formal, precise language</ListItem>
+            <ListItem>
+              Stage 3 (candidate): signed-off spec text, needs implementations
+              and user feedback
+            </ListItem>
+            <ListItem>
+              Stage 4 (finished): two compatible implementations shipped, ready
+              for inclusion in spec
+            </ListItem>
           </List>
           <Notes>
             <List>
+              <ListItem>0: early input + discussion</ListItem>
               <ListItem>
-                0: floating the idea: allowing early input and discussion
+                1: describe case, shape of solution, potential challenges
+                <br />> prereqs: "champion", informal doc
               </ListItem>
               <ListItem>
-                1: provide more information: make case for addition, describe
-                shape of solution and identify potential challenges,
-                prerequisites are a "champion", informal doc describing problem
-                + solution + examples + api + algorithms + abstractions +
-                challenges. means that time will be devoted to the problem /
-                solution.
+                2: make it formal: precise desc of syntax + semantics <br />>
+                prereq: formal spec text
+                <br />
+                --> feature is expected to be developed + included in standard
               </ListItem>
               <ListItem>
-                2: make it formal: precise desc of syntax + semantics,
-                prerequisite is formal spec text. means that the feature is
-                expected to be developed + included in standard.
+                3: internal work complete, needs implm'n + external feedback
+                <br />> prereqs: complete spec text w. signoff
               </ListItem>
               <ListItem>
-                3: internal work complete - needs implmentation and external
-                feedback. prerequisites are complete spec text with reviewer and
-                ES editor signoff.
-              </ListItem>
-              <ListItem>
-                4: done + ready for inclusion in spec. prerequisites are
-                acceptance tests, 2 compatible implementations
+                4: done + ready for inclusion in spec.
+                <br />> prereqs: acceptance tests, 2 compatible implm'ns
               </ListItem>
             </List>
           </Notes>
@@ -1249,44 +1117,32 @@ export default class Presentation extends React.Component {
           <Heading size={5}>React Goals</Heading>
           <List>
             <Appear>
-              <ListItem>lower React paradigms into the language</ListItem>
+              <ListItem textSize={48}>lower React paradigms into JS</ListItem>
             </Appear>
             <Appear>
-              <ListItem>add new low-level APIs to allow optimization</ListItem>
+              <ListItem textSize={48}>
+                new low-level APIs for optimization
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>improve developer experience</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>make React obsolete</ListItem>
+              <ListItem textSize={48}>
+                make React obsolete <small style={{ opacity: 0.5, }}> ⏎</small>
+              </ListItem>
             </Appear>
           </List>
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/o8pjF2
+          </Text>
           <Notes>
-            I posit that React contributors working in standards are aiming to
-            achieve the following goals.
             <List>
-              <ListItem>
-                lower React paradigms into the language: paradigms like
-                functional programming, immutability, declarative APIs
-              </ListItem>
-              <ListItem>
-                add new low-level APIs to allow optimization: allow for
-                optimization through exposing low-level browser functionality
-              </ListItem>
-              <ListItem>
-                improve developer experience: boilerplate reduction, tooling
-                improvements
-              </ListItem>
-              <ListItem>
-                longer term - make React obsolete: a longer-term and more
-                ambitious goal is to introduce new standards in order to make
-                React obsolete. For instance, reactive updates with diffing in
-                the browser.
-              </ListItem>
+              <ListItem>fp, immutability, declarative APIs</ListItem>
+              <ListItem>expose low-level browser functionality</ListItem>
+              <ListItem>longer term: obsolescence</ListItem>
             </List>
           </Notes>
         </Slide>
-        <Slide bgColor="tertiary">
+        {/* <Slide bgColor="tertiary">
           <BlockQuote>
             <Quote>
               One day when React isn&rsquo;t needed anymore, in a few years or
@@ -1299,13 +1155,13 @@ export default class Presentation extends React.Component {
           <Notes>
             Cheng Lou philosophized about such a future at React Conf 2017
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
-            Sebastian Markbåge - Object Rest/Spread Properties (Stage 3)
+            Sebastian Markbåge - Object Rest/Spread Properties (Stage 4)
           </Text>
           <br />
           <CodePane
@@ -1314,18 +1170,19 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/YTq1xM
+          </Text>
           <Notes>
-            So a first example of declarativity, a React paradigm, being
-            promoted in the proposals is Sebastian Markbåge&rsquo;s
-            (Markboge&rsquo;s) Object Rest/Spread Properties
-            <br />
-            <br />
-            (explain the dot syntax)
+            <List>
+              <ListItem>improved declarativity</ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <CodePane
             lang="js"
@@ -1337,13 +1194,15 @@ export default class Presentation extends React.Component {
             Here it&rsquo;s being used in the React docs to spread properties
             over a component and for extending the previous state in Redux
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Sebastian Markbåge - Silent Property Access on null/undefined
+            <br />
+            (unproposed)
           </Text>
           <br />
           <CodePane
@@ -1352,20 +1211,15 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
-          <Notes>
-            Sebastian also wrote a rough specification in 2016 in order for
-            JavaScript to return undefined and not throw an error when an
-            property is accessed on undefined or null
-            <br />
-            (explain syntax)
-            <br />
-            This allows for a less complicated syntax when accessing data,
-            especially in declarative APIs
-          </Notes>
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/stLEKU
+          </Text>
+          <Notes>less complicated syntax when accessing data</Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Claude Pache, Gabriel Isenberg - Optional Chaining (Stage 1)
@@ -1374,19 +1228,18 @@ export default class Presentation extends React.Component {
           <CodePane
             lang="js"
             source={require('raw-loader!../assets/proposal-optional-chaining.example')}
-            textSize={24}
+            textSize={38}
             theme="external"
           />
-          <Notes>
-            However, it has not been proposed yet, and in the meantime another
-            similar specification called Optional Chaining has been proposed by
-            Claude Pache and Gabriel Isenberg and has gained some support,
-            moving to Stage 1.
-          </Notes>
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/2vpyK5
+          </Text>
+          <Notes>similar proposal further in spec process (stg 1)</Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Claude Pache, Gabriel Isenberg - Optional Chaining (Stage 1)
@@ -1402,10 +1255,10 @@ export default class Presentation extends React.Component {
             Optional chaining also defines semantics for how function and method
             calls should be treated
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Daniel Ehrenberg, Jeff Morrison - Class Fields (Stage 3)
@@ -1417,18 +1270,22 @@ export default class Presentation extends React.Component {
             textSize={25}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/LgvhbJ
+          </Text>
           <Notes>
-            Facebook&rsquo;s Jeff Morrison and Daniel Ehrenberg from Igalia are
-            collaborating on a joint Class Fields proposal, containing the
-            public class fields and private class fields proposals by Jeff and
-            Daniel respectively.
-            <br />
-            (explain syntax)
+            <List>
+              <ListItem>
+                simpler, declarative way to init properties on classes
+              </ListItem>
+              <ListItem>fewer state transitions for instances</ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Daniel Ehrenberg, Jeff Morrison - Class Fields (Stage 3)
@@ -1441,10 +1298,10 @@ export default class Presentation extends React.Component {
             theme="external"
           />
           <Notes>This also made it into the React documentation</Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Sebastian Markbåge - Scoped Constructor Arguments (unproposed)
@@ -1456,16 +1313,22 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/nttJoD
+          </Text>
           <Notes>
-            Sebastian builds on the class fields proposal in his scoped
-            constructor arguments spec, which allows for more declarative
-            initialization of properties from constructor arguments, instead of
-            having to mutate ad-hoc in various places.
+            <List>
+              <ListItem>builds on class fields</ListItem>
+              <ListItem>
+                declarative init of props from constructor arg's
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Declarativity, Boilerplate Reduction</Heading>
+          <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Sebastian Markbåge - Scoped Constructor Arguments (unproposed)
@@ -1481,13 +1344,14 @@ export default class Presentation extends React.Component {
             It also allows for captured arguments, which refer to a private slot
             on `this`
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Functional Programming</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
-            Brian Terlson, Sebastian Markbåge - Pattern Matching (Stage 0)
+            Brian Terlson, Sebastian Markbåge, Kat Marchán - Pattern Matching
+            (Stage 1)
           </Text>
           <br />
           <CodePane
@@ -1496,9 +1360,15 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/BFFuxw
+          </Text>
           <Notes>
-            Brian Terlson and Sebastian Markbåge propose the functional pattern
-            matching paradigm, drawing inspiration from Rust and F#.
+            <List>
+              <ListItem>pattern matching paradigm from fp</ListItem>
+              <ListItem>inspiration from Rust and F#.</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>

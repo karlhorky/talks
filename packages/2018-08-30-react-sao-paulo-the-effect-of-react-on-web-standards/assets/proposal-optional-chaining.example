@@ -1,9 +1,3 @@
-let a
-
-a = null
-a?.b   // undefined
-a?.[x] // undefined
-
-a = undefined
-a?.b   // undefined
-a?.[x] // undefined
+let user = null       // or `undefined`
+user?.address?.street // undefined
+user?.delete()        // undefined
