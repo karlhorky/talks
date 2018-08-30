@@ -1,7 +1,8 @@
-// Record
+// Record (immutable objects)
 const xy = #{ x: 1, y: 2 }; // frozen value type
-const xyz = #{ ...xy, z: 3 }; // functional extension
 
-// Immutable Vector
+// Immutable Vector (immutable array)
 const xy = #[ x, y ]; // frozen value type
-const xyz = #[ ...xy, z ]; // functional extension
+
+// Immutable Map
+const a = ImmutableMap([['x', 1], ['y', 2]]); // frozen value type

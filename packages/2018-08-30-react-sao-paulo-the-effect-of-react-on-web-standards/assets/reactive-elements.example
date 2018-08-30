@@ -1,0 +1,10 @@
+class MyComponent extends React.Component {
+  render({items}) {
+    return <ul>{items.map(item => <li>{item.name}</li>)}</ul>;
+  }
+}
+
+document.registerReact('my-react-component', MyComponent);
+
+// In HTML body
+<my-react-component items="{window.someArray}"></my-react-component>

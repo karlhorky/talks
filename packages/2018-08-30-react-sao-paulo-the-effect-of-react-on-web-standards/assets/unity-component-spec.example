@@ -1,0 +1,8 @@
+// Import Vue Button Single-File Component:
+import {Button} from "material-unity"
+
+// And use in Preact render function:
+render(
+  <Button someProp="whatever" />,
+  document.body
+);

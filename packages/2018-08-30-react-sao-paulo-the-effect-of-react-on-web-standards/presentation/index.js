@@ -63,6 +63,7 @@ require('normalize.css');
 const images = {
   jeffMorrison: require('../assets/jeffMorrison.jpg'),
   jordanHarband: require('../assets/jordanHarband.jpg'),
+  llvmBackend: require('../assets/llvm-backend.png'),
   logoAdobe: require('../assets/logo-adobe.svg'),
   logoAirbnb: require('../assets/logo-airbnb.svg'),
   logoApple: require('../assets/logo-apple.svg'),
@@ -944,13 +945,13 @@ export default class Presentation extends React.Component {
         </Slide> */}
         <Slide bgColor="tertiary">
           <BlockQuote>
-            <Quote>
+            <Quote textSize={56}>
               How do we remove existing features from the existing language?
               ...you can&rsquo;t remove things from the web. But they can be
               removed from our industry&rsquo;s mental surface area
             </Quote>
             <Cite textColor="primary">
-              Sebastian Markbåge, "Minimal API Surface Area"
+              Sebastian Markbåge, "Minimal API Surface Area" goo.gl/QCULgG
             </Cite>
           </BlockQuote>
           <Notes>
@@ -1035,42 +1036,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="#fff7de">
             Web Standards Proposals
           </Heading>
-          <div style={{ marginLeft: -20, marginRight: -20, }}>
-            <Image
-              src={images.sebastianMarkbage}
-              style={{
-                height: 240,
-                borderRadius: 5,
-                marginTop: 64,
-              }}
-            />
-            <Image
-              src={images.jeffMorrison}
-              style={{
-                height: 240,
-                borderRadius: 5,
-                marginLeft: 54,
-                marginTop: 64,
-              }}
-            />
-            <Image
-              src={images.jordanHarband}
-              style={{
-                height: 240,
-                borderRadius: 5,
-                marginLeft: 54,
-                marginTop: 64,
-              }}
-            />
-          </div>
-          <Notes>
-            a few members of the community:
-            <List>
-              <ListItem>FB: Sebastian Markbåge (Markboge)</ListItem>
-              <ListItem>FB: Jeff Morrison</ListItem>
-              <ListItem>Airbnb: Jordan Harband</ListItem>
-            </List>
-          </Notes>
+          <Notes>from the community or following same React paradigms</Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Web Standards Proposals</Heading>
@@ -1161,7 +1127,7 @@ export default class Presentation extends React.Component {
           <Heading size={5}>Declarativity</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
-            Sebastian Markbåge - Object Rest/Spread Properties (Stage 4)
+            Sebastian Markbåge - Object Rest/Spread Properties (ES2018)
           </Text>
           <br />
           <CodePane
@@ -1371,7 +1337,7 @@ export default class Presentation extends React.Component {
             </List>
           </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Functional Programming</Heading>
           <br />
@@ -1385,11 +1351,9 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
-          <Notes>
-            Dave Herman proposes functional programming&rsquo;s do expressions
-          </Notes>
-        </Slide>
-        <Slide>
+          <Notes>evaluating the last expression</Notes>
+        </Slide> */}
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Functional Programming</Heading>
           <br />
@@ -1407,7 +1371,7 @@ export default class Presentation extends React.Component {
             Do expressions can be useful to conditionally return components in
             templating languages like JSX
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Functional Programming</Heading>
@@ -1422,16 +1386,15 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
-          <Notes>
-            Object.values and Object.entries by Jordan Hardband of Airbnb allow
-            iterating over the values or the entries (both the keys and the
-            values) similar to Object.keys() that can be helpful in functional
-            programming
-          </Notes>
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/LgvhbJ
+          </Text>
+          <Notes>can be helpful in functional programming</Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Immutability, Performance</Heading>
+          <Heading size={5}>Immutability</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Sebastian Markbåge - Immutable Data Structures (presented in 2015)
@@ -1443,16 +1406,21 @@ export default class Presentation extends React.Component {
             textSize={22}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/jYQSEg
+          </Text>
           <Notes>
-            Sebastian Markbåge presented ideas for immutable data structures to
-            the TC39 in 2015. However the value of having it in the engine was
-            unproven and due to the large implementation effort of doubling the
-            data structures, it was not pursued any further.
+            <List>
+              <ListItem>presented in 2015</ListItem>
+              <ListItem>unproven value</ListItem>
+              <ListItem>large impl'n effort</ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Standards Proposals</Heading>
-          <Heading size={5}>Immutability, Performance</Heading>
+          <Heading size={5}>Immutability</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40} fit>
             Sebastian Markbåge - Shallow Equality Test (Stage 0)
@@ -1464,12 +1432,20 @@ export default class Presentation extends React.Component {
             textSize={27}
             theme="external"
           />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/6AFh3j
+          </Text>
           <Notes>
-            To further enable use of immutable data structures, Sebastian also
-            proposed a shallow equality test for objects, useful in memoization
+            <List>
+              <ListItem>
+                further enables use of immutable data structures
+              </ListItem>
+              <ListItem>proposed, received a lot of concerns</ListItem>
+            </List>
           </Notes>
         </Slide>
-        <Slide>
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Immutability, Performance</Heading>
           <br />
@@ -1488,8 +1464,8 @@ export default class Presentation extends React.Component {
             object to facilitate proper copying of objects. This has made it
             into the standard in ES2017.
           </Notes>
-        </Slide>
-        <Slide>
+        </Slide> */}
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Developer Experience</Heading>
           <br />
@@ -1513,8 +1489,8 @@ export default class Presentation extends React.Component {
             for each addition (such as param2 and param3 in the declaration or
             bar and baz in the call) have been
           </Notes>
-        </Slide>
-        <Slide>
+        </Slide> */}
+        {/* <Slide>
           <Heading size={4}>Standards Proposals</Heading>
           <Heading size={5}>Developer Experience</Heading>
           <br />
@@ -1532,14 +1508,17 @@ export default class Presentation extends React.Component {
             The proposal allows for trailing commas on the last parameter or
             argument, mitigating this problem.
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
             Why hasn&rsquo;t there been more progress?
           </Heading>
+          <br />
+          <Text lineHeight={1.4} textSize={60}>
+            Sebastian and Jake weigh in
+          </Text>
           <Notes>
-            So why don&rsquo;t we see proposals for bigger changes, like a full
-            declarative component API?
+            why not bigger proposals? (ex. full declarative component API)
           </Notes>
         </Slide>
         <Slide bgColor="tertiary">
@@ -1551,47 +1530,49 @@ export default class Presentation extends React.Component {
             </Quote>
             <Cite textColor="primary">
               Sebastian Markbåge, "DOM as a Second-class citizen (2015)"
+              goo.gl/K5UtvR
+            </Cite>
+          </BlockQuote>
+          <Notes>big changes often too big + get rejected</Notes>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <BlockQuote>
+            <Quote>
+              This is why the web platform must be really cautious about
+              throwing trends into specs.
+            </Quote>
+            <Cite textColor="primary">
+              Jake Archibald, Twitter goo.gl/q7wCLY
             </Cite>
           </BlockQuote>
           <Notes>
-            Sebastian Markbåge&rsquo;s idea back in 2015 was that such a large
-            change would be built on top of the existing DOM, bringing all its
-            problems with it.
+            <List>
+              <ListItem>ex. Object.observe</ListItem>
+              <ListItem>
+                trends become obsolete, (eg. what is after React?)
+              </ListItem>
+            </List>
           </Notes>
         </Slide>
         <Slide>
           <Heading size={4}>Why hasn&rsquo;t there been more progress?</Heading>
           <List>
-            <Appear>
-              <ListItem>
-                can&rsquo;t remove anything from the web (don&rsquo;t break the
-                web)
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                deliberately slow process to wait for maturity
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>a way forward: expose more browser APIs</ListItem>
-            </Appear>
+            <ListItem>
+              can&rsquo;t remove anything from the web (don&rsquo;t break the
+              web)
+            </ListItem>
+            <ListItem>deliberately slow process for maturity</ListItem>
+            <ListItem>a way forward: expose more browser APIs</ListItem>
           </List>
           <Notes>
             <List>
               <ListItem>
-                can&rsquo;t remove anything from the web: once features are
-                shipped on the web, they cannot be removed again, due to the
-                tenet of the web "don&rsquo;t break the web"
+                tenet "don't break the web" - once shipped, features cannot be
+                removed again
               </ListItem>
+              <ListItem>ideas tested over time, carefully considered</ListItem>
               <ListItem>
-                deliberately slow process to wait for maturity: because nothing
-                can be removed from the web again, ideas are tested over time
-                and very carefully considered and weighed against alternatives
-              </ListItem>
-              <ListItem>
-                a way forward: expose more browser APIs: expose more APIs that
-                browsers already implement
+                expose more APIs that browsers already implement
               </ListItem>
             </List>
           </Notes>
@@ -1604,15 +1585,12 @@ export default class Presentation extends React.Component {
               really good.
             </Quote>
             <Cite textColor="primary">
-              Sebastian Markbåge, "DOM as a Second-class Citizen"
+              Sebastian Markbåge, "DOM as a Second-class Citizen" goo.gl/K5UtvR
             </Cite>
           </BlockQuote>
-          <Notes>
-            Thats what the extensible web manifesto proposes: to expose more
-            APIs that are already there, including low level features.
-          </Notes>
+          <Notes>expose more existing APIs, including low level</Notes>
         </Slide>
-        <Slide bgColor="quartenary">
+        {/* <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
             React: Other influence
           </Heading>
@@ -1620,8 +1598,8 @@ export default class Presentation extends React.Component {
             Outside of web standards proposals, React paradigms have also had an
             effect on many frameworks and libraries.
           </Notes>
-        </Slide>
-        <Slide>
+        </Slide> */}
+        {/* <Slide>
           <Heading size={4}>React: Other influence</Heading>
           <List>
             <Appear>
@@ -1679,18 +1657,12 @@ export default class Presentation extends React.Component {
             Rob mentions that here, how people are watching what React is
             proposing
           </Notes>
-        </Slide>
+        </Slide> */}
         <Slide bgColor="quartenary">
           <Heading size={1} textColor="#fff7de">
             Future
           </Heading>
-          <Heading size={2} textColor="#fff7de">
-            Integration / Interop
-          </Heading>
-          <Notes>
-            There have been proposals of integration of web components with
-            React
-          </Notes>
+          <Notes>what does the future hold?</Notes>
         </Slide>
         <Slide bgColor="tertiary">
           <BlockQuote>
@@ -1707,118 +1679,112 @@ export default class Presentation extends React.Component {
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Future: Integration / Interop</Heading>
-          <Heading size={5}>Libraries</Heading>
-          <List>
-            <Appear>
-              <ListItem>Reactive Elements</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>SkateJS</ListItem>
-            </Appear>
-          </List>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>Integration / Interop</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            Reactive Elements: Convert React.js components into Web Components
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require('raw-loader!../assets/reactive-elements.example')}
+            textSize={22}
+            theme="external"
+          />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/3oztFs
+          </Text>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>Integration / Interop</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40} fit>
+            SkateJS: Effortless custom elements for modern view libraries
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require('raw-loader!../assets/skatejs.example')}
+            textSize={22}
+            theme="external"
+          />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/zxdBS4
+          </Text>
           <Notes>
             Some alternative approaches to mixing React and Web Components can
             be seen with Reactive Elements and SkateJS
           </Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Future: Integration / Interop</Heading>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>Integration / Interop</Heading>
           <Image
             src={images.twitterTranspilation}
             style={{ width: 750, borderRadius: 5, marginTop: 30, }}
           />
-          <Notes>
-            Jason Miller also apparently has a project in the works that will
-            convert between, allowing for easy transition between frameworks,
-            possibly also targeting standards as an input or output format.
-          </Notes>
-        </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
-            Future
-          </Heading>
-          <Heading size={2} textColor="#fff7de">
-            Alternative Specifications
-          </Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/YRzcaU
+          </Text>
+          <Notes>Jason Miller project to transpile between f/works</Notes>
         </Slide>
         <Slide>
-          <Heading size={4}>Future: Alternative Specifications</Heading>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>Alternative Specifications</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40}>
+            Sean Larkin&rsquo;s Unity Component Specification
+          </Text>
+          <br />
+          <CodePane
+            lang="js"
+            source={require('raw-loader!../assets/unity-component-spec.example')}
+            textSize={22}
+            theme="external"
+          />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/LgvhbJ
+          </Text>
+          <Notes>
+            specification to standardize single-file components for interop
+            between f/works
+          </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>Alternatives to the DOM</Heading>
           <List>
-            <Appear>
-              <ListItem>
-                Sean Larkin&rsquo;s Unity Component Specification
-              </ListItem>
-            </Appear>
+            <ListItem>
+              Douglas Crockford&rsquo;s "Helper App" ("Upgrading the Web" at
+              AngularU 2015) goo.gl/A8mKxv
+            </ListItem>
+            <ListItem>
+              Ken Wheeler&rsquo;s "App Browser" ("Why We Need An App Browser" at
+              Chain React 2017) goo.gl/6YsnQb
+            </ListItem>
           </List>
           <Notes>
             <List>
               <ListItem>
-                (kind of like what we saw with Jason Miller's project...)
-                <br />
-                In August Sean Larkin proposed a specification to codify how
-                single-file components look for component interoperability
-                between frameworks. It borrows ideas from React, Vue and web
-                components.
+                2015 Douglas Crockford's idea to discarding the old model of the
+                DOM for something more robust
+              </ListItem>
+              <ListItem>
+                program for navigating to native apps (also alternative model to
+                the DOM)
               </ListItem>
             </List>
           </Notes>
         </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
-            Future
-          </Heading>
-          <Heading size={2} textColor="#fff7de">
-            Alternatives to the DOM
-          </Heading>
-        </Slide>
         <Slide>
-          <Heading size={4}>Future: Alternatives to the DOM</Heading>
-          <List>
-            <Appear>
-              <ListItem>
-                Douglas Crockford&rsquo;s "Helper App" ("Upgrading the Web" at
-                AngularU 2015)
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Ken Wheeler&rsquo;s "App Browser" ("Why We Need An App Browser"
-                at Chain React 2017)
-              </ListItem>
-            </Appear>
-          </List>
-          <Notes>
-            <List>
-              <ListItem>
-                Douglas Crockford&rsquo;s "Helper App": in 2015 Douglas
-                Crockford described a technique of upgrading the web that would
-                allow for discarding the old model of the DOM in favor of
-                something more robust.
-              </ListItem>
-              <ListItem>
-                Ken Wheeler&rsquo;s "App Browser": Ken Wheeler described an App
-                Browser, a program similar to a web browser that would allow
-                users to navigate to native apps. This would also enable an
-                alternative model to the DOM.
-              </ListItem>
-            </List>
-          </Notes>
-        </Slide>
-        <Slide bgColor="quartenary">
-          <Heading size={1} textColor="#fff7de">
-            Future
-          </Heading>
-          <Heading size={2} textColor="#fff7de">
-            New languages
-          </Heading>
-          <Notes>
-            New languages offer the capability to explore new features and
-            paradigms without having to wait for the standards process
-          </Notes>
-        </Slide>
-        <Slide>
-          <Heading size={4}>Future: New Languages</Heading>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>New Languages</Heading>
           <br />
           <Text lineHeight={1.6} textSize={40}>
             ReasonML
@@ -1833,6 +1799,27 @@ export default class Presentation extends React.Component {
           <Notes>
             ...Such as ReasonML, Facebooks new syntax on top of Ocaml
           </Notes>
+        </Slide>
+        <Slide>
+          <Heading size={4}>Future</Heading>
+          <Heading size={5}>New Languages</Heading>
+          <br />
+          <Text lineHeight={1.6} textSize={40}>
+            Sebastian Markbåge&rsquo;s Prepack LLVM Backend
+          </Text>
+          <br />
+          <Image
+            src={images.llvmBackend}
+            style={{
+              borderRadius: 5,
+            }}
+          />
+          <br />
+          <Text lineHeight={1.6} textSize={30}>
+            Source: goo.gl/UohQJt
+            <small style={{ opacity: 0.5, }}> ⏎</small>
+          </Text>
+          <Notes>compile code to native machine code or web assembly</Notes>
         </Slide>
         <Slide>
           <Heading size={1}>Takeaways</Heading>
