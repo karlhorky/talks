@@ -1,5 +1,6 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "2017-04-27-react-kyiv-low-config",
+  "private": true,
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",

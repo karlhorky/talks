@@ -1,5 +1,6 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "2017-09-28-react-alicante-effect-react-web-standards",
+  "private": true,
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",

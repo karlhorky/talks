@@ -1,5 +1,10 @@
 {
+  "name": "karlhorky-talks",
+  "private": true,
   "scripts": {
     "build": "for dir in packages/*/ ; do (if ! grep -q $dir index.md; then echo \"* [$dir]($dir)\" >> index.md; fi && cd \"$dir\"); done"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

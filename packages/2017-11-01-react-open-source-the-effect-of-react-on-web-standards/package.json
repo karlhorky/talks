@@ -1,5 +1,6 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "2017-11-01-react-open-source-effect-react-web-standards",
+  "private": true,
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",

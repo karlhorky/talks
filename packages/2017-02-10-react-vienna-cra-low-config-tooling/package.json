@@ -1,5 +1,6 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "2017-02-10-react-vienna-low-config-tooling",
+  "private": true,
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
