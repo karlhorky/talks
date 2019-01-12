@@ -1,51 +1,95 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 /* eslint-disable */
 
-var path = require('path');
-var webpack = require('webpack');
+var path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
-  entry: ['babel-polyfill', './index'],
+  mode: "production",
+  entry: ["@babel/polyfill", "./index"],
+
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle1.js',
-    publicPath:
-      '/talks/packages/2018-08-30-react-sao-paulo-the-effect-of-react-on-web-standards/dist/',
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/dist/"
   },
+
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
-      },
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false,
-      },
-    }),
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
+      }
+    })
   ],
+
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.md$/,
-        loader: 'html-loader!markdown-loader?gfm=false',
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+
+            options: {
+              gfm: false
+            }
+          }
+        ]
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ]
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          }
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: 'url-loader?limit=8192',
+        use: [
+          {
+            loader: "url-loader",
+
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       },
       {
         test: /\.svg$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml',
-      },
-    ],
+        use: [
+          {
+            loader: "url-loader",
+
+            options: {
+              limit: 10000,
+              mimetype: "image/svg+xml"
+            }
+          }
+        ]
+      }
+    ]
   },
+
+  optimization: {
+    minimize: true,
+
+    minimizer: [new UglifyJsPlugin()]
+  }
 };
