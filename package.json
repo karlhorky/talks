@@ -1,5 +1,6 @@
 {
   "name": "karlhorky-talks",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "for dir in packages/*/ ; do (if ! grep -q $dir index.md; then echo \"* [$dir]($dir)\" >> index.md; fi && cd \"$dir\"); done"
