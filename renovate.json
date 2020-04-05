@@ -9,5 +9,8 @@
       "groupName": "dependencies (non-major)"
     }
   ],
-  "ignorePresets": ["group:babelMonorepo"]
+  "ignorePresets": ["group:babelMonorepo"],
+  "major": {
+    "enabled": false
+  }
 }
