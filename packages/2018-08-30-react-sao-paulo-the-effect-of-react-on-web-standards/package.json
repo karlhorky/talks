@@ -50,7 +50,7 @@
     "file-loader": "2.0.0",
     "html-loader": "0.5.5",
     "is-buffer": "2.0.4",
-    "markdown-loader": "4.0.0",
+    "markdown-loader": "5.1.0",
     "node-libs-browser": "2.2.1",
     "raw-loader": "0.5.1",
     "react-hot-loader": "4.12.20",
