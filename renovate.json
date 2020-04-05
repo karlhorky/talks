@@ -8,5 +8,6 @@
       "updateTypes": ["patch", "minor"],
       "groupName": "dependencies (non-major)"
     }
-  ]
+  ],
+  "ignorePresets": ["group:babelMonorepo"]
 }
