@@ -17,7 +17,7 @@
     "set-value": "^2.0.1",
     "surge": "^0.21.3",
     "union-value": "^1.0.1",
-    "mkdirp": "0.5.3",
+    "mkdirp": "0.5.5",
     "**/optimist/minimist": "0.2.1",
     "**/surge/minimist": "1.2.2",
     "**/strong-log-transformer/minimist": "0.2.1"
