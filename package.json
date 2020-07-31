@@ -9,6 +9,7 @@
     "packages/*"
   ],
   "resolutions": {
+    "dot-prop": "5.2.0",
     "fsevents": "^1.2.9",
     "handlebars": "^4.5.3",
     "js-yaml": "^3.13.1",
