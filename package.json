@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "resolutions": {
-    "dot-prop": "5.2.0",
+    "dot-prop": "5.3.0",
     "js-yaml": "3.14.0",
     "serialize-javascript": "3.1.0",
     "mkdirp": "0.5.5",
