@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "github>karlhorky/renovate-config"
-  ],
-  "ignorePresets": ["group:babelMonorepo"],
-  "major": {
-    "enabled": false
-  }
-}
